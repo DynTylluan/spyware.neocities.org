@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang=”en-us”>
+   <head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Spyware Watchdog</title>
+  </head>
+  <body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <h1>Dissenter</h1>
+  <p><a href="/articles">Back to catalog</a></p>
+  <img src="/images/dissenter_logo.png" alt="Dissenter Logo">
+  <p>
+Dissenter is a web browser and plugin released by the social network company Gab.
+  </p>
+  <h2>Spyware Level: <font color="orange">High</font></h2>
+  <p>
+The Dissenter browser is a fork of the <a href="/articles/brave.html">Brave</a> web browser. It phones home to
+Brave for autoupdates and safebrowsing, which is hosted by Brave. The default search engine is <a href="/articles/duckduckgo.html">DuckDuckGo</a>. 
+The browser has two extensions preinstalled. One extension, "Shields", blocks certain advertisment scripts. The other,
+"Dissenter" allows you to access the Dissenter social network. This extension phones home to several places whenever you open it,
+including Google and Twitter. The Dissenter social network also inherently must collect more information about the user's browsing
+habits than the current alternatives that already exist. 
+  </p>
+  <h3>Phoning home</h3>
+  <p>
+When the Dissenter Browser is started, it will make several connections to Brave's autoupdate services:
+  </p>
+  <img src="/images/dissenter_phone_home_1.png" alt="Dissenter Browser phoning home to Brave">
+  <p>
+Every once in a while, the Browser will send a request to Brave's instance of the Google safebrowsing service:
+  </p>
+  <img src="/images/dissenter_safebrowsing.png" alt="Dissenter Browser phoning home to Brave">
+  <p>
+  <p>
+  Whenever the Dissenter extension is opened, it will phone home to several companies:
+  </p>
+   <img src="/images/dissenter_ext_ph.png" alt="Dissenter Extension phoning home">
+  <p>
+  This includes:
+  </p>
+  <ul>
+  <li>Google</li>
+  <li>Twitter</li>
+  <li>Doubleclick (Google owned telemetry company)</li>
+  <li>FontAwesome</li>
+  <li>Cloudflare</li>
+  </ul>
+  <p>
+  This happens every time the extension is opened. 
+  </p>
+  <h3>Opt-out telemetry</h3>
+  <p>
+  Dissenter will sent crash reports to Gab automatically. This is on by default and you have to opt-out.
+  </p>
+  <p><i>
+  "When Gab crashes, it creates a report that can be sent to us to help us fix whatever caused the problem. This report contains technical information about your computer system which is typically distinctive. You can choose whether to send us these reports. Even if you have chosen to send reports in the past, you can turn off future reports in settings. Crash reports may contain personal information."
+  </i> <sup><a href="#1">[1]</a></sup>.</p>
+  <h3>Dissenter bypasses it's own tracker filter</h3>
+  <p>
+  Dissenter comes with it's own content blocker called Shields that is meant to block trackers as you browse the web. 
+  This content blocker can block requests made by regular websites, but it does not block content that
+  is loaded by the Dissenter extension. The Dissenter extension makes requests to trackers that would have been
+  blocked by it's own filter- by it's <b><font color=yellow>own standards</font></b> Dissenter makes connections to
+  tracking websites that are not necessary and not private. The spyware site <code>googleads.g.doubleclick.net</code>
+  is correctly blocked by Shields when a normal website tries to access it, but this connection is not blocked when Dissenter accesses it...
+  This is an interesting double standard when it comes to privacy. 
+  </p>
+  <img src="/images/sheilds_blocking.png">
+  <hr>
+  <h2>Inherent issues with Dissenter</h2>
+  <p>
+  Dissenter has the inherent problem that it associates the web pages you have visited with the discussions you are having or trying to have.
+  If you want to check an article's comments on Dissenter, you have to tell Gab that you visited that article. This gives Gab a very good profile 
+  of what sites you visit and what articles you read. Currently alternatives exist to this model that are already in place. For example, you can
+  create a thread on an Imageboard, Reddit-like website, or other web forum format, which sets an archived link to the article as the topic of discussion.
+  This format is much more private because the parties involved have much less information about what their users did. The news website has no 
+  idea who read it's article, because the traffic went to the archival service. The forum that you can freely comment on also doesn't know what
+  articles you looked at or what discussions you tried to have. If we only consider privacy, this method is a somewhat better way of acheiving this goal.
+  </p>
+   <hr>
+  <h2>Sources</h2>
+  <p>
+  <a name="1">1.</a>
+  <a href="https://dissenter.com/about/privacy-policy">Dissenter Privacy Policy</a>
+  <a href="http://web.archive.org/web/20190516235423/https://dissenter.com/about/privacy-policy">[web.archive.org]</a>
+  <a href="http://archive.fo/A6AgI">[archive.is]</a><br>
+  </p>
+  <hr>
+  <p><b>
+  This article was last edited on 5/24/2019
+  </b></p>
+   <p>
+ If you want to edit this article, or contribute your own article(s), email me at <a href="mailto:spyware@aaathats3as.com">spyware@aaathats3as.com</a>. All contributions must be liscenced under the CC0 license to be accepted.
+ </p>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="/images/cc0.png" alt="CC0 Liscence"></a>
+  
+  </body>
+ 
+</html>

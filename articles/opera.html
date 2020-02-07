@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang=”en-us”>
+   <head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Spyware Watchdog</title>
+  </head>
+  <body>
+  <h1>Opera</h1>
+  <p><a href="/articles">Back to catalog</a></p>
+  <img src="/images/opera_logo.png" alt="Images are in the /images folder">
+  <p>
+	A web browser made by Opera Software, using the Blink engine. Has some interesting features like mouse gestures, a built-in ad blocker and VPN. It is the sixth most popular browser. But how does it look like in terms of privacy?
+  </p>
+  <h2>Spyware Level: <font color=red>EXTREMELY HIGH</font></h2>
+  <p>
+  Opera makes 55 unsolicited requests upon its first run. By default, it spies on all your browsing history. Works closely with advertisers and trackers. Is integrated with Facebook, one of the biggest privacy violators in the world. Has Google as the default search engine. Closed source.
+  </p>
+
+ <h3>Geolocation</h3>
+
+	<p>The first request Opera makes is the geolocation request: <img src="/images/opera_geo.png"> which includes your country and the precise timestamp.</p>
+
+	<h3>Homepage request</h3>
+
+	<p>If this is the first time you run Opera, it makes this request: <img src = "/images/opera_firstrun.png"> which will redirect you to their homepage. Then, that homepage will make a bunch of other requests, including to google analytics, facebook (if you're logged in, they now know who you are), and even yandex.ru. The yandex request will set a <b>uniquely identifying</b> cookie.</p>
+
+	<h3>Cxense analytics</h3>
+
+	<p>Later, it will make a few requests to cxense.com. What is Cxense?</p>
+
+	<p><i>We are Cxense. We help hundreds of leading publishers and marketers across the globe transform their raw data into their most valuable resource. Built on the premise of 1:1 analytics and communication; allowing you to both gain unprecedented insight about your individual customers, and to action this insight real-time in all your marketing and sales channels. </i></p>
+
+	<p>This request seems to include a <b>unique ID</b></p>
+
+	<h3>Search engines</h3>
+
+	<p>Opera will also download a list of search engines, which <font color=red><b>you cannot delete</b></font>, only add new ones (at least from the GUI). Apparently, there are some convoluted methods of deleting the search engines, but I haven't confirmed them. <img src = "/images/opera_partner_content.png"> Of course, the default search engine is the anti-privacy <a href="/articles/google.html">Google</a>.</p>
+
+	<h3>OCSP querying</h3>
+
+	<p>Opera will query OCSP servers (ocsp.comodoca.com) to check if SSL certificates expired.
+
+	<h3>Malware / Phishing protection</h3>
+	<p>Anytime you visit a website, Opera will make a request like this: <img src="/images/opera_sitecheck.png"> to check if it is malicious. So it is literally spying on your whole browsing history. Fortunately, this can be turned off.</p>
+
+	<h3>Other requests</h3>
+
+	<p>Other requests include ones to googletagmanager, google ads specific for your country, more requests to yandex (these include your screen size, encoding, and the page you came from), more geolocation, etc. Together, Opera made 55 unsolicited requests in my first run of it. Analyzing them all would probably take a book.</p>
+
+	<h3>Facebook integration</h3>
+
+	<p>Opera has a Facebook chat button on the sidebar, and Facebook is one of the most anti-privacy organizations out there.</p>
+
+	<h3>Opera's "Partners"</h3>
+	<p>Opera has a list of "partners" - those are the websites that are in the Speed Dial by default. If you click on one of them from there, they will know you visited from Opera's Speed Dial. Those requests also include <b>unique user IDs</b>.
+	What happens if you close Opera and run it again? The websites in the Speed Dial will change to the ones from your country! And the same rule about them knowing where you came from applies.</p>
+
+	<h3>Opera is closed source</h3>
+	<p>And it will stay that way. <a href="https://archive.is/YMRla">From their FAQ</a> (the message used to be there in 2017, they must have <b>deleted it somewhere in 2018</b>):</p>
+
+	<p><i>Opera has no current plans to open source its browser.</i></p>
+
+	<p>Therefore, some other spyware might be hiding in there.</p>
+	<hr>
+	<h2>Credits</h2>
+	<p>
+	This article was written by <a href="https://digdeeper.neocities.org/">digdeeper.neocities.org</a><br>
+	Formatting changes were done by the site maintainer.
+  </p>
+<hr>
+    <p><b>
+  This article was last edited on 6/8/2018
+  </b></p>
+    <p><b>
+  This article was created on 11/25/2017
+  </b></p>
+     <p>
+ If you want to edit this article, or contribute your own article(s), email me at <a href="mailto:spyware@aaathats3as.com">spyware@aaathats3as.com</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
+ </p>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="/images/cc0.png" alt="CC0 Liscence"></a>
+  </body>
+</html>

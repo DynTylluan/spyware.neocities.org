@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang=”en-us”>
+   <head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Spyware Watchdog</title>
+  </head>
+  
+  <body>
+   <h1>Mozilla Firefox Spyware Mitigation Guide</h1>
+   <p>
+   <a href="/">Back to Home</a><br>
+   <a href="/articles/firefox.html">Back to Firefox</a>
+   </p>
+   <img src="/images/firefox_logo.png">
+   <p>
+    After configuring Mozilla Firefox according to this guide it's rating changes like so:
+   </p>
+   <h3>Spyware Rating: <font color="orange">High</font> =&gt; <font color="lime">Not Spyware</font></h3>
+   <p>
+   Before beginning this guide it is important that you try and cross-reference it with other guides,
+   to see which prespective on this topic is the best way to do it for you. At the bottom of the page are links 
+   to <a href="#Other_Guides">other guides</a> and projects like this one. You should strongly consider this as <b><font color=orange>
+   you may find other guides more useful than this one.</font></b> 
+   </p>
+   <p>
+   Mozilla Firefox has a huge amount of spyware features, but they all can be disabled by using predefined profile settings.
+   To do this you need to create new Firefox profile:
+   <ul>
+    <li> Run <code>firefox -no-remote -ProfileManager</code> </li>
+    <li> Create a new profile </li>
+    <li> Exit. </li>
+   </ul>
+   Then open your Firefox user profiles directory. It should be located at:
+   
+  <table border background="/images/bg.jpg" style="width:800px">
+  <tr>
+   <th> OS</th>
+   <th> Path</th>
+  </tr>
+  <tr>
+   <td> Windows 7</td>
+   <td><code> %APPDATA%\Mozilla\Firefox\Profiles\XXXXXXXX.your_profile_name</code></td>
+  </tr>
+  <tr>
+   <td> Linux </td>
+   <td><code> ~/.mozilla/firefox/XXXXXXXX.your_profile_name</code></td>
+  </tr>
+  <tr>
+   <td> OS X</td>
+   <td><code> ~/Library/Application Support/Firefox/Profiles/XXXXXXXX.your_profile_name</code></td>
+  </tr>
+  <tr>
+   <td> Android</td>
+   <td><code> /data/data/org.mozilla.firefox/files/mozilla/XXXXXXXX.your_profile_name</code></td>
+  </tr>
+  <tr>
+   <td> Sailfish OS + Alien Dalvik</td>
+   <td><code> /opt/alien/data/data/org.mozilla.firefox/files/mozilla/XXXXXXXX.your_profile_name</code></td>
+  </tr>
+  <tr>
+   <td> Windows (portable)</td>
+   <td><code> [firefox directory]\Data\profile\</code></td>
+  </tr>
+  </table>
+  </p>
+  <p>
+  Delete everything from the new profile and create in this folder "user.js" file with such content:<br>
+   <code>
+   user_pref("network.connectivity-service.enabled", false);<br>
+	user_pref("browser.startup.homepage", "about:blank");<br>
+	user_pref("browser.newtabpage.enabled", false);<br>
+	user_pref("browser.newtab.preload", false);<br>
+	user_pref("browser.search.geoip.url", "");<br>
+	user_pref("app.update.enabled", false);<br>
+	user_pref("extensions.update.enabled", false);<br>
+	user_pref("app.update.auto", false);<br>
+	user_pref("extensions.update.autoUpdateDefault", false);<br>
+	user_pref("app.update.service.enabled", false);<br>
+	user_pref("app.update.staging.enabled", false);<br>
+	user_pref("app.update.silent", false);<br>
+	user_pref("extensions.getAddons.cache.enabled", false);<br>
+	user_pref("lightweightThemes.update.enabled", false);<br>
+	user_pref("browser.search.update", false);<br>
+	user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);<br>
+	user_pref("dom.ipc.plugins.reportCrashURL", false);<br>
+	user_pref("extensions.getAddons.showPane", false); <br>
+	user_pref("extensions.webservice.discoverURL", "");<br>
+	user_pref("toolkit.telemetry.unified", false);<br>
+	user_pref("toolkit.telemetry.enabled", false); <br>
+	user_pref("toolkit.telemetry.server", "data:,");<br>
+	user_pref("toolkit.telemetry.archive.enabled", false);<br>
+	user_pref("toolkit.telemetry.cachedClientID", "");<br>
+	user_pref("toolkit.telemetry.newProfilePing.enabled", false); <br>
+	user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); <br>
+	user_pref("toolkit.telemetry.updatePing.enabled", false); <br>
+	user_pref("toolkit.telemetry.bhrPing.enabled", false); <br>
+	user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); <br>
+	user_pref("toolkit.telemetry.hybridContent.enabled", false); <br>
+	user_pref("datareporting.healthreport.uploadEnabled", false);<br>
+	user_pref("datareporting.policy.dataSubmissionEnabled", false);<br>
+	user_pref("breakpad.reportURL", "");<br>
+	user_pref("browser.tabs.crashReporting.sendReport", false);<br>
+	user_pref("browser.crashReports.unsubmittedCheck.enabled", false); <br>
+	user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false); <br>
+	user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); <br>
+	user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");<br>
+	user_pref("browser.chrome.errorReporter.enabled", false);<br>
+	user_pref("browser.chrome.errorReporter.submitUrl", "");<br>
+	user_pref("extensions.blocklist.enabled", false);<br>
+	user_pref("extensions.blocklist.url", "");<br>
+	user_pref("services.blocklist.update_enabled", false);<br>
+	user_pref("services.blocklist.onecrl.collection", ""); <br>
+	user_pref("services.blocklist.addons.collection", "");<br>
+	user_pref("services.blocklist.plugins.collection", "");<br>
+	user_pref("services.blocklist.gfx.collection", "");<br>
+	user_pref("browser.safebrowsing.malware.enabled", false);<br>
+	user_pref("browser.safebrowsing.phishing.enabled", false); <br>
+	user_pref("browser.safebrowsing.downloads.enabled", false);<br>
+	user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);<br>
+	user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);<br>
+	user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false); <br>
+	user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false); <br>
+	user_pref("browser.safebrowsing.provider.google.updateURL", "");<br>
+	user_pref("browser.safebrowsing.provider.google.gethashURL", "");<br>
+	user_pref("browser.safebrowsing.provider.google4.updateURL", ""); <br>
+	user_pref("browser.safebrowsing.provider.google4.gethashURL", "");<br>
+	user_pref("browser.safebrowsing.downloads.remote.enabled", false);<br>
+	user_pref("browser.safebrowsing.downloads.remote.url", "");<br>
+	user_pref("browser.safebrowsing.provider.google.reportURL", "");<br>
+	user_pref("browser.safebrowsing.reportPhishURL", "");<br>
+	user_pref("browser.safebrowsing.provider.google4.reportURL", ""); <br>
+	user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", ""); <br>
+	user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", ""); <br>
+	user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", ""); <br>
+	user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", ""); <br>
+	user_pref("browser.safebrowsing.allowOverride", false);<br>
+	user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);<br>
+	user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");<br>
+	user_pref("browser.safebrowsing.blockedURIs.enabled", false);<br>
+	user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");<br>
+	user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");<br>
+	user_pref("network.allow-experiments", false);<br>
+	user_pref("app.normandy.enabled", false);<br>
+	user_pref("app.normandy.api_url", "");<br>
+	user_pref("app.shield.optoutstudies.enabled", false);<br>
+	user_pref("shield.savant.enabled", false); <br>
+	user_pref("extensions.systemAddon.update.enabled", false); <br>
+	user_pref("extensions.systemAddon.update.url", "");<br>
+	user_pref("browser.ping-centre.telemetry", false);<br>
+	user_pref("extensions.pocket.enabled", false);<br>
+	user_pref("browser.library.activity-stream.enabled", false); <br>
+	user_pref("extensions.screenshots.disabled", true);<br>
+	user_pref("extensions.screenshots.upload-disabled", true); <br>
+	user_pref("browser.onboarding.enabled", false);<br>
+	user_pref("extensions.formautofill.addresses.enabled", false);<br>
+	user_pref("extensions.formautofill.available", "off");<br>
+	user_pref("extensions.formautofill.creditCards.enabled", false); <br>
+	user_pref("extensions.formautofill.heuristics.enabled", false);<br>
+	user_pref("extensions.webcompat-reporter.enabled", false);<br>
+	user_pref("network.prefetch-next", false);<br>
+	user_pref("network.dns.disablePrefetch", true);<br>
+	user_pref("network.dns.disablePrefetchFromHTTPS", true);<br>
+	user_pref("network.predictor.enabled", false);<br>
+	user_pref("captivedetect.canonicalURL", "");<br>
+	user_pref("network.captive-portal-service.enabled", false);<br>
+	user_pref("browser.send_pings", false);<br>
+	user_pref("browser.send_pings.require_same_host", true);<br>
+	user_pref("network.protocol-handler.external.ms-windows-store", false);<br>
+	user_pref("network.predictor.enable-prefetch", false);<br>
+	user_pref("network.trr.mode", 0);<br>
+	user_pref("network.trr.bootstrapAddress", "");<br>
+	user_pref("network.trr.uri", "");<br>
+	user_pref("network.file.disable_unc_paths", true);<br>
+	user_pref("browser.search.suggest.enabled", false);<br>
+	user_pref("browser.urlbar.suggest.searches", false);<br>
+	user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);<br>
+	user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);<br>
+	user_pref("browser.urlbar.speculativeConnect.enabled", false);<br>
+	user_pref("security.ssl.errorReporting.automatic", false);<br>
+	user_pref("security.ssl.errorReporting.enabled", false);<br>
+	user_pref("security.ssl.errorReporting.url", "");<br>
+	user_pref("dom.push.enabled", false);<br>
+	user_pref("dom.push.connection.enabled", false);<br>
+	user_pref("dom.push.serverURL", "");<br>
+	user_pref("dom.push.userAgentID", "");<br>
+	user_pref("beacon.enabled", false);<br>
+	user_pref("browser.uitour.enabled", false);<br>
+	user_pref("browser.uitour.url", "");<br>
+	user_pref("permissions.manager.defaultsUrl", "");<br>
+	user_pref("webchannel.allowObject.urlWhitelist", ""); <br>
+	user_pref("browser.startup.homepage_override.mstone", "ignore"); <br>
+	user_pref("startup.homepage_welcome_url", "");<br>
+	user_pref("startup.homepage_welcome_url.additional", "");<br>
+	user_pref("startup.homepage_override_url", "");<br>
+	user_pref("media.gmp-gmpopenh264.autoupdate", false);<br>
+  user_pref("browser.shell.shortcutFavicons", false);<br>
+  user_pref("media.gmp-eme-adobe.autoupdate", false);<br>
+  user_pref("media.gmp-manager.url", "data:text/plain,");<br>
+  user_pref("media.gmp-manager.url.override", "data:text/plain,");<br>
+  user_pref("media.gmp-manager.updateEnabled", false);<br>
+  user_pref("media.gmp-widevinecdm.autoupdate", false);<br>
+  user_pref("devtools.webide.autoinstallADBHelper", false);<br>
+   </code>
+   </p>
+  <p>
+  If you want to disable OCSP as well, you should also add this to your user.js. These settings are seperated 
+  because while OCSP is a privacy breach it is also a security feature, and so whether to have it on or off should
+  be thought about before continuing. You can read about OCSP here: <a href="https://scotthelme.co.uk/revocation-is-broken/">
+  https://scotthelme.co.uk/revocation-is-broken/</a> <a href="http://web.archive.org/web/20180831224302/https://scotthelme.co.uk/revocation-is-broken/">
+  [web.archive.org]</a> . The problem is, that OCSP is a form of phoning home, and you might not want to make those requests. 
+  </p>
+  <code>
+  user_pref("security.ssl.enable_ocsp_stapling", false);<br>
+  user_pref("security.OCSP.enabled", 0);<br>
+  user_pref("security.OCSP.require", false);<br>
+  </code>
+  <p>
+  With this installation method, if you change any of user.js settings through about:config or Firefox preferences dialogs, 
+  they will be reset to the user.js defined values after you restart Firefox. 
+  This makes sure they're always back to secure defaults when starting the browser.
+  At the end you need to delete several default plugins in Firefox directory at <code>\Mozilla Firefox\browser\features\</code> that can violate privacy:
+    </p>
+  <ul>
+  <li> firefox@getpocket.com.xpi - Pocket </li>
+  <li> followonsearch@mozilla.com.xpi - Follow On Search  </li>
+  <li> activity-stream@mozilla.org.xpi - Activity Stream </li>
+  <li> screenshots@mozilla.org.xpi - Screenshots </li>
+  <li> onboarding@mozilla.org.xpi - Onboarding </li>
+  <li> formautofill@mozilla.org.xpi - Autofill </li>
+  <li> webcompat@mozilla.org.xpi - Web Compatibility Reporter </li>
+  </ul>
+
+  <p>
+  It is highly recommended to also check other user.js template settings from ongoing <i>"ghacks-user.js project"</i><sup><a href="#1">[1]</a></sup> for further hardening Firefox privacy, security and anti-fingerprinting.
+</P>
+<hr>
+<a name="Other_Guides"></a>
+<h2>Other Guides</h2>
+<p>
+These are other guides and projects to help protect your privacy using Firefox. It's important to look at 
+other prespectives instead of reading JUST this guide. So you should be comparing all of the
+guides that you can find to hear everyone's ideas about how this should be done, before you
+finish setting Firefox up. Librefox is less of a guide and more of a project and series of tools and settings 
+you can download to help you make Firefox private. 
+</p>
+  <a href="https://www.privacytools.io/#about_config">Firefox: Privacy Related "about:config" Tweaks</a>
+    <a href="http://web.archive.org/web/20181031171622/https://www.privacytools.io/">[web.archive.org]</a>
+  <a href="http://archive.fo/SEFXb">[archive.is]</a><br>
+    <a href="https://restoreprivacy.com/firefox-privacy/">Firefox Privacy – The Complete How-To Guide</a>
+    <a href="https://web.archive.org/web/20181015023738/https://restoreprivacy.com/firefox-privacy/">[web.archive.org]</a>
+  <a href="http://archive.is/20180414165038/https://restoreprivacy.com/firefox-privacy/">[archive.is]</a><br>
+      <a href=" https://librefox.org">Librefox: Firefox with privacy enhancements</a>
+    <a href="http://web.archive.org/web/20181224083906/https://github.com/intika/Librefox">[web.archive.org]</a>
+  <a href="http://archive.is/Nb6oz">[archive.is]</a><br>
+ <hr>
+  <h2>Sources</h2>
+  <p> 
+ <p>
+  <a name="1">1.</a>
+  <a href="https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">ghacksuserjs/ghacks-user.js</a>
+  <a href="http://web.archive.org/web/20181015031306/https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">[web.archive.org]</a>
+  <a href="http://archive.is/GXIBO">[archive.is]</a>
+  <br>
+  
+  </p>
+    <hr>
+  <p><b>
+  This guide was created on 10/8/2018<br>
+  This guide was last updated on 12/26/2018
+  </b></p>
+   <p>
+ If you want to edit this article, or contribute your own article(s), email me at <a href="mailto:spyware@aaathats3as.com">spyware@aaathats3as.com</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
+ </p>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="/images/cc0.png" alt="CC0 Liscence"></a>
+  
+</body></html>

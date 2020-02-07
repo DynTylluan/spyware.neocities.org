@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang=”en-us”>
+   <head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Spyware Watchdog</title>
+  </head>
+  <body>
+  <h1>Pale Moon</h1>
+  <p><a href="/articles">Back to catalog</a><br>
+  <a href="/guides/palemoon.html">Mitigation Guide</a></p>
+  <img src="/images/palemoon_logo.png" alt="Pale Moon logo">
+  <p>
+  Pale Moon is a fork of an old <a href="/articles/firefox.html">Firefox</a> version, before the user interface change that put off many people. But is it a worthy alternative to FF in terms of privacy? Versions 27.7.2 and 28.1.0 were both tested for this article.
+  </p>
+  <p>
+  <h2>Spyware Level: <font color=yellow>Medium</font></h2>
+  After following the <a href="/guides/palemoon.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>. 
+  </p>
+   <h3><font color=red>This article talks about the older behaviors of the spyware services that Pale Moon was connecting too, which have changed. This article is oudated.</font></h3>
+  <p>
+  Connects to a MASSIVE amount of trackers, and these requests can <b>only be avoided on subsequent runs</b>. Has geolocation, search suggestions, and auto-updates. Sends SSL certificates from the sites you visit. Together made 169 unsolicited requests upon my first run of it, but again, most of them can be avoided on subsequent runs. Pale Moon, in the end, has less privacy issues than Firefox, aside from its terrible start page, so the rating is Medium.
+  </p>
+  <h3>First run</h3>
+  <p>
+  If this is your first run of Pale Moon, it will automatically connect to its first run webpage (http://palemoon.org/firstrun.html), which in turn will make a bunch of requests for location-aware Google Ads.
+  </p>
+  <h3>Pale Moon's start page</h3>
+  <p>
+  By default, Pale Moon's start page is set to https://palemoon.start.me, and it will automatically make a connection to it upon its first run. That page will then (again) make a bunch of requests for various trackers - here is a list:
+  <ul>
+  <li>Google Ads (location-aware)</li>
+  <li>Facebook (so if you're logged in, they know who you are)</li>
+  <li>Quantserve ("Quantcast is an American technology company, founded in 2006, that specializes in audience measurement and real-time advertising.")</li>
+  <li>Amazon Ads</li>
+  <li>Criteo ("Criteo is a personalized retargeting company that works with Internet retailers to serve personalized online display advertisements to consumers who have previously visited the advertiser's website.")</li>
+  <li>Scorecardresearch ("ScorecardResearch conducts research by collecting Internet web browsing data and then uses that data to help show how people use the Internet")</li>
+  <li>HubSpot ("HubSpot is an inbound marketing and sales platform that helps companies attract visitors, convert leads, and close customers.")</li>
+  <li>Alexa Metrics</li>
+  <li>Twitter Ads and Analytics</li>
+  <li>A few others</li>
+  </ul>
+  <p>
+  All these requests contain the Pale Moon start page referrer, so they know where you came from. They also all set uniquely idenfifying cookies, so if you come across another website with these trackers included, they will know you're the person from the Pale Moon's start page, and could start building a profile from your browsing habits. You can easily delete the cookies and change the start page so that it never appears again, but <b>there is no way to avoid the requests being made upon Pale Moon's first run.</b>
+
+  </p>
+  <h3>Blocking privacy-enhancing addons</h3>
+  <p>
+Pale Moon blocks privacy enhancing addons like noscript, citing this rationale for 
+blocking such an imporant addon: <i>"NoScript is known to cause severe issues with a large (and growing) number of websites. Unless finely tuned for every website visited,
+NoScript will cause display issues and functional issues. "</i><sup><a href="#1">[1]</a></sup> So, it looks like Pale Moon's developers are actively working against the intrests of its
+privacy-concerned users, and would rather allow websites to execute malicious ECMAScript programs on unsuspecting user's machines, than to be blamed for a broken website.
+<b><font color=yellow>To disable this blocklist, set extensions.blocklist.enabled to false in about:config.</font></b>
+  </p>
+  <h3>Auto-updates</h3>
+  <p>
+  Pale Moon will automatically update itself, addons and search engines, as well as its blocklist.xml file with the addons it considers "malicious". Some of these can be turned off from the GUI, and some only from about:config.
+  </p>
+
+  <h3>Search Suggestions</h3>
+  <p>The default search engine is the privacy-respecting DuckDuckGo, however search suggestions are enabled by default, which could send a request for every letter you've typed, all while you think it stays in-browser until you press Enter. Can be turned off by right-clicking the search bar.
+  </p>
+
+  <h3>Geolocation</h3>
+  <p>Pale Moon connects to Mozilla's geolocation services.</p>
+
+  <h3>OCSP querying</h3>
+  <p>Will automatically check every site's SSL certificate to see if it is valid, which necessitates sending it to a third party. Can be turned off from the GUI.</p>
+  <hr>
+  <h2>Sources</h2>
+  <p>
+  
+  <a name="1">1.</a>
+  <a href="http://blocklist.palemoon.org/info/?id=pm112">This Add-on to your browser has been blocked or disabled.</a>
+  <a href="https://web.archive.org/web/20180514135250/http://blocklist.palemoon.org/info/?id=pm112">[web.archive.org]</a>
+  <a href="http://archive.is/EiraE">[archive.is]</a>
+  <br>
+  
+  </p>
+	<hr>
+	<h2>Credits</h2>
+	<p>
+	This article was written by <a href="https://digdeeper.neocities.org/">digdeeper.neocities.org</a><br>
+	Formatting changes and some sections were written by the site maintainer.
+  </p>
+  <hr>
+    <p><b>
+  This article was created on 6/7/2018<br>
+  This article was last updated on 10/14/2018
+  </b></p>
+     <p>
+ If you want to edit this article, or contribute your own article(s), email me at <a href="mailto:spyware@aaathats3as.com">spyware@aaathats3as.com</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
+ </p>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="/images/cc0.png" alt="CC0 Liscence"></a>
+  </body>
+</html>

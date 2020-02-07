@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang=”en-us”>
+   <head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Spyware Watchdog</title>
+  </head>
+  <body>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <h1>PowerISO</h1>
+  <p><a href="/articles">Back to catalog</a></p>
+  <img src="/images/poweriso_logo.png" alt="PowerISO logo">
+  <p>
+PowerISO is a CD / DVD / BD image file processing tool.
+  </p>
+  <h2>Spyware Level: <font color="yellow">Medium</font></h2>
+  <p>
+The PowerISO software itself, after you have installed it, does not seem to have a lot of serious privacy problems and would probably be listed
+as "Not Spyware" or "Low". However, downloading and installing this software requires careful attention because it attempts to install serveral spyware 
+programs and otherwise violates your privacy at every step of the installation process. So it's received this higher rating because of how bad this
+process is for user privacy. Also, keep in mind that this is for the free version of the software and the paid version might be slightly better for 
+user privacy, however because there are so many problems with the free version you would have to do your own tests to make sure. 
+  </p>
+  <p>
+To talk more specifically about the software itself, it will check off "automatically check for updates" by default in the installer which is bad, but you can uncheck it.
+When I actually ran it after installing, it did not make any unsolicited requests so it didn't have any problems. When I asked it to check for updates,
+it used HTTP to talk to some server. HTTP is a little excessive and not good for privacy. But at least it doesn't phone home or anything, which is really 
+not something I expected after seeing the absolute disregard for user privacy when trying to install the program. 
+  </p>
+  <p>
+Microsoft Network Monitor 3.4, ProcMon, and NoScript were used to check this program and it's installation process for spyware.
+  </p>
+  <h3>Unsolicited connections in installation process</h3>
+  <p>
+When you try to download this program off of the developer's website (<a href="http://www.poweriso.com/download.php">http://www.poweriso.com/download.php</a>), the download link,
+which appears to be a link to: <code>http://www.fettcedob-nero.com/vf6o1o5/PowerISO7-x64.exe</code>, is actually a redirect to a website that tries to run a third
+party script (spyware) on your browser.
+  </p>
+  <img src="/images/piso_scripts.png" alt="PowerISO install button running scripts- caught by noscript.">
+  <h3>Attempting to install a chrome extenison</h3>
+  <p>
+I could not manage to download this program with a Firefox-based browser so I used a Chrome-Based browser to download it. Once I had enabled JavaScript and executed all of the 
+spyware involved, it attempted to get me to install this chrome extension:
+  </p>
+  <img src="/images/piso_extension.png" alt="PowerISO attempt to install a chrome extension">
+  <p>
+While this is not a review of search manager, it's worth noting that this extension is known adware at least, and who knows what else it does. Any searches about this 
+extension should explain this. But at the very least, assuming that you didn't install any spyware yet, you at least have the PowerISO installer... 
+  </p>
+  <h3>Attempts to Install spyware in the PowerISO installer</h3>
+  <p>
+  Once you run the PowerISO installer, it will attempt to install the following progams on your computer:
+  </p>
+  <img src="/images/PowerISO7-x64_1.png" alt="PowerISO attempt to install spyware 1">
+   <img src="/images/PowerISO7-x64_2.png" alt="PowerISO attempt to install spyware 2">
+  <p>
+  Which both look very shady. <a href="/articles/cdex.html">CDex</a> also seems to be using this same tactic and installer software.<br>
+  Now, to top it all off, the PowerISO installer will also phone home to some Amazon Servers:
+  </p>
+  <img src="/images/piso_installer_phone_home.png" alt="PowerISO installer phoning home">
+  <hr>
+  <p><b>
+  This article was created on 10/7/2018
+  </b></p>
+   <p>
+ If you want to edit this article, or contribute your own article(s), email me at <a href="mailto:spyware@aaathats3as.com">spyware@aaathats3as.com</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
+ </p>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="/images/cc0.png" alt="CC0 Liscence"></a>
+  
+  </body>
+ 
+</html>

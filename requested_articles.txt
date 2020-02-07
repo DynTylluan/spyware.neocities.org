@@ -1,0 +1,90 @@
+This text file is so that I can list all of the articles that
+people have requested to be made, so that I don't forget about
+anyone's request. If you are interested in writing articles
+for the site and need help choosing something to review, this
+list is a good place to start.
+
+1password - made a "stub" article: 
+https://spyware.neocities.org/articles/1password.html
+
+Ask.com services (excite, myway) - no progress has been made
+
+Merge information from http://archive.is/baCzK and https://www.ghacks.net/2016/02/08/steam-uses-insecure-out-of-date-chromium-browser/ 
+to the steam article, also run it through MITMproxy to find what requests it makes. - no progress has been made 
+
+Create a new class of articles about browser addons, the following explicitly:
+NoScript (allegedly phones home? needs a test to see if that's true or not...)
+Stylish (definite spyware)
+Ghostery
+
+No progress made on any of those ^
+
+uTorrent - stub article: https://spyware.neocities.org/articles/utorrent.html
+
+Write about Razor mouse products:
+Useful links:
+https://www.razer.com/legal/privacy-policy
+http://wp.xin.at/archives/1438 
+For mitigation guides there's an easy way to run any program without letting it connect to the internet using scripts through iptables and there's always the --net=none option with firejail.
+https://serverfault.com/questions/550276/how-to-block-internet-access-to-certain-programs-on-linux I use 'ni' instead of 'no-internet'.
+
+No progress has been made ^
+
+Write about the oculus rift:
+https://www.roadtovr.com/oculus-vr-privacy-policy-serves-needs-facebook-not-users/
+https://www.roadtovr.com/error-rendered-many-rifts-useless-simple-workaround/
+
+No Progress ^
+
+Write about privacy badger: https://www.eff.org/privacybadger#faq-Why-does-my-browser-connect-to-fastly.com-IP-addresses-on-startup-after-installing-Privacy-Badger
+
+Write about lenovo bundling spyware:
+https://www.makeuseof.com/tag/security-failings-demonstrate-avoid-lenovo/
+
+Write about HP bundling spyware:
+https://www.extremetech.com/computing/259605-hp-caught-installing-spyware-windows-10-systems-without-permission-notification
+https://www.engadget.com/2017/11/28/hp-quietly-installs-system-slowing-spyware-on-its-pcs/
+
+Write about Dell bundling spyware:
+https://www.techdirt.com/articles/20050530/2333212.shtml
+https://arstechnica.com/information-technology/2015/11/dell-does-superfish-ships-pcs-with-self-signed-root-certificates/
+
+Write about TOSHIBA bundling spyware:
+https://www.shouldiremoveit.com/TOSHIBA-Service-Station-5383-program.aspx
+
+Write about Acer bundling spyware:
+https://www.pcmag.com/article2/0,2817,2477704,00.asp
+
+Rate CPU's for spyware:
+https://libreboot.org/faq.html#amd
+https://libreboot.org/faq.html#intel
+
+Some progress made with that. See AMD CPU article. Still need to finish that.
+
+Write about visual studio- no progress
+write about geary - no progress
+
+Add this tag to the top of everything:
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+Ublock Origin - No progress (phoning home? check privacy policy)
+
+> please add to overview browsers like Seamonkey, Srware Iron and Sphere
+> browser: https://sphere.tenebris.cc <https://sphere.tenebris.cc/>
+
+Did Iron and Sphere
+Didn't do Seamonkey yet....
+
+Write about the Bromite Android Browser
+
+-I don't have an android phone. So someone else will have to write it, I don't have the means to do a reveiw of it. 
+
+write articles about alternatives to Discord:
+
+Signal
+XMPP
+Mumble, etc.
+
+No progress has been made yet. 
+
+Write an article about Facebook.

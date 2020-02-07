@@ -1,0 +1,15 @@
+  a:link   {color:coral; background-color:transparent; text-decoration:underline}
+  a:visited   {color:coral; background-color:transparent; text-decoration:underline}
+  a:hover   {color:red; background-color:transparent; text-decoration:underline}
+  sup:hover   {text-decoration:none}
+  p {
+    max-width: 800px;
+  
+  }
+  li {
+    max-width: 800px;
+  }
+  body{ 
+    background: url("/images/blackbg.jpg"); 
+    color: white;
+  }
