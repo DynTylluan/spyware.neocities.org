@@ -11,7 +11,7 @@
   <a href="../articles/index.html">Back to catalog</a><br>
   <a href="/guides/firefox.html">Mitigation Guide</a>
   </p>
-  <img src../images/firefox_logo.png" alt="Firefox logo">
+  <img src="../images/firefox_logo.png" alt="Firefox logo">
   <p>
   Mozilla Firefox is one of the most popular and longest existing
   browsers.  Its developers have earned it a reputation for being a "privacy and security-based browser, respecting the user" - but is it justified, or just marketing? In fact, over the years they have made several anti-privacy (and generally anti-user) decisions, but this article will focus exclusively on spying. Version tested: 52.5.0, with the default settings. Program used for testing requests: Mitmproxy.
@@ -53,7 +53,7 @@ The best takeaway to this is that Mozilla wants to pretend that including spywar
   </p>
   <h3>"Safe" Browsing?</h3>
   <p>
-  Allegedly used to protect you from "phishing" websites, but in the end, it makes a bunch of requests to Google every 30 minutes (according to Mozilla), including a POST request with your Firefox version and a unique, persistent, hidden cookie. Since whenever the current URL matches an entry in the cached local blacklist a request is made to Google servers, ostensibly to test whether that website is still on the master online blacklist, it allows Google to monitor specific websites transparently to the user by putting the URLs of interest on the local but not the online blacklist. <br><img src../images/safe_browsing.png"><b><font color=orange>Can be disabled ONLY in about:config.</font></b>
+  Allegedly used to protect you from "phishing" websites, but in the end, it makes a bunch of requests to Google every 30 minutes (according to Mozilla), including a POST request with your Firefox version and a unique, persistent, hidden cookie. Since whenever the current URL matches an entry in the cached local blacklist a request is made to Google servers, ostensibly to test whether that website is still on the master online blacklist, it allows Google to monitor specific websites transparently to the user by putting the URLs of interest on the local but not the online blacklist. <br><img src="../images/safe_browsing.png"><b><font color=orange>Can be disabled ONLY in about:config.</font></b>
   </p>
 
   <h3>Firefox Health Report</h3>
@@ -120,7 +120,7 @@ The best takeaway to this is that Mozilla wants to pretend that including spywar
   <h3>Other issues</h3>
   <p>
   Firefox also sometimes makes a request to "self-repair.mozilla.org" which looks like this:
-  <br><img src../images/self_repair.png">
+  <br><img src="../images/self_repair.png">
   It includes "optimizelyEndUserID" which probably means it
   <b>uniquely identifies you. </b><b><font color=orange>Can be disabled ONLY in about:config.</font></b><sup><a href="#7">[7]</a></sup><br>
   It also makes this request every time you open the default home page:
@@ -263,6 +263,6 @@ they should be set too:
      <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src../images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
   </body>
 </html>

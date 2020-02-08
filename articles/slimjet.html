@@ -8,7 +8,7 @@
   <body>
   <h1>Slimjet</h1>
   <p><a href="../articles/index.html">Back to catalog</a></p>
-  <img src../images/slimjet_logo.png" alt="slimjet Logo">
+  <img src="../images/slimjet_logo.png" alt="slimjet Logo">
   <p>
 Slimjet is a clone of the SlimBrowser web browser from FlashPeak that uses the Chromium as a base.
   </p>
@@ -22,7 +22,7 @@ services. Slimjet claims to be concerned about privacy but ultimately retains ju
   Even though on its site, FlashPeak claims that: <i>"Slimjet doesn't send any usage data back to Google like Chrome."</i><sup><a href="#1">[1]</a></sup>
   the moment I turn it on with MITMproxy running, I am greeted with this:
   </p>
-  <img src../images/sj_google_requests.png" alt="Slimjet sending requests to all sorts of google services">
+  <img src="../images/sj_google_requests.png" alt="Slimjet sending requests to all sorts of google services">
   <p>
   So, this claim just isn't true at all. It's still got a lot of Google's spyware in it, if it's still connecting to so many Google services. What's kind of surprising is that it didn't seem connect to any servers explicitly operated by FlashPeak when I was testing it. Even though, it claims to collect information about it's users for internal usage.<sup><a href="#2">[2]</a></sup> So, it must be phoning home as well as sending information to Google. Maybe it sends information through some kind of Google web service?
   </p>
@@ -32,7 +32,7 @@ services. Slimjet claims to be concerned about privacy but ultimately retains ju
   <i>"served from fpseek.com"</i> which means that not only are you exposing your information to Bing, this is also being logged by fpseek, which
   has it's own privacy policy<sup><a href="#3">[3]</a></sup>. Whenever you search something using the default search engine, requests are sent to both Bing and fpseek.
   </p>
-  <img src../images/fpseek.png" alt="Fpseek connection">
+  <img src="../images/fpseek.png" alt="Fpseek connection">
   <p>
   So, not only are you sharing everything with Microsoft, now there is another company looking at all of your searches. This is a uniquely bad
   default search engine because of how much information it leaks out. Fpseek itself is a company that seems to be tracking how users interact
@@ -55,14 +55,14 @@ services. Slimjet claims to be concerned about privacy but ultimately retains ju
   When you start Slimjet, it will begin using the BITS (Background Intelligent Transfer Service) which is designed to use spare bandwidth to transfer
   updates and other information. These requests are sent between Slimjet and a Google server, with confirmation from Process Monitor and MITMproxy:
   </p>
-  <img src../images/sj_google_BITS.png" alt="Bits1">
-  <img src../images/sj_google_BITS_2.png" alt="Bits2">
-  <img src../images/sj_google_BITS_3.png" alt="Bits3">
+  <img src="../images/sj_google_BITS.png" alt="Bits1">
+  <img src="../images/sj_google_BITS_2.png" alt="Bits2">
+  <img src="../images/sj_google_BITS_3.png" alt="Bits3">
   <p>
   Personal information was censored from these images. It's unclear what this is for specifically but this is probably being done to implement the
   "CLOUD SYNC OF BOOKMARK & DATA" that is advertised on Slimjet's website. This is probably how they upload all of your search history and bookmarks into their cloud services, which seem to be provided by Google. There are no other features or requests made that would require large amounts of data to be sent too an external server in this way, so by process of elimination this is my theory as to how it's implemented.
   </p>
-  <img src../images/sj_cloud.png" alt="cloud sync feature">
+  <img src="../images/sj_cloud.png" alt="cloud sync feature">
   <p>
   Obviously you can tell that any kind of service to sync your search history "in the cloud" is a privacy nightmare. Now both Google and Slimjet have access to your search history...
   </p>
@@ -88,6 +88,6 @@ services. Slimjet claims to be concerned about privacy but ultimately retains ju
    <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src../images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
   </body>
 </html>
