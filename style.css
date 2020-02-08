@@ -1,15 +1,26 @@
-  a:link   {color:coral; background-color:transparent; text-decoration:underline}
-  a:visited   {color:coral; background-color:transparent; text-decoration:underline}
-  a:hover   {color:red; background-color:transparent; text-decoration:underline}
-  sup:hover   {text-decoration:none}
-  p {
+a:link {color:coral; background-color:transparent; text-decoration:underline}
+a:visited {color:coral; background-color:transparent; text-decoration:underline}
+a:hover {color:red; background-color:transparent; text-decoration:underline}
+sup:hover {text-decoration:none}
+p {
     max-width: 800px;
-  
-  }
-  li {
+}
+li {
     max-width: 800px;
-  }
-  body{ 
-    background: url("/images/blackbg.jpg"); 
+}
+body {
+    background: url("images/blackbg.jpg");
     color: white;
-  }
+}
+.notice {
+    color: coral;
+    margin-bottom: -0.5em;
+    margin-top: -0.1em;
+}
+.border {
+    display: inline-block;
+    border: 2px solid coral;
+    border-radius: 10px;
+    padding: 1em;
+    background: black;
+}

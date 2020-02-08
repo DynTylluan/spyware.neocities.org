@@ -1,21 +1,21 @@
 <!DOCTYPE HTML>
 <html lang=”en-us”>
    <head>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <title>Spyware Watchdog</title>
   </head>
   <body>
   <h1>Iridium Browser</h1>
-  <p><a href="/articles">Back to catalog</a><br>
+  <p><a href="../articles/index.html">Back to catalog</a><br>
   <a href="/guides/iridium.html">Mitigation Guide</a></p>
-  <img src="/images/iridium_logo.jpg" alt="Iridium Logo">
+  <img src../images/iridium_logo.jpg" alt="Iridium Logo">
   <p>
  Iridium is a privacy-based fork of Google Chrome. From their website: "All modifications enhance the privacy of the user and make sure that the latest and best secure technologies are used. Automatic transmission of partial queries, keywords and metrics to central services is prevented and only occurs with the approval of the user." Unlike other browsers of its kind, this one is fully featured (has all the addons that are available for Chrome), and so is recommended for everyday usage.
   </p>
   <p>
   <h2>Spyware Level: <font color=yellowgreen>Low</font></h2>
-  After following the <a href="/guides/iridium.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>. 
+  After following the <a href="/guides/iridium.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>.
   </p>
   <p>
  The only unsolicited request is for the Google SafeBrowsing feature, and can be easily turned off from the Preferences menu. Additionally, privacy enhancements unrelated to Google are added, such as blocking third party cookies by default, and deleting local storage on close. Full list of the differences between Chrome and Iridium can be found <a href="https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">here</a><sup><a href="#1">[1]</a></sup>. However this list is <b><font color=red>not accurate</font></b> and each claim it makes should be verified by the user.
@@ -24,50 +24,50 @@
   <p>
   Iridium browser will make these requests to Google to update a blocklist of websites for its SafeBrowsing feature:
   </p>
-  <img src="/images/iridium_request.png" alt="Iridium safebrowsing requests">
+  <img src../images/iridium_request.png" alt="Iridium safebrowsing requests">
   <p>
   Iridium browser will also download this blocklist from a mirror maintained by the developers. Since the web browser is
-  awalys "phoning home" to either google or the developers servers, this is a form of spyware that can be used to monitor 
-  usage of the program, as well as collection of the User-Agent's of the program's users. (See the <a href="/articles/http.html">HTTP article</a>)
-  This request is made 5 miniutes after the program is started, and then updated every 30 miniutes. 
+  awalys "phoning home" to either google or the developers servers, this is a form of spyware that can be used to monitor
+  usage of the program, as well as collection of the User-Agent's of the program's users. (See the <a href="../articles/http.html">HTTP article</a>)
+  This request is made 5 miniutes after the program is started, and then updated every 30 miniutes.
   </p>
   <h3>Inaccurate Privacy Claims</h3>
   <p>
   The Iridium developers make the claim that as one of the privacy enhancements of Iridium, it uses the Google SafeBrowsing spyware feature, but with their own mirror of Google's database, meaning that you can
-  use the feature without constantly phoning home to google, but instead phoning home to the developers, which, while still being a form of spyware, is an increase in privacy 
-  for the user<sup><a href="#1">[1]</a></sup>. At least it would be if this section was actually true. You can see that from the "Phoning Home" section of this article, this claim is simply 
-  <b><font color=red>not true</font></b>, which is very bad because it undermines the crediblity of the other privacy claims that Iridium makes. 
+  use the feature without constantly phoning home to google, but instead phoning home to the developers, which, while still being a form of spyware, is an increase in privacy
+  for the user<sup><a href="#1">[1]</a></sup>. At least it would be if this section was actually true. You can see that from the "Phoning Home" section of this article, this claim is simply
+  <b><font color=red>not true</font></b>, which is very bad because it undermines the crediblity of the other privacy claims that Iridium makes.
   </p>
   <p>
-  According to another writer, in his tests the browser would only connect to iridiumbrowser.de. So it is possible that this privacy claim is true for some versions of Iridium, 
+  According to another writer, in his tests the browser would only connect to iridiumbrowser.de. So it is possible that this privacy claim is true for some versions of Iridium,
   and false for other versions of Iridium. The version of Iridium that phones home to Google is Version 2018.4 for 64-bit Windows, tested on Windows 7, if you want to see this
-  for yourself. 
+  for yourself.
   </p>
   <p>
   Not only is this privacy claim inaccurate, but a pull request<sup><a href="#2">[2]</a></sup> has been open on the developers github for OVER A YEAR with no response from the development team.
   It's pretty dissapointing to see such a privacy concerned front to this project, but then a negligent additude with longstanding privacy issues once you pull back the curtain
   and look a little deeper at the claims this browser makes.
   </p>
-  
+
   <hr>
   <h2>Sources</h2>
   <p>
-  
+
   <a name="1">1.</a>
   <a href="https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">Differences between Iridium and Chromium</a>
   <a href="http://web.archive.org/web/20180216153314/https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">[web.archive.org]</a>
   <a href="https://archive.is/H8MsS">[archive.is]</a>
   <a href="https://via.hypothes.is/https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">[via.hypothes.is]</a><br>
-  
+
   <a name="2">2.</a>
   <a href="https://github.com/iridium-browser/tracker/issues/131">Still access to google safebrowsing servers</a>
   <a href="http://web.archive.org/web/20180517043109/https://github.com/iridium-browser/tracker/issues/131">[web.archive.org]</a>
   <a href="https://archive.li/eayJ1">[archive.is]</a>
   <br>
-  
+
   </p>
-  
-  
+
+
   <hr>
     <p><b>
   This article was last edited on 5/16/2018
@@ -75,10 +75,10 @@
     <p><b>
   This article was created on 5/5/2018
   </b></p>
-  
+
      <p>
- If you want to edit this article, or contribute your own article(s), email me at <a href="mailto:spyware@aaathats3as.com">spyware@aaathats3as.com</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
+ If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="/images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src../images/cc0.png" alt="CC0 Liscence"></a>
   </body>
 </html>
