@@ -59,6 +59,12 @@ hr {
 	margin-bottom: 3vh;
 	margin-top: 3vh;
 }
+.main {
+	min-height: 60vh;
+}
+.sources {
+	text-align: left;
+}
 .footer {
 	margin-top: 1vh;
 	text-align: center;
