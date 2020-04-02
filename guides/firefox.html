@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang=”en-us”>
    <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
     <meta charset="UTF-8">
     <title>Spyware Watchdog</title>
   </head>
 
   <body>
+<center>
    <h1>Mozilla Firefox Spyware Mitigation Guide</h1>
    <p>
    <a href="/">Back to Home</a><br>
@@ -65,143 +66,10 @@
   </table>
   </p>
   <p>
-  Delete everything from the new profile and create in this folder "user.js" file with such content:<br>
-   <code>
-   user_pref("network.connectivity-service.enabled", false);<br>
-	user_pref("browser.startup.homepage", "about:blank");<br>
-	user_pref("browser.newtabpage.enabled", false);<br>
-	user_pref("browser.newtab.preload", false);<br>
-	user_pref("browser.search.geoip.url", "");<br>
-	user_pref("app.update.enabled", false);<br>
-	user_pref("extensions.update.enabled", false);<br>
-	user_pref("app.update.auto", false);<br>
-	user_pref("extensions.update.autoUpdateDefault", false);<br>
-	user_pref("app.update.service.enabled", false);<br>
-	user_pref("app.update.staging.enabled", false);<br>
-	user_pref("app.update.silent", false);<br>
-	user_pref("extensions.getAddons.cache.enabled", false);<br>
-	user_pref("lightweightThemes.update.enabled", false);<br>
-	user_pref("browser.search.update", false);<br>
-	user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);<br>
-	user_pref("dom.ipc.plugins.reportCrashURL", false);<br>
-	user_pref("extensions.getAddons.showPane", false); <br>
-	user_pref("extensions.webservice.discoverURL", "");<br>
-	user_pref("toolkit.telemetry.unified", false);<br>
-	user_pref("toolkit.telemetry.enabled", false); <br>
-	user_pref("toolkit.telemetry.server", "data:,");<br>
-	user_pref("toolkit.telemetry.archive.enabled", false);<br>
-	user_pref("toolkit.telemetry.cachedClientID", "");<br>
-	user_pref("toolkit.telemetry.newProfilePing.enabled", false); <br>
-	user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); <br>
-	user_pref("toolkit.telemetry.updatePing.enabled", false); <br>
-	user_pref("toolkit.telemetry.bhrPing.enabled", false); <br>
-	user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); <br>
-	user_pref("toolkit.telemetry.hybridContent.enabled", false); <br>
-	user_pref("datareporting.healthreport.uploadEnabled", false);<br>
-	user_pref("datareporting.policy.dataSubmissionEnabled", false);<br>
-	user_pref("breakpad.reportURL", "");<br>
-	user_pref("browser.tabs.crashReporting.sendReport", false);<br>
-	user_pref("browser.crashReports.unsubmittedCheck.enabled", false); <br>
-	user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false); <br>
-	user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); <br>
-	user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");<br>
-	user_pref("browser.chrome.errorReporter.enabled", false);<br>
-	user_pref("browser.chrome.errorReporter.submitUrl", "");<br>
-	user_pref("extensions.blocklist.enabled", false);<br>
-	user_pref("extensions.blocklist.url", "");<br>
-	user_pref("services.blocklist.update_enabled", false);<br>
-	user_pref("services.blocklist.onecrl.collection", ""); <br>
-	user_pref("services.blocklist.addons.collection", "");<br>
-	user_pref("services.blocklist.plugins.collection", "");<br>
-	user_pref("services.blocklist.gfx.collection", "");<br>
-	user_pref("browser.safebrowsing.malware.enabled", false);<br>
-	user_pref("browser.safebrowsing.phishing.enabled", false); <br>
-	user_pref("browser.safebrowsing.downloads.enabled", false);<br>
-	user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);<br>
-	user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);<br>
-	user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false); <br>
-	user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false); <br>
-	user_pref("browser.safebrowsing.provider.google.updateURL", "");<br>
-	user_pref("browser.safebrowsing.provider.google.gethashURL", "");<br>
-	user_pref("browser.safebrowsing.provider.google4.updateURL", ""); <br>
-	user_pref("browser.safebrowsing.provider.google4.gethashURL", "");<br>
-	user_pref("browser.safebrowsing.downloads.remote.enabled", false);<br>
-	user_pref("browser.safebrowsing.downloads.remote.url", "");<br>
-	user_pref("browser.safebrowsing.provider.google.reportURL", "");<br>
-	user_pref("browser.safebrowsing.reportPhishURL", "");<br>
-	user_pref("browser.safebrowsing.provider.google4.reportURL", ""); <br>
-	user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", ""); <br>
-	user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", ""); <br>
-	user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", ""); <br>
-	user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", ""); <br>
-	user_pref("browser.safebrowsing.allowOverride", false);<br>
-	user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);<br>
-	user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");<br>
-	user_pref("browser.safebrowsing.blockedURIs.enabled", false);<br>
-	user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");<br>
-	user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");<br>
-	user_pref("network.allow-experiments", false);<br>
-	user_pref("app.normandy.enabled", false);<br>
-	user_pref("app.normandy.api_url", "");<br>
-	user_pref("app.shield.optoutstudies.enabled", false);<br>
-	user_pref("shield.savant.enabled", false); <br>
-	user_pref("extensions.systemAddon.update.enabled", false); <br>
-	user_pref("extensions.systemAddon.update.url", "");<br>
-	user_pref("browser.ping-centre.telemetry", false);<br>
-	user_pref("extensions.pocket.enabled", false);<br>
-	user_pref("browser.library.activity-stream.enabled", false); <br>
-	user_pref("extensions.screenshots.disabled", true);<br>
-	user_pref("extensions.screenshots.upload-disabled", true); <br>
-	user_pref("browser.onboarding.enabled", false);<br>
-	user_pref("extensions.formautofill.addresses.enabled", false);<br>
-	user_pref("extensions.formautofill.available", "off");<br>
-	user_pref("extensions.formautofill.creditCards.enabled", false); <br>
-	user_pref("extensions.formautofill.heuristics.enabled", false);<br>
-	user_pref("extensions.webcompat-reporter.enabled", false);<br>
-	user_pref("network.prefetch-next", false);<br>
-	user_pref("network.dns.disablePrefetch", true);<br>
-	user_pref("network.dns.disablePrefetchFromHTTPS", true);<br>
-	user_pref("network.predictor.enabled", false);<br>
-	user_pref("captivedetect.canonicalURL", "");<br>
-	user_pref("network.captive-portal-service.enabled", false);<br>
-	user_pref("browser.send_pings", false);<br>
-	user_pref("browser.send_pings.require_same_host", true);<br>
-	user_pref("network.protocol-handler.external.ms-windows-store", false);<br>
-	user_pref("network.predictor.enable-prefetch", false);<br>
-	user_pref("network.trr.mode", 0);<br>
-	user_pref("network.trr.bootstrapAddress", "");<br>
-	user_pref("network.trr.uri", "");<br>
-	user_pref("network.file.disable_unc_paths", true);<br>
-	user_pref("browser.search.suggest.enabled", false);<br>
-	user_pref("browser.urlbar.suggest.searches", false);<br>
-	user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);<br>
-	user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);<br>
-	user_pref("browser.urlbar.speculativeConnect.enabled", false);<br>
-	user_pref("security.ssl.errorReporting.automatic", false);<br>
-	user_pref("security.ssl.errorReporting.enabled", false);<br>
-	user_pref("security.ssl.errorReporting.url", "");<br>
-	user_pref("dom.push.enabled", false);<br>
-	user_pref("dom.push.connection.enabled", false);<br>
-	user_pref("dom.push.serverURL", "");<br>
-	user_pref("dom.push.userAgentID", "");<br>
-	user_pref("beacon.enabled", false);<br>
-	user_pref("browser.uitour.enabled", false);<br>
-	user_pref("browser.uitour.url", "");<br>
-	user_pref("permissions.manager.defaultsUrl", "");<br>
-	user_pref("webchannel.allowObject.urlWhitelist", ""); <br>
-	user_pref("browser.startup.homepage_override.mstone", "ignore"); <br>
-	user_pref("startup.homepage_welcome_url", "");<br>
-	user_pref("startup.homepage_welcome_url.additional", "");<br>
-	user_pref("startup.homepage_override_url", "");<br>
-	user_pref("media.gmp-gmpopenh264.autoupdate", false);<br>
-  user_pref("browser.shell.shortcutFavicons", false);<br>
-  user_pref("media.gmp-eme-adobe.autoupdate", false);<br>
-  user_pref("media.gmp-manager.url", "data:text/plain,");<br>
-  user_pref("media.gmp-manager.url.override", "data:text/plain,");<br>
-  user_pref("media.gmp-manager.updateEnabled", false);<br>
-  user_pref("media.gmp-widevinecdm.autoupdate", false);<br>
-  user_pref("devtools.webide.autoinstallADBHelper", false);<br>
-   </code>
+  Delete everything from the new profile and get ghack's user.js<br>
+ <ul><li>cd /path/to/your/profile && rm -r * && wget https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js</li></ul>
+  You may want to edit the file to your needs, if so
+  <ul><li>yourtexteditor user.js</li></ul>
    </p>
   <p>
   If you want to disable OCSP as well, you should also add this to your user.js. These settings are seperated
@@ -267,11 +135,11 @@ you can download to help you make Firefox private.
     <hr>
   <p><b>
   This guide was created on 10/8/2018<br>
-  This guide was last updated on 12/26/2018
+  This guide was last updated on 4/2/2020
   </b></p>
    <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
  </p>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
-
+</center>
 </body></html>
