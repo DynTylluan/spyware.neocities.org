@@ -1,145 +1,137 @@
-<!DOCTYPE html>
-<html lang=”en-us”>
-   <head>
-    <link rel="stylesheet" href="../style2.css">
-    <meta charset="UTF-8">
-    <title>Spyware Watchdog</title>
-  </head>
-
-  <body>
-<center>
-   <h1>Mozilla Firefox Spyware Mitigation Guide</h1>
-   <p>
-   <a href="/">Back to Home</a><br>
-   <a href="/articles/firefox.html">Back to Firefox</a>
-   </p>
-   <img src="../images/firefox_logo.png">
-   <p>
-    After configuring Mozilla Firefox according to this guide it's rating changes like so:
-   </p>
-   <h3>Spyware Rating: <font color="orange">High</font> =&gt; <font color="lime">Not Spyware</font></h3>
-   <p>
-   Before beginning this guide it is important that you try and cross-reference it with other guides,
-   to see which prespective on this topic is the best way to do it for you. At the bottom of the page are links
-   to <a href="#Other_Guides">other guides</a> and projects like this one. You should strongly consider this as <b><font color=orange>
-   you may find other guides more useful than this one.</font></b>
-   </p>
-   <p>
-   Mozilla Firefox has a huge amount of spyware features, but they all can be disabled by using predefined profile settings.
-   To do this you need to create new Firefox profile:
-   <ul>
-    <li> Run <code>firefox -no-remote -ProfileManager</code> </li>
-    <li> Create a new profile </li>
-    <li> Exit. </li>
-   </ul>
-   Then open your Firefox user profiles directory. It should be located at:
-
-  <table border background="../images/bg.jpg" style="width:800px">
-  <tr>
-   <th> OS</th>
-   <th> Path</th>
-  </tr>
-  <tr>
-   <td> Windows 7</td>
-   <td><code> %APPDATA%\Mozilla\Firefox\Profiles\XXXXXXXX.your_profile_name</code></td>
-  </tr>
-  <tr>
-   <td> Linux </td>
-   <td><code> ~/.mozilla/firefox/XXXXXXXX.your_profile_name</code></td>
-  </tr>
-  <tr>
-   <td> OS X</td>
-   <td><code> ~/Library/Application Support/Firefox/Profiles/XXXXXXXX.your_profile_name</code></td>
-  </tr>
-  <tr>
-   <td> Android</td>
-   <td><code> /data/data/org.mozilla.firefox/files/mozilla/XXXXXXXX.your_profile_name</code></td>
-  </tr>
-  <tr>
-   <td> Sailfish OS + Alien Dalvik</td>
-   <td><code> /opt/alien/data/data/org.mozilla.firefox/files/mozilla/XXXXXXXX.your_profile_name</code></td>
-  </tr>
-  <tr>
-   <td> Windows (portable)</td>
-   <td><code> [firefox directory]\Data\profile\</code></td>
-  </tr>
-  </table>
-  </p>
-  <p>
-  Delete everything from the new profile and get ghack's user.js<br>
- <ul><li>cd /path/to/your/profile && rm -r * && wget https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js</li></ul>
-  You may want to edit the file to your needs, if so
-  <ul><li>yourtexteditor user.js</li></ul>
-   </p>
-  <p>
-  If you want to disable OCSP as well, you should also add this to your user.js. These settings are seperated
-  because while OCSP is a privacy breach it is also a security feature, and so whether to have it on or off should
-  be thought about before continuing. You can read about OCSP here: <a href="https://scotthelme.co.uk/revocation-is-broken/">
-  https://scotthelme.co.uk/revocation-is-broken/</a> <a href="http://web.archive.org/web/20180831224302/https://scotthelme.co.uk/revocation-is-broken/">
-  [web.archive.org]</a> . The problem is, that OCSP is a form of phoning home, and you might not want to make those requests.
-  </p>
-  <code>
-  user_pref("security.ssl.enable_ocsp_stapling", false);<br>
-  user_pref("security.OCSP.enabled", 0);<br>
-  user_pref("security.OCSP.require", false);<br>
-  </code>
-  <p>
-  With this installation method, if you change any of user.js settings through about:config or Firefox preferences dialogs,
-  they will be reset to the user.js defined values after you restart Firefox.
-  This makes sure they're always back to secure defaults when starting the browser.
-  At the end you need to delete several default plugins in Firefox directory at <code>\Mozilla Firefox\browser\features\</code> that can violate privacy:
-    </p>
-  <ul>
-  <li> firefox@getpocket.com.xpi - Pocket </li>
-  <li> followonsearch@mozilla.com.xpi - Follow On Search  </li>
-  <li> activity-stream@mozilla.org.xpi - Activity Stream </li>
-  <li> screenshots@mozilla.org.xpi - Screenshots </li>
-  <li> onboarding@mozilla.org.xpi - Onboarding </li>
-  <li> formautofill@mozilla.org.xpi - Autofill </li>
-  <li> webcompat@mozilla.org.xpi - Web Compatibility Reporter </li>
-  </ul>
-
-  <p>
-  It is highly recommended to also check other user.js template settings from ongoing <i>"ghacks-user.js project"</i><sup><a href="#1">[1]</a></sup> for further hardening Firefox privacy, security and anti-fingerprinting.
-</P>
-<hr>
-<a name="Other_Guides"></a>
-<h2>Other Guides</h2>
-<p>
-These are other guides and projects to help protect your privacy using Firefox. It's important to look at
-other prespectives instead of reading JUST this guide. So you should be comparing all of the
-guides that you can find to hear everyone's ideas about how this should be done, before you
-finish setting Firefox up. Librefox is less of a guide and more of a project and series of tools and settings
-you can download to help you make Firefox private.
-</p>
-  <a href="https://www.privacytools.io/#about_config">Firefox: Privacy Related "about:config" Tweaks</a>
-    <a href="http://web.archive.org/web/20181031171622/https://www.privacytools.io/">[web.archive.org]</a>
-  <a href="http://archive.fo/SEFXb">[archive.is]</a><br>
-    <a href="https://restoreprivacy.com/firefox-privacy/">Firefox Privacy – The Complete How-To Guide</a>
-    <a href="https://web.archive.org/web/20181015023738/https://restoreprivacy.com/firefox-privacy/">[web.archive.org]</a>
-  <a href="http://archive.is/20180414165038/https://restoreprivacy.com/firefox-privacy/">[archive.is]</a><br>
-      <a href=" https://librefox.org">Librefox: Firefox with privacy enhancements</a>
-    <a href="http://web.archive.org/web/20181224083906/https://github.com/intika/Librefox">[web.archive.org]</a>
-  <a href="http://archive.is/Nb6oz">[archive.is]</a><br>
- <hr>
-  <h2>Sources</h2>
-  <p>
- <p>
-  <a name="1">1.</a>
-  <a href="https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">ghacksuserjs/ghacks-user.js</a>
-  <a href="http://web.archive.org/web/20181015031306/https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">[web.archive.org]</a>
-  <a href="http://archive.is/GXIBO">[archive.is]</a>
-  <br>
-
-  </p>
-    <hr>
-  <p><b>
-  This guide was created on 10/8/2018<br>
-  This guide was last updated on 4/2/2020
-  </b></p>
-   <p>
- If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
- </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
-</center>
-</body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+		<head>
+				<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+				<title>Mozilla Firefox Spyware Mitigation Guide - Spyware Watchdog</title>
+				<link rel="stylesheet" href="../style2.css"/>
+		</head>
+		<body>
+				<div class="case">
+						<div class="nav">
+								<a href="../index.html">&larr; Home</a>
+								<a class="right" href="../articles/firefox.html">Firefox &rarr; </a>
+						</div>
+						<div class="main">
+								<img alt="Firefox Logo" src="../images/firefox_logo3.svg">
+								<h1>Mozilla Firefox Spyware Mitigation Guide</h1>
+								<p>This guide was tested working with Firefox version 74.</p>
+								<p>After configuring Mozilla Firefox with ghacks-user.js, according to this guide it's rating changes like so:</p>
+								<h2>Spyware Rating: <span class="orange">High</span> &rarr; <span class="green">Not Spyware</span></h2>
+								<p>The ghacks user.js is a template which aims to provide as much privacy and enhanced security as possible, and to reduce tracking and fingerprinting as much as possible - while minimizing any loss of functionality and breakage (but it will happen).<sup><a href="#two">[2]</a></sup></p>
+								<br/>
+								<p>
+										Before beginning this guide it is important that you try and cross-reference it with other guides,
+										to see which prespective on this topic is the best way to do it for you. At the bottom of the page are links
+										to <a href="#Other_Guides">other guides</a> and projects like this one. You should strongly consider this as <b><span class="orange">
+										you may find other guides more useful than this one.</span></b>
+								</p>
+								<br/>
+								<p>For extra privacy &amp; security, disconnect your computer from the internet while following this guide, so that Firefox is unable to phone home by accident.</p>
+								<br/>
+								<p>
+										Mozilla Firefox has a huge amount of spyware features, but they can all be disabled by using predefined profile settings.
+										To do this you need to create new Firefox profile:
+								<ul>
+										<li>Run <code>firefox -no-remote -ProfileManager</code></li>
+										<li>Create a new profile </li>
+										<li>Exit.</li>
+								</ul>
+								<p>Then open your Firefox user profiles directory. It should be located at:</p>
+								<table>
+										<tr>
+												<th>OS</th>
+												<th>Path</th>
+										</tr>
+										<tr>
+												<td>Windows 7</td>
+												<td><code class="big-code">%APPDATA%\Mozilla\Firefox\Profiles\XXXXXXXX.your_profile_name</code></td>
+										</tr>
+										<tr>
+												<td> Linux </td>
+												<td><code class="big-code">~/.mozilla/firefox/XXXXXXXX.your_profile_name</code></td>
+										</tr>
+										<tr>
+												<td> OS X</td>
+												<td><code class="big-code">~/Library/Application Support/Firefox/Profiles/XXXXXXXX.your_profile_name</code></td>
+										</tr>
+										<tr>
+												<td> Android</td>
+												<td><code class="big-code">/data/data/org.mozilla.firefox/files/mozilla/XXXXXXXX.your_profile_name</code></td>
+										</tr>
+										<tr>
+												<td>Sailfish OS + Alien Dalvik</td>
+												<td><code class="big-code">/opt/alien/data/data/org.mozilla.firefox/files/mozilla/XXXXXXXX.your_profile_name</code></td>
+										</tr>
+										<tr>
+												<td>Windows (portable)</td>
+												<td><code class="big-code">[firefox directory]\Data\profile\</code></td>
+										</tr>
+								</table>
+								<br/>
+								<p>Delete everything from the new profile and get ghacks user.js:</p>
+								<code class="big-code">cd /path/to/your/profile && rm -r * && wget https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js</code>
+								<p>You may want to edit the file to your needs, if so:</p>
+								<code class="big-code">$EDITOR user.js</code>
+								<p>
+										If you want to disable OCSP as well, you should also add this to your user.js. These settings are seperated
+										because while OCSP is a privacy breach, it is also a security feature.  It works by contacting other servers to verify the authenticity of the address you are connecting to.
+								</p>
+								<p>
+										You should think about it before making a decision. You can read more about OCSP here: <a href="https://scotthelme.co.uk/revocation-is-broken/">
+										https://scotthelme.co.uk/revocation-is-broken/</a> <a href="http://web.archive.org/web/20180831224302/https://scotthelme.co.uk/revocation-is-broken/">
+										[web.archive.org]</a>. 								</p>
+								<code class="big-code">
+										user_pref("security.ssl.enable_ocsp_stapling", false);<br/>
+										user_pref("security.OCSP.enabled", 0);<br/>
+										user_pref("security.OCSP.require", false);<br/>
+								</code>
+								<p>
+										With this installation method, if you change any of the settings in user.js through about:config or Firefox preferences dialogs,
+										they will be reset to the user.js defined values after you restart Firefox.
+										This makes sure they're always back to secure defaults when starting the browser.
+										At the end you need to delete several default plugins in Firefox directory at <code>/path/to/firefox/browser/features</code> (ie <code>/usr/lib/firefox/browser/features/</code>) that can violate privacy:
+								</p>
+								<ul>
+										<li>firefox@getpocket.com.xpi - Pocket</li>
+										<li>followonsearch@mozilla.com.xpi - Follow On Search</li>
+										<li>activity-stream@mozilla.org.xpi - Activity Stream</li>
+										<li>screenshots@mozilla.org.xpi - Screenshots</li>
+										<li>onboarding@mozilla.org.xpi - Onboarding</li>
+										<li>formautofill@mozilla.org.xpi - Autofill</li>
+										<li>webcompat@mozilla.org.xpi - Web Compatibility Reporter</li>
+								</ul>
+								<p>
+									It is highly recommended to also check other user.js template settings from ongoing <i>"ghacks-user.js project"</i><sup><a href="#one">[1]</a></sup> for further hardening Firefox privacy, security and anti-fingerprinting.
+								</p>
+								<br/>
+								<p>Run <code>firefox -no-remote -ProfileManager</code> again and start the profile you created.  Delete any others if needed. Check to make sure, after the first start, that another profile which does <i>not</i> use ghacks was not created by Firefox.</p>
+								<hr/>
+								<h2>Other Guides</h2>
+								<p>
+										These are other guides and projects to help protect your privacy using Firefox. It's important to look at
+										other perspectives instead of reading JUST this guide. So you should be comparing all of the
+										guides that you can find to hear everyone's ideas about how this should be done, before you
+										finish setting Firefox up. Librewolf is less of a guide and more of a project and series of tools and settings
+										you can download to help you make Firefox private.
+								</p>
+								<ol>
+										<li><a href="https://www.privacytools.io/#about_config">Privacy Related "about:config" Tweaks to Firefox</a> <a href="http://web.archive.org/web/20181031171622/https://www.privacytools.io/">[web.archive.org]</a> <a href="http://archive.fo/SEFXb">[archive.is]</a></li>
+										<li><a href="https://restoreprivacy.com/firefox-privacy/">Firefox Privacy – The Complete How-To Guide</a> <a href="https://web.archive.org/web/20181015023738/https://restoreprivacy.com/firefox-privacy/">[web.archive.org]</a> <a href="http://archive.is/20180414165038/https://restoreprivacy.com/firefox-privacy/">[archive.is]</a></li>
+										<li><a href="https://gitlab.com/librewolf-community/browser/linux/">Librewolf, Firefox with privacy enhancements</a></li>
+								</ol>
+								<hr/>
+								<h2>Sources</h2>
+								<ol>
+									<li value="0"><a href="https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg">https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg</a> (Firefox Logo)</li>
+									<li id="one"><a href="https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">ghacksuserjs/ghacks-user.js</a> <a href="http://web.archive.org/web/20181015031306/https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">[web.archive.org]</a> <a href="http://archive.is/GXIBO">[archive.is]</a></li>
+									<li id="two"><a href="https://github.com/ghacksuserjs/ghacks-user.js/blob/master/README.md">https://github.com/ghacksuserjs/ghacks-user.js/blob/master/README.md</a></li>
+								</ol>
+								<hr/>
+								<p>
+								If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
+								</p>
+								<a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 Liscence"></a>
+						</div>
+				</div>
+		</body>
+</html>
