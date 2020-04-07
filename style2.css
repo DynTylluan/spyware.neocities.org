@@ -9,7 +9,7 @@ p {
     max-width: 780px;
 	margin: auto;
 }
-h1, h2 {
+h1, h2, h3, h4, h5 {
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
@@ -86,6 +86,13 @@ code {
 	margin-top: 0.5vh;
 	margin-left: 0.6vw;
 	margin-right: 0.6vw;
+}
+.wide-nav {
+	text-align: center;
+}
+.wide-nav a {
+	margin-left: 5%;
+	margin-right: 5%;
 }
 .nav a {
 	text-decoration: none;
