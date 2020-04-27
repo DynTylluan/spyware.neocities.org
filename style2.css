@@ -74,6 +74,12 @@ code {
 	padding-left: 5px;
 	padding-right: 5px;
 }
+ol {
+    max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .big-code {
 	display: block;
 	margin-left: auto;
