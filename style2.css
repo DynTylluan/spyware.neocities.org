@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	background: black;
 	color: #F5F5F5;
+	font-family: "sans";
 }
 p {
     max-width: 780px;
