@@ -1,9 +1,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: black;
-	color: #F5F5F5;
-	font-family: "sans";
+	background: url("images/blackbg.jpg");
+	color: white;
 }
 p {
     max-width: 780px;
@@ -43,7 +42,10 @@ img {
 	width: 155px;
 }
 .icon {
-	width: 77px
+	width: 77px;
+}
+.screenshot {
+	width: 780px;
 }
 hr {
 	border: 1px solid #1A1A1A;
@@ -131,4 +133,14 @@ ol {
 .footer, .center {
 	margin-top: 1vh;
 	text-align: center;
+}
+li {
+	max-width: 800px;
+	margin-left: 30%;
+	margin-right: auto;
+}
+xmp {
+	max-width: 800px;
+	margin-left: 20%;
+	margin-right: auto;
 }

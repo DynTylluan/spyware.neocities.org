@@ -1,24 +1,23 @@
 <!DOCTYPE HTML>
 <html lang=”en-us”>
    <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
     <meta charset="UTF-8">
-    <title>Spyware Watchdog</title>
+    <title>Firefox - Spyware Watchdog</title>
   </head>
   <body>
-  <h1>Mozilla Firefox</h1>
-  <p>
-  <a href="../articles/index.html">Back to catalog</a><br>
-  <a href="/guides/firefox.html">Mitigation Guide</a>
-  </p>
   <img src="../images/firefox_logo.png" alt="Firefox logo">
+  <h1>Mozilla Firefox</h1>
+  <center>
+  <a href="../articles/firefox_es.html">Spanish Translation</a>
+  </center>
   <p>
   Mozilla Firefox is one of the most popular and longest existing
   browsers.  Its developers have earned it a reputation for being a "privacy and security-based browser, respecting the user" - but is it justified, or just marketing? In fact, over the years they have made several anti-privacy (and generally anti-user) decisions, but this article will focus exclusively on spying. Version tested: 52.5.0, with the default settings. Program used for testing requests: Mitmproxy.
   </p>
-  <p>
    <h2>Spyware Level: <font color=orange>High</font></h2>
-     After following the <a href="../guides/firefox.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>.
+  <p>  
+  After following the <a href="../guides/firefox.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>.
   </p>
   <p>It sends a lot of different data very often (some of which could
   uniquely identify you). All the "services" that it provides, such as
@@ -28,7 +27,7 @@
 
   <h3>Phoning home</h3>
   <p>
- Whenever you start Firefox, it makes this request: <br><img src="../images/request.png"><br> In fact, it makes it every time you go to a website, and even a few times in a row for a single website. So Firefox "phones home" all the time, without your knowledge. <b><font color=orange>Can be disabled ONLY in about:config</font></b>. But, since you've already started Firefox, it will make this request at least once.
+ Whenever you start Firefox, it makes this request: <br><img class="screenshot" src="../images/request.png"><br> In fact, it makes it every time you go to a website, and even a few times in a row for a single website. So Firefox "phones home" all the time, without your knowledge. <b><font color=orange>Can be disabled ONLY in about:config</font></b>. But, since you've already started Firefox, it will make this request at least once.
   </p>
 
   <h3>Automatic connections to some websites you've visited, including their trackers</h3>
@@ -53,7 +52,8 @@ The best takeaway to this is that Mozilla wants to pretend that including spywar
   </p>
   <h3>"Safe" Browsing?</h3>
   <p>
-  Allegedly used to protect you from "phishing" websites, but in the end, it makes a bunch of requests to Google every 30 minutes (according to Mozilla), including a POST request with your Firefox version and a unique, persistent, hidden cookie. Since whenever the current URL matches an entry in the cached local blacklist a request is made to Google servers, ostensibly to test whether that website is still on the master online blacklist, it allows Google to monitor specific websites transparently to the user by putting the URLs of interest on the local but not the online blacklist. <br><img src="../images/safe_browsing.png"><b><font color=orange>Can be disabled ONLY in about:config.</font></b>
+  Allegedly used to protect you from "phishing" websites, but in the end, it makes a bunch of requests to Google every 30 minutes (according to Mozilla), including a POST request with your Firefox version and a unique, persistent, hidden cookie. Since whenever the current URL matches an entry in the cached local blacklist a request is made to Google servers, ostensibly to test whether that website is still on the master online blacklist, it allows Google to monitor specific websites transparently to the user by putting the URLs of interest on the local but not the online blacklist. <b><font color=orange>Can be disabled ONLY in about:config.</font></b>
+  <br><img class="screenshot" src="../images/safe_browsing.png">  
   </p>
 
   <h3>Firefox Health Report</h3>
@@ -104,9 +104,8 @@ The best takeaway to this is that Mozilla wants to pretend that including spywar
   functionality. "We may also share your device ID with third parties
   in connection with advertising campaigns. " And they work with
   advertisers too! Describing all of Pocket's
-  violations would take up this whole article. There are similar services with better privacy policies, but in the end, they still store the things you view in "the cloud". A real privacy-based browser would not be integrated with them by default.
+  violations would take up this whole article. There are similar services with better privacy policies, but in the end, they still store the things you view in "the cloud". A real privacy-based browser would not be integrated with them by default. <font color=yellow> <b>Can be disabled in about:config</b></font><sup><a href="#8">[8]</a></sup>
   </p>
-  <font color=yellow> <b>Can be disabled in about:config</b></font><sup><a href="#8">[8]</a></sup>
   <h3>Automatic updates</h3>
   <p>
   Not that bad compared to all of the above, I guess - but still
@@ -120,15 +119,15 @@ The best takeaway to this is that Mozilla wants to pretend that including spywar
   <h3>Other issues</h3>
   <p>
   Firefox also sometimes makes a request to "self-repair.mozilla.org" which looks like this:
-  <br><img src="../images/self_repair.png">
+  <br><img class="screenshot" src="../images/self_repair.png">
   It includes "optimizelyEndUserID" which probably means it
   <b>uniquely identifies you. </b><b><font color=orange>Can be disabled ONLY in about:config.</font></b><sup><a href="#7">[7]</a></sup><br>
   It also makes this request every time you open the default home page:
-  <img src =../images/request2.png"><br>
+  <img class="screenshot" src ="../images/request2.png"><br>
   The number after the Firefox version is, again, <b>uniquely
   identifying</b><sup><a href="#4">[4]</a></sup><b><font color=orange> Can be disabled ONLY in about:config.</font></b>
   <br>
-  Firefox has a file with list of blocked addons that it considers "malicious" and it makes a request to update it every day (even if you don't have any addons installed). <img src =../images/blocklist.png"> The request includes a <b>uniquely identifying</b> browser installation ID. <b><font color=orange>Can be disabled ONLY in about:config.</font></b>
+  Firefox has a file with list of blocked addons that it considers "malicious" and it makes a request to update it every day (even if you don't have any addons installed). <img class="screenshot" src ="../images/blocklist.png"> The request includes a <b>uniquely identifying</b> browser installation ID. <b><font color=orange>Can be disabled ONLY in about:config.</font></b>
 
   </p>
 
@@ -163,14 +162,14 @@ The best takeaway to this is that Mozilla wants to pretend that including spywar
   <a href="http://archive.fo/gkVeb">[archive.fo]</a>
   </p>
  <h3>Whitelisting trackers</h3>
-<p>
-Mozilla has a feature called "Enhanced Tracking Protection". This feature's claimed goal is to protect the user from being tracked.
-This would be nice if Mozilla didn't whitelist a massive list of domains<sup><a href="#9">[9]</a></sup>. 
-</p> 
+  <p>
+   Mozilla has a feature called "Enhanced Tracking Protection". This feature's claimed goal is to protect the user from being tracked.
+   This would be nice if Mozilla didn't whitelist a massive list of domains<sup><a href="#9">[9]</a></sup>. 
+  </p> 
   <h3>Mitigating Firefox Spyware</h3>
   <p>
 This reveiew is also accompanied by a page about how to configure Firefox to be more privacy respecting, and links to other projects that have been created to solve this
-problem. You can read about that <a href="/guides/firefox.html">here.</a> These are some of the flags in about:config mentioned earlier in the article, and the values that
+problem. You can read about that <a href="../guides/firefox.html">here.</a> These are some of the flags in about:config mentioned earlier in the article, and the values that
 they should be set too:
   </p>
    <table border background../images/bg.jpg" style="width:800px">
@@ -203,13 +202,13 @@ they should be set too:
   </tr>
   </table>
   <hr>
+  <center>
   <h2>Further Reading</h2>
   <p>
   <a href="https://jojo-website.neocities.org/privacy.html">firefox "about:config" settings</a>
   <a href="http://web.archive.org/web/20180821224202/https://jojo-website.neocities.org/privacy.html">[web.archive.org]</a>
   <a href="http://archive.is/eyzdE">[archive.is]</a><br>
-  <a href="https://invidious.snopyta.org/watch?v=UqkeZIPLY5M">Firefox's Enhanced Tracking Protection whitelists Google, Instagram... and Winamp?</a><br>
-
+  <a href="https://invidious.snopyta.org/watch?v=UqkeZIPLY5M">Firefox's Enhanced Tracking Protection whitelists Google, Instagram... and Winamp?</a>
   </p>
   <hr>
   	<h2>Credits</h2>
@@ -259,9 +258,10 @@ they should be set too:
   <a href="https://help.getpocket.com/article/1025-disabling-pocket-in-firefox#firefox">Disable Pocket in Firefox</a>
   <a href="https://archive.li/mWBcp">[archive.is]</a><br>
   
-<a name="9">9.</a>
-<a href="https://disconnect.me/trackerprotection/unblocked">List of whitelisted trackers</a>
-<a href="https://web.archive.org/web/20200411051257/https://disconnect.me/trackerprotection/unblocked">[web.archive.org]</a><br>
+  <a name="9">9.</a>
+  <a href="https://disconnect.me/trackerprotection/unblocked">List of whitelisted trackers</a>
+  <a href="https://web.archive.org/web/20200411051257/https://disconnect.me/trackerprotection/unblocked">[web.archive.org]</a><br>
+
   <hr>
   <p><b>
   This article was last edited on 5/25/2020
@@ -272,6 +272,8 @@ they should be set too:
      <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="../articles/index.html">Back to catalog</a><br>
+  </center>
   </body>
 </html>

@@ -1,21 +1,19 @@
 <!DOCTYPE HTML>
 <html lang=”en-us”>
    <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
     <meta charset="UTF-8">
-    <title>Spyware Watchdog</title>
+    <title>Iridium Browser - Spyware Watchdog</title>
   </head>
   <body>
-  <h1>Iridium Browser</h1>
-  <p><a href="../articles/index.html">Back to catalog</a><br>
-  <a href="/guides/iridium.html">Mitigation Guide</a></p>
   <img src="../images/iridium_logo.jpg" alt="Iridium Logo">
+  <h1>Iridium Browser</h1>
   <p>
  Iridium is a privacy-based fork of Google Chrome. From their website: "All modifications enhance the privacy of the user and make sure that the latest and best secure technologies are used. Automatic transmission of partial queries, keywords and metrics to central services is prevented and only occurs with the approval of the user." Unlike other browsers of its kind, this one is fully featured (has all the addons that are available for Chrome), and so is recommended for everyday usage.
   </p>
-  <p>
   <h2>Spyware Level: <font color=yellowgreen>Low</font></h2>
-  After following the <a href="/guides/iridium.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>.
+  <p>
+  After following the <a href="../guides/iridium.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>.
   </p>
   <p>
  The only unsolicited request is for the Google SafeBrowsing feature, and can be easily turned off from the Preferences menu. Additionally, privacy enhancements unrelated to Google are added, such as blocking third party cookies by default, and deleting local storage on close. Full list of the differences between Chrome and Iridium can be found <a href="https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">here</a><sup><a href="#1">[1]</a></sup>. However this list is <b><font color=red>not accurate</font></b> and each claim it makes should be verified by the user.
@@ -24,7 +22,7 @@
   <p>
   Iridium browser will make these requests to Google to update a blocklist of websites for its SafeBrowsing feature:
   </p>
-  <img src="../images/iridium_request.png" alt="Iridium safebrowsing requests">
+  <img class="screenshot" src="../images/iridium_request.png" alt="Iridium safebrowsing requests">
   <p>
   Iridium browser will also download this blocklist from a mirror maintained by the developers. Since the web browser is
   awalys "phoning home" to either google or the developers servers, this is a form of spyware that can be used to monitor
@@ -50,6 +48,7 @@
   </p>
 
   <hr>
+  <center>
   <h2>Sources</h2>
   <p>
 
@@ -79,6 +78,8 @@
      <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 Liscence"></a>
+  <p><a href="../articles/index.html">Back to catalog</a>
+  </center>
   </body>
 </html>

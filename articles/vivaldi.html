@@ -1,14 +1,13 @@
 <!DOCTYPE HTML>
 <html lang=”en-us”>
    <head>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style2.css">
     <meta charset="UTF-8">
-    <title>Spyware Watchdog</title>
+    <title>Vivaldi - Spyware Watchdog</title>
   </head>
   <body>
-  <h1>Vivaldi</h1>
-  <p><a href="../articles/index.html">Back to catalog</a></p>
   <img src="../images/vivaldi_logo.png" alt="vivaldi logo">
+  <h1>Vivaldi</h1>
   <p>
   Vivaldi is a feature-full, customizable web browser made by some of Opera's old developers (since they were dissatisfied with the direction Opera was heading). But how does it look in terms of privacy? Versions 1.15 and 2.0 were tested to make this article. Program used for testing requests: Mitmproxy.
   </p>
@@ -28,19 +27,19 @@ are <font color=red><b>not developers you can trust.</b></font> Below is an anti
   <h3>Addon updates</h3>
   <p>
   <BR>
-  <img src = "../images/vivaldi_update.png"><BR>
+  <img class="screenshot" src = "../images/vivaldi_update.png"><BR>
   These are the Chrome webstore requests, supposed to update your extensions. But with a new Vivaldi install, you don't have any, so they only accomplish spying. And the first request includes "x-googleupdate-appid" which is most likely <b>uniquely identifying</b>. <font color=red>Can't be disabled.</font>
   </p>
   <h3>Google Safe Browsing</h3>
   <p>
-  <img src = "../images/vivaldi_safebrowsing.png"><BR>
-  <img src = "../images/vivaldi_threatlist.png"><BR>
+  <img class="screenshot" src = "../images/vivaldi_safebrowsing.png"><BR>
+  <img class="screenshot" src = "../images/vivaldi_threatlist.png"><BR>
   Vivaldi is downloading the lists for Google's Malware and Phishing protection, which is enabled by default, but can be disabled from the Settings menu.
   </p>
 
   <h3>Phoning home</h3>
   <p>
-  From Vivaldi's privacy policy: "When you install Vivaldi browser ('Vivaldi'), each installation profile is <b>assigned a unique user ID</b> that is stored on your computer. Vivaldi will send a message using HTTPS directly to our servers located in Iceland every 24 hours containing this ID, version, cpu architecture, screen resolution and time since last message. We anonymize the IP address of Vivaldi users by removing the last octet of the IP address from your Vivaldi client then we store the resolved approximate location after using a local geoip lookup. The purpose of this collection is to determine the total number of active users and their geographical distribution.". So they (claim to) delete "the last octet" of your IP. How generous of them. This is the full request: <img src="../images/vivaldi_piwik.png">
+  From Vivaldi's privacy policy: "When you install Vivaldi browser ('Vivaldi'), each installation profile is <b>assigned a unique user ID</b> that is stored on your computer. Vivaldi will send a message using HTTPS directly to our servers located in Iceland every 24 hours containing this ID, version, cpu architecture, screen resolution and time since last message. We anonymize the IP address of Vivaldi users by removing the last octet of the IP address from your Vivaldi client then we store the resolved approximate location after using a local geoip lookup. The purpose of this collection is to determine the total number of active users and their geographical distribution.". So they (claim to) delete "the last octet" of your IP. How generous of them. This is the full request: <img class="screenshot" src="../images/vivaldi_piwik.png">
   </p>
 
   <h3>Anti-privacy search engine by default</h3>
@@ -55,6 +54,7 @@ are <font color=red><b>not developers you can trust.</b></font> Below is an anti
 "However, it is only our Chromium work that is found on https://vivaldi.com/source. If you were to build it and run it, nothing will display as the HTML/CSS/JS UI is missing. This UI is only available as part of our end user packages, which is covered by the EULA (in which we also bundle with a compiled version of our modified Chromium)."<sup><a href="#3">[3]</a></sup>
   </p>
    <hr>
+  <center>
   <h2>Sources</h2>
   <p>
   <a name="1">1.</a>
@@ -86,7 +86,8 @@ are <font color=red><b>not developers you can trust.</b></font> Below is an anti
      <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 Liscence"></a>
+  <p><a href="../articles/index.html">Back to catalog</a></p>
+  </center>
   </body>
 </html>
-
