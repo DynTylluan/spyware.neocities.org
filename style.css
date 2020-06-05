@@ -71,6 +71,7 @@ code {
 	text-align: left;
 	display: inline-block;
 	font-family: Monospace;
+	background: black;
 	color: #890000;
 	border: 1px solid #890000;
 	margin: 2px;
@@ -146,6 +147,6 @@ xmp {
 	text-align: center;
 }
 .directory-list {
-	max-width: 80%;
+	max-width: 72vw;
 	margin-left: auto;
 }
