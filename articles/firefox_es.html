@@ -1,16 +1,18 @@
+
 <!DOCTYPE HTML>
 <html lang=”en-us”>
    <head>
     <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
-    <title>Firefox - Spyware Watchdog</title>
+    <title>Spyware Watchdog</title>
   </head>
   <body>
-  <img src="../images/firefox_logo.png" alt="Firefox logo">
   <h1>Mozilla Firefox</h1>
-  <center>
-  <a href="../articles/firefox.html">English Translation</a>
-  </center>
+  <p>
+  <a href="../articles/index.html">Back to catalog</a><br>
+  <a href="../guides/firefox_es.html">Guía de mitigación</a>
+  </p>
+  <img src="../images/firefox_logo.png" alt="Firefox logo">
   <p>
   Mozilla Firefox es uno de los navegadores web más populares y perdurables. Sus desarrolladores han adquirido cierta reputación por desarrollar un "navegador que respeta la privacidad y seguridad del usuario" - pero, ¿es algo justificado o sólo una estrategia de marketing? Bueno, de hecho, a través de sus años de existencia, los desarrolladores han tomado varias decisiones que podrían ser consideradas anti-privacidad (y anti-usuario en general), pero en este artículo nos estaremos enfocando exclusivamente en aquellas que pueden ser consideradas spyware. Versión testeada: 52.5.0, con la configuración por defecto. Programas usados para buscar solicitudes web: Mitmproxy.
   </p>
@@ -18,11 +20,12 @@
   <p>
      Después de seguir la <a href="../guides/firefox.html">guía de mitigación</a>, este programa <font color=lime><b>No Es Spyware</b></font>.
   </p>
+  <br/>
   <p>Este navegador envía bastante información de forma frecuente (mucha de la cual podría ser utilizada para identificarte de forma única). Todos los "servicios" que provee, como los buscadores que vienen por defecto y Pocket, son anti-privacidad. La clasificación puesta no es más alta porque al menos puedes desactivar or modificar la mayoría de estas características, aunque esto requiera lidiar bastante con about:config
   </p>
   <h3>Llamadas a casa</h3>
   <p> 
- En el momento en el que inicias Firefox, el navegador hace esta solicitud: <br><img class="screenshot" src="../images/request.png"><br> De hecho, hace esta solicitud cada vez que visitas un sitio web, e incluso puede que unas cuantas veces seguidas en un solo sitio web. Se podría decir que Firefox hace "llamadas a casa" la mayoría del tiempo, sin tu consentimiento, <b><font color=orange>Esto sólo se puede deshabilitar usando about:config</font></b>. Sin embargo, como ya has abierto el navegador, éste hará esta solicitud al menos una vez.
+ En el momento en el que inicias Firefox, el navegador hace esta solicitud: <br><img src="../images/request.png"><br> De hecho, hace esta solicitud cada vez que visitas un sitio web, e incluso puede que unas cuantas veces seguidas en un solo sitio web. Se podría decir que Firefox hace "llamadas a casa" la mayoría del tiempo, sin tu consentimiento, <b><font color=orange>Esto sólo se puede deshabilitar usando about:config</font></b>. Sin embargo, como ya has abierto el navegador, éste hará esta solicitud al menos una vez.
   </p>
 
   <h3>Conexiones automáticas a sitios visitados, incluyendo sus rastreadores</h3>
@@ -44,7 +47,7 @@ tl:dr: Ahora tenemos la opción de optar por que Google no haga nada con los dat
 Estamos recopilando datos agregados no identificables en números para asegurar que nuestro desarrollo y cambios se logren correctamente. Podemos respetar la privacidad y utilizar servicios analíticos al mismo tiempo; de hecho, la intención de Mozilla es crear una experiencia que respeta la privacidad y la usabilidad (quiero decir, Apple quiere desarrollar una experiencia de usuario que también encaje en ese molde). Necesitamos datos, anonimizados para lograr esto.
   </i></p>
   <p>
-Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spyware en su navegador, por alguna razón, no es una brecha de privacidad, y que Firefox puede respetar la privacidad de los usuarios mientras recoge satos sobre ellos de forma simultánea para después enviar esos datos a Google. Se sugiere leer el hilo de github y los posteriores comentarios anti-privacidad que este empleado de Mozilla hizo para defender estas características de espionaje en Firefox. Es bastante peligroso afirmar que de alguna manera hay un intermedio entre respetar la privacidad del usuario y minar sus datos.
+Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spyware en su navegador, por alguna razón, no es una brecha de privacidad, y que Firefox puede respetar la privacidad de los usuarios mientras recoge datos sobre ellos de forma simultánea para después enviar esos datos a Google. Se sugiere leer el hilo de github y los posteriores comentarios anti-privacidad que este empleado de Mozilla hizo para defender estas características de espionaje en Firefox. Es bastante peligroso afirmar que de alguna manera hay un intermedio entre respetar la privacidad del usuario y minar sus datos.
   </p>
   <h3>¿Navegación "segura"?</h3>
   <p>
@@ -100,8 +103,9 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
   violaciones a la privacidad por parte de Pocket tomaría todo este artículo. Hay servicios
   similares con mejores prácticas de privacidad, pero al final, todos ellos recopilan datos
   que ves en "la nube". Un navegador que realmente respete tu privacidad no debería estar integrado
-  con esos servicios por defecto. <font color=yellow> <b>Esto puede ser deshabilitado en about:config</b></font><sup><a href="#8">[8]</a></sup>
+  con esos servicios por defecto.
   </p>
+  <font color=yellow> <b>Esto puede ser deshabilitado en about:config</b></font><sup><a href="#8">[8]</a></sup>
   <h3>Actualizaciones automáticas</h3>
   <p>
   No es algo tan malo como lo anteriormente mencionado, teóricamente - pero aún así se
@@ -115,20 +119,19 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
   <h3>Otros problemas</h3>
   <p>
   En ocasiones Firefox hace una solicitud a "self-repair.mozilla.org", la cual luce así:
-  <br><img class="screenshot" src="../images/self_repair.png">
+  <br><img src="../images/self_repair.png">
   La solicitud incluye un parámetro llamado "optimizeEndUserID", lo cual podría significar que
   <b>te identifica de forma única</b> <b><font color=orange>Esto SÓLO puede ser deshabilitado en about:config</font></b><sup><a href="#7">[7]</a></sup><br>
   También se hace esta solicitud cada vez que abres la página de inicio por defecto:
-  <img class="screenshot" src="../images/request2.png"><br>
+  <img src="../images/request2.png"><br>
   El número después de la versión de Firefox es, nuevamente, <b>identificable de forma única</b><sup><a href="#4">[4]</a></sup><b><font color=orange>Esto SÓLO puede ser deshabilitado en about:config</font></b>
   </p>
 
       <h3>Firefox hace "llamadas a casa" casi siempre que se interacciona con su interfaz</h3>
   <p>
-  Firefoz envía información a Mozilla sobre casi cualquier operación básica que hagas. Esa información es atada a una ID única de cliente, una ID para tu sesión y otra información relevante relacionada a tus acciones.
+  Firefox envía información a Mozilla sobre casi cualquier operación básica que hagas. Esa información es atada a una ID única de cliente, una ID para tu sesión y otra información relevante relacionada a tus acciones.
   <b><font color=red>Por defecto, las siguientes acciones del usuario en la interfaz, serán reportadas a Mozilla<sup><a href="#5">[5]</a></sup>:</font></b>
   </p>
-  </center>
   <ul>
   <li>Realizar una búsqueda</li>
   <li>Hacer clic en un elemento del panel de "Sitios Populares"</li>
@@ -147,9 +150,8 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
   <li>Imprimir algo</li>
   <li>Hacer clic en algún botón de Pocket</li>
   <li>Cuando un addon falla en iniciarse</li>
-  <li>Se envía también un cálculo relacionado a los dominios web</li>
+  <li>Tiempo que tardan en cargar los sitios web</li>
   </ul>
-  <center>
   <p>
   Esencialmente, aunque esta característica no envía tu historial a Mozilla, sí le provee con información muy detallada y exacta sobre cómo el usuario usa la interfaz de Firefox. Esto puede ser deshabilitado a través de la interfaz de Firefox como se describe aquí:
   <a href="https://support.mozilla.org/en-US/kb/share-data-mozilla-help-improve-firefox">Share data with Mozilla to help improve Firefox</a>
@@ -159,7 +161,7 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
   
   <h3>Mitigando el spyware de Firefox</h3>
   <p>
-  Esta revisión está acompañada de una página sobre cómo configurar Firefox para hacerlo más amigable para la privacidad, y también hay enlaces a otros proyectos que han sido creados para resolver este problema. Puedes leer acerca de eso <a href="../guides/firefox_es.html">aquí.</a> Estas son algunas de las preferencias en about:config mencionadas antes en el artículo, y sus valores deben ser establecidos a:
+  Esta revisión está acompañada de una página sobre cómo configurar Firefox para hacerlo más amigable para la privacidad, y también hay enlaces a otros proyectos que han sido creados para resolver este problema. Puedes leer acerca de eso <a href="/guides/firefox_es.html">aquí.</a> Estas son algunas de las preferencias en about:config mencionadas antes en el artículo, y sus valores deben ser establecidos a:
   </p>
    <table border background../images/bg.jpg" style="width:800px">
   <tr>
@@ -191,7 +193,6 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
   </tr>
   </table>
   <hr>
-  <center>
   <h2>Artículos de interés</h2>
   <p>
   <a href="https://jojo-website.neocities.org/privacy.html"><i>firefox "about:config" settings</i></a>
@@ -247,7 +248,7 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
   <a name="8">8.</a>
   <a href="https://help.getpocket.com/article/1025-disabling-pocket-in-firefox#firefox"><i>Disable Pocket in Firefox</i></a>
   <a href="https://archive.li/mWBcp">[archive.is]</a><br>
-  <hr>
+
   <p><b>
   This is a translation of the original article, it may become outdated.
   Esta es una traducción del artículo original en inglés, puede quedar desactualizada eventualmente.
@@ -261,8 +262,6 @@ Una mejor forma de entender esto es que Mozilla quiere pretender que incluir spy
      <p>
  If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be liscenced under the CC0 liscence to be accepted.
  </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 Liscence"></a>
-  <a href="../articles/index.html">Back to catalog</a><br>
-  </center>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img src="../images/cc0.png" alt="CC0 Liscence"></a>
   </body>
-</html>                               
+</html>
