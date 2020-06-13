@@ -121,8 +121,14 @@ xmp {
 .yellowgreen {
 	color: #C8E63C;
 }
+.yellow {
+	color: #FFFF00;
+}
 .orange {
 	color: #FF6100;
+}
+.red {
+	color: #FF0000;
 }
 .case {
 	border: 2px solid #1A1A1A;
@@ -138,7 +144,7 @@ xmp {
 .main {
 	min-height: 60vh;
 }
-.sources {
+.sources, .futher {
 	text-align: left;
 }
 .footer, .center {
