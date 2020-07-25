@@ -6,10 +6,14 @@ body {
 	font-family: sans;
 }
 p {
-    max-width: 780px;
+	max-width: 780px;
 	margin: auto;
 }
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
@@ -22,14 +26,14 @@ h4 {
 	margin-right: auto;
 	margin-left: 1vw;
 }
-a {
-	color: #006B9F;
-}
-a:hover {
-		color: #094561;
-}
 :target a {
 	color: #959800;
+}
+a {
+	color: #006b9f;
+}
+a:hover {
+	color: #094561;
 }
 .img-link a:hover {
 	border: none;
@@ -49,19 +53,21 @@ img {
 	width: 780px;
 }
 hr {
-	border: 1px solid #1A1A1A;
+	border: 1px solid #1a1a1a;
 }
 ul {
-    max-width: 780px;
+	max-width: 780px;
 	margin-left: auto;
 	margin-right: auto;
 }
-table, th, td {
+table,
+th,
+td {
 	text-align: center;
 	border: 1px solid white;
 	margin-left: auto;
 	margin-right: auto;
-    max-width: 780px;
+	max-width: 780px;
 }
 td {
 	padding-right: 10px;
@@ -79,7 +85,7 @@ code {
 	padding-right: 5px;
 }
 ol {
-    max-width: 780px;
+	max-width: 780px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -98,7 +104,7 @@ xmp {
 	margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
-    max-width: 500px;	
+	max-width: 500px;
 }
 .nav {
 	margin-top: 0.5vh;
@@ -115,23 +121,26 @@ xmp {
 .nav a {
 	text-decoration: none;
 }
+.lime {
+	color: #00ff00;
+}
 .green {
-	color: #00981B;
+	color: #00981b;
 }
 .yellowgreen {
-	color: #C8E63C;
+	color: #c8e63c;
 }
 .yellow {
-	color: #FFFF00;
+	color: #ffff00;
 }
 .orange {
-	color: #FF6100;
+	color: #ff6100;
 }
 .red {
-	color: #FF0000;
+	color: #ff0000;
 }
 .case {
-	border: 2px solid #1A1A1A;
+	border: 2px solid #1a1a1a;
 	border-radius: 15px;
 	margin-left: 3vw;
 	margin-right: 3vw;
@@ -144,10 +153,12 @@ xmp {
 .main {
 	min-height: 60vh;
 }
-.sources, .futher {
+.sources,
+.futher {
 	text-align: left;
 }
-.footer, .center {
+.footer,
+.center {
 	margin-top: 1vh;
 	text-align: center;
 }
