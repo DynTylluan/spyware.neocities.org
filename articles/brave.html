@@ -1,125 +1,306 @@
-<!DOCTYPE HTML>
-<html lang=”en-us”>
-   <head>
-    <link rel="stylesheet" href="../style.css">
-    <meta charset="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta
+      http-equiv="Content-type"
+      content="application/xhtml+xml;charset=utf-8"
+    />
     <title>Outdated Brave - Spyware Watchdog</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
+
   <body>
-  <img src="../images/brave_logo.png" alt="Brave logo">
-  <h1>Brave Browser</h1>
-  <h3><font color=red>Note: This article is outdated. I will try to update it soon. </font></h3>
-  <br>
-  <p>
-	Brave Browser is a Chromium fork with many interesting features not found elsewhere, such as built-in Adblock and other extensions, fingerprinting protection, cleaner Preferences menu than other Chrome forks, and the (opt-in) ability to automatically support (pay) the websites you visit. The developers describe it as <i>"A browser with your interests at heart."</i><sup><a href="#1">[1]</a></sup> With the built-in privacy protections, some would seem to agree with that. Let's see how it stacks up when we take everything into account.
-  </p>
-  <h2>Spyware Level: <font color=orange>High</font></h2>
-  <p>
-  Auto-updates that can be turned off only by hacky workarounds.  <a href="../articles/google.html">Google</a> as default search engine. Analytics on Brave's home page. Two other requests made at each start of Brave. Whitelisting spyware from Facebook and Twitter.<sup><a href="#5">[5]</a></sup> Has some decent privacy protections built in, but uMatrix is still better. Some privacy features are there by default, but, it's still trying to work with advertisers (same as Mozilla did with their Sponsored Tiles). Despite claiming to be <i>"A browser with your interests at heart."</i><sup><a href="#1">[1]</a></sup>, it has <a href="../articles/google.html">Google</a> as default search engine, as well as shitty forced updates. Anyway, despite the privacy protections, you should stay away from this browser - it seems to have a "mission" to switch the internet to its version of "user-respecting" ads, (we know how that turned out for Mozilla), and that's slimy and suspicious. Beyond that it has repeatedly shown itself to be dishonest and disingenuous about what it's mission and goals and operations are.
-  </p>
-  <h3>Whitelisting spyware from Facebook and Twitter</h3>
-  <p>
-  On it's website, Brave claims that <i>"Brave fights malware and prevents tracking, keeping your information safe and secure. It’s our top priority."</i><sup><a href="#6">[6]</a></sup>. Yet despite this claim, Brave actually <b><font color=red>disables</font></b> its tracking protections for Facebook and Twitter's spyware
-  scripts that allow them to track people across the web.<sup><a href="#5">[5]</a></sup> Brave's spyware protections, and any claims that it makes to work in the interests of
-  it's users, <b><font color=orange>cannot be taken seriously.</font></b> Brave is actively working <b><font color=red>against its users</font></b> while lying to them about
-  supposed privacy protections that it offers. This problem becomes even more serious when you take into account Brave's response to this situation:
-  </p>
-  <p><i>
-  "Loading a script from an edge-cache does not track a user without third-party cookies or equivalent browser-local storage, which Brave always blocks and always will block. In other words, sending requests and receiving responses without cookies or other means of identifying users does not necessarily create a tracking threat."
-  </i><sup><a href="#7">[7]</a></sup></p>
-  <p>
-  This statement is just, <b><font color=red>completely wrong</font></b>. Just because a website isn't able to store cookies, does not mean that it cannot uniquely identify you. Executing JavaScript spyware from Facebook and Twitter is <b>more than enough.</b> Blocking cookies is not going to stop them from tracking you. This isn't even information that is difficult to verify. There are many websites that you can visit right now, to see just how much information a JavaScript program designed to track you can get.
-  </p>
-  <center>
-  <p>
-  Here are a few:
-  <br>
-  <a href="https://browserleaks.com/">https://browserleaks.com/</a><br>
-  <a href="https://panopticlick.eff.org/">https://panopticlick.eff.org/</a><br>
-  </center>
-  </p>
-  <h3>Auto-updates</h3>
-  <p>
-  Brave will check for updates every time you run it, and you CANNOT turn it off (except through fiddling with DNS and such) ! What is the devs' answer? From their GitHub page<sup><a href="#2">[2]</a></sup>: </p>
+    <div class="case">
+      <div class="nav"><a href="index.html">&larr; Catalog</a></div>
+      <div class="main">
+        <img src="../images/brave_logo.png" alt="Brave Logo" />
+        <h1>Brave</h1>
+        <h2>
+          <font color="red"
+            >Note: This article is outdated. I will try to update it soon.
+          </font>
+        </h2>
+        <p>
+          Brave Browser is a Chromium fork with many interesting features not
+          found elsewhere, such as built-in Adblock and other extensions,
+          fingerprinting protection, cleaner Preferences menu than other Chrome
+          forks, and the (opt-in) ability to automatically support (pay) the
+          websites you visit. The developers describe it as
+          <i>"A browser with your interests at heart."</i
+          ><sup><a href="#s1">[1]</a></sup> With the built-in privacy
+          protections, some would seem to agree with that. Let's see how it
+          stacks up when we take everything into account.
+        </p>
+        <h2>Spyware Level: <span class="orange">High</span></h2>
+        <p>
+          Auto-updates that can be turned off only by hacky workarounds.
+          <a href="../articles/google.html">Google</a> as default search engine.
+          Analytics on Brave's home page. Two other requests made at each start
+          of Brave. Whitelisting spyware from Facebook and Twitter.<sup
+            ><a href="#s5">[5]</a></sup
+          >
+          Has some decent privacy protections built in, but uMatrix is still
+          better. Some privacy features are there by default, but, it's still
+          trying to work with advertisers (same as Mozilla did with their
+          Sponsored Tiles). Despite claiming to be
+          <i>"A browser with your interests at heart."</i
+          ><sup><a href="#s1">[1]</a></sup
+          >, it has <a href="../articles/google.html">Google</a> as default
+          search engine, as well as shitty forced updates. Anyway, despite the
+          privacy protections, you should stay away from this browser - it seems
+          to have a "mission" to switch the internet to its version of
+          "user-respecting" ads, (we know how that turned out for Mozilla), and
+          that's slimy and suspicious. Beyond that it has repeatedly shown
+          itself to be dishonest and disingenuous about what it's mission and
+          goals and operations are.
+        </p>
+        <h3>Whitelisting spyware from Facebook and Twitter</h3>
+        <p>
+          On it's website, Brave claims that
+          <i
+            >"Brave fights malware and prevents tracking, keeping your
+            information safe and secure. It’s our top priority."</i
+          ><sup><a href="#s6">[6]</a></sup
+          >. Yet despite this claim, Brave actually
+          <b><font color="red">disables</font></b> its tracking protections for
+          Facebook and Twitter's spyware scripts that allow them to track people
+          across the web.<sup><a href="#s5">[5]</a></sup> Brave's spyware
+          protections, and any claims that it makes to work in the interests of
+          it's users,
+          <b><font color="orange">cannot be taken seriously.</font></b> Brave is
+          actively working
+          <b><font color="red">against its users</font></b> while lying to them
+          about supposed privacy protections that it offers. This problem
+          becomes even more serious when you take into account Brave's response
+          to this situation:
+        </p>
+        <p>
+          <i>
+            "Loading a script from an edge-cache does not track a user without
+            third-party cookies or equivalent browser-local storage, which Brave
+            always blocks and always will block. In other words, sending
+            requests and receiving responses without cookies or other means of
+            identifying users does not necessarily create a tracking threat."
+          </i>
+          <sup>
+            <a href="#s7">[7]</a>
+          </sup>
+        </p>
+        <p>
+          This statement is just,
+          <b>
+            <font color="red">completely wrong</font>
+          </b>
+          . Just because a website isn't able to store cookies, does not mean
+          that it cannot uniquely identify you. Executing JavaScript spyware
+          from Facebook and Twitter is
+          <b>
+            more than enough.
+          </b>
+          Blocking cookies is not going to stop them from tracking you. This
+          isn't even information that is difficult to verify. There are many
+          websites that you can visit right now, to see just how much
+          information a JavaScript program designed to track you can get.
+        </p>
+        <center>
+          <p>
+            Here are a few:
+            <br />
+            <a href="https://browserleaks.com/">https://browserleaks.com/</a>
+            <br />
+            <a href="https://panopticlick.eff.org/"
+              >https://panopticlick.eff.org/</a
+            >
+            <br />
+          </p>
+        </center>
+        <h3>Auto-updates</h3>
+        <p>
+          Brave will check for updates every time you run it, and you CANNOT
+          turn it off (except through fiddling with DNS and such) ! What is the
+          devs' answer? From their GitHub page
+          <sup><a href="#s2">[2]</a></sup
+          >:
+        </p>
 
-  <p><i>"We don't plan on adding in UI to disable updates, but users can easily adjust environment variables if they really want to put themselves at risk."</i></p>
+        <p>
+          <i>
+            "We don't plan on adding in UI to disable updates, but users can
+            easily adjust environment variables if they really want to put
+            themselves at risk."
+          </i>
+        </p>
 
-  <p>and</p>
+        <p>and</p>
 
-  <p><i>"i feel that being able to figure out how to do this is a sufficiently high bar for users who want to turn off autoupdating (to prove they know what they're doing and understand the security implications)"</i></p>
+        <p>
+          <i>
+            "i feel that being able to figure out how to do this is a
+            sufficiently high bar for users who want to turn off autoupdating
+            (to prove they know what they're doing and understand the security
+            implications)"
+          </i>
+        </p>
 
-  <P>So according to the devs, you have to hunt down random internet comments to be able to disable auto-updating. Brave will also update what looks like the list of its "partners" every time you run it. Extensions are also updated often. <img class="screenshot" src="../images/brave_partners.png">
-  </p>
+        <p>
+          So according to the devs, you have to hunt down random internet
+          comments to be able to disable auto-updating. Brave will also update
+          what looks like the list of its "partners" every time you run it.
+          Extensions are also updated often.
+          <img class="screenshot" src="../images/brave_partners.png" />
+        </p>
 
-  <h3>Anti-privacy search engine by default</h3>
-  <p>
-  <a href="../articles/google.html">Google</a>  is the default search engine of Brave, and the issues with it are well known and would take a book to describe them all.
-  </p>
+        <h3>Anti-privacy search engine by default</h3>
+        <p>
+          <a href="../articles/google.html">Google</a>
+          is the default search engine of Brave, and the issues with it are well
+          known and would take a book to describe them all.
+        </p>
 
-	<h3>Brave's start page contains analytics</h3>
-	<p>
-		Brave will connect to its home page, https://brave.com, automatically on the first run of Brave, and that page contains Piwik's analytics scripts. This is the full request: <img class="screenshot" src="../images/brave_piwik.png">It will also make a connection to Google to download some fonts. You can disable these on subsequent runs by changing the start page.
-	</p>
-	<h3>Crash reports</h3>
-	<p>Enabled by default, but can be disabled from the preferences menu.</p>
-	<h3>Other requests</h3>
-	<p>Brave will make a connection to this site every time it is started up: <img class="screenshot" src="../images/brave_bat.png"> It probably has something to do with their project of working with advertisers to provide more relevant targeted ads, which sounds pretty disgusting, but can be turned off ("Notify me about token promotions"). You can read more about it here<sup><a href="#3">[3]</a></sup>.It will also make this request which downloads the rulesets for HTTPS Everywhere: <img class="screenshot" src="../images/brave_httpse.png"></p>
-	<h3>Brave's privacy protections</h3>
-	<p>Brave Browser also contains in-built privacy protections such as HTTPS Everywhere, AdBlock, cookie blocking, script blocking, and fingerprinting protections - that are configurable site by site. This is commendable of course, but in the end, uMatrix outclasses them. Trackers, for example, easily avoid pure AdBlock (so you will be tracked by Facebook and such), and binary script blocking breaks sites. Nice effort on Brave's part though, and the fingerprinting protection I don't think is found in any other browser (but I didn't confirm if it actually works).
-	</p>
-	<hr>
-	<center>
-	<h2>Credits</h2>
-	<p>
-	This article was written by <a href="https://digdeeper.neocities.org/">digdeeper.neocities.org</a><br>
-	Formatting changes were done by the site maintainer.
-  </p>
-  <hr>
-  <h2>Sources</h2>
-  <p>
-  <a name="1">1.</a>
-  <a href="https://brave.com">Brave's website</a>
-  <a href="https://web.archive.org/web/20180609070708/https://brave.com">[web.archive.org]</a>
-  <br>
-  <a name="2">2.</a>
-  <a href="https://github.com/brave/browser-laptop/issues/1877">How to stop autoupdate of brave?</a>
-  <a href="http://web.archive.org/web/20180530053311/https://github.com/brave/browser-laptop/issues/1877">[web.archive.org]</a>
-  <a href="https://archive.li/AJZr5">[archive.li]</a><br>
-  <a name="3">3.</a>
-  <a href="https://basicattentiontoken.org">Basic Attention Token</a>
-  <a href="https://web.archive.org/web/20180528161328/https://www.basicattentiontoken.org">[web.archive.org]</a>
-  <a href="http://wayback.archive-it.org/all/20180528161328/https://www.basicattentiontoken.org">[wayback.archive-it.org]</a><br>
-  <a name="4">4.</a>
-  <a href="https://laptop-updates.brave.com/promo/custom-headers">Laptop Headers</a>
-  <a href="http://web.archive.org/web/20190213015206/https://laptop-updates.brave.com/promo/custom-headers">[web.archive.org]</a>
-  <a href="https://archive.fo/ecx6L">[archive.fo]</a><br>
-  <a name="5">5.</a>
-  <a href="https://www.bleepingcomputer.com/news/security/facebook-twitter-trackers-whitelisted-by-brave-browser/">Facebook, Twitter Trackers Whitelisted by Brave Browser</a>
-  <a href="http://web.archive.org/web/20190213055618/https://www.bleepingcomputer.com/news/security/facebook-twitter-trackers-whitelisted-by-brave-browser/">[web.archive.org]</a>
-  <a href="https://archive.fo/X98Xz">[archive.fo]</a><br>
-
-  <a name="6">6.</a>
-  <a href="https://brave.com/features/">Brave Browser Features</a>
-  <a href="http://web.archive.org/web/20190124134301/https://brave.com/features/">[web.archive.org]</a><br>
-
-  <a name="7">7.</a>
-  <a href="https://brave.com/script-blocking-exceptions-update/">Script Blocking Exceptions Update</a>
-  <a href="http://web.archive.org/web/20190214034944/https://brave.com/script-blocking-exceptions-update/">[web.archive.org]</a>
-    <a href="http://archive.fo/Qopen">[archive.fo]</a><br>
-
-  </p>
-	<hr>
-     <p><b>
-  This article was last edited on 2/13/2019
-  </b></p>
-    <p><b>
-  This article was created on 5/7/2018
-  </b></p>
-   <p>
- If you want to edit this article, or contribute your own article(s), contact us on XMPP over in spyware@conference.nuegia.net, or visit us at the git repo on <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 liscence to be accepted.
- </p>
-  <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 Liscence"></a>
-  <p><a href="../articles/index.html">Back to catalog</a></p>
-  </center>
+        <h3>Brave's start page contains analytics</h3>
+        <p>
+          Brave will connect to its home page, https://brave.com, automatically
+          on the first run of Brave, and that page contains Piwik's analytics
+          scripts. This is the full request:
+          <img class="screenshot" src="../images/brave_piwik.png" />
+          It will also make a connection to Google to download some fonts. You
+          can disable these on subsequent runs by changing the start page.
+        </p>
+        <h3>Crash reports</h3>
+        <p>
+          Enabled by default, but can be disabled from the preferences menu.
+        </p>
+        <h3>Other requests</h3>
+        <p>
+          Brave will make a connection to this site every time it is started up:
+          <img class="screenshot" src="../images/brave_bat.png" />
+          It probably has something to do with their project of working with
+          advertisers to provide more relevant targeted ads, which sounds pretty
+          disgusting, but can be turned off ("Notify me about token
+          promotions"). You can read more about it here
+          <sup><a href="#s3">[3]</a></sup>
+          .It will also make this request which downloads the rulesets for HTTPS
+          Everywhere:
+          <img class="screenshot" src="../images/brave_httpse.png" />
+        </p>
+        <h3>Brave's privacy protections</h3>
+        <p>
+          Brave Browser also contains in-built privacy protections such as HTTPS
+          Everywhere, AdBlock, cookie blocking, script blocking, and
+          fingerprinting protections - that are configurable site by site. This
+          is commendable of course, but in the end, uMatrix outclasses them.
+          Trackers, for example, easily avoid pure AdBlock (so you will be
+          tracked by Facebook and such), and binary script blocking breaks
+          sites. Nice effort on Brave's part though, and the fingerprinting
+          protection I don't think is found in any other browser (but I didn't
+          confirm if it actually works).
+        </p>
+      </div>
+      <hr />
+      <div class="footer">
+        <div>
+          <h4>Credits</h4>
+          <ol>
+            This article was written by
+            <a href="https://digdeeper.neocities.org/"
+              >digdeeper.neocities.org</a
+            ><br />
+            Formatting changes were done by the site maintainer.
+          </ol>
+        </div>
+        <hr />
+        <div class="sources">
+          <h4>Sources:</h4>
+          <ol>
+            <li id="s1">
+              <a href="https://brave.com">Brave's website</a>
+              <a
+                href="https://web.archive.org/web/20180609070708/https://brave.com"
+                >[web.archive.org]</a
+              >
+            </li>
+            <li id="s2">
+              <a href="https://github.com/brave/browser-laptop/issues/1877"
+                >How to stop autoupdate of brave?</a
+              >
+              <a
+                href="http://web.archive.org/web/20180530053311/https://github.com/brave/browser-laptop/issues/1877"
+                >[web.archive.org]</a
+              >
+              <a href="https://archive.li/AJZr5">[archive.li]</a>
+            </li>
+            <li id="s3">
+              <a href="https://basicattentiontoken.org"
+                >Basic Attention Token</a
+              >
+              <a
+                href="https://web.archive.org/web/20180528161328/https://www.basicattentiontoken.org"
+                >[web.archive.org]</a
+              >
+              <a
+                href="http://wayback.archive-it.org/all/20180528161328/https://www.basicattentiontoken.org"
+                >[wayback.archive-it.org]</a
+              >
+            </li>
+            <li id="s4">
+              <a href="https://laptop-updates.brave.com/promo/custom-headers"
+                >Laptop Headers</a
+              >
+              <a
+                href="http://web.archive.org/web/20190213015206/https://laptop-updates.brave.com/promo/custom-headers"
+                >[web.archive.org]</a
+              >
+              <a href="https://archive.fo/ecx6L">[archive.fo]</a>
+            </li>
+            <li id="s5">
+              <a
+                href="https://www.bleepingcomputer.com/news/security/facebook-twitter-trackers-whitelisted-by-brave-browser/"
+                >Facebook, Twitter Trackers Whitelisted by Brave Browser</a
+              >
+              <a
+                href="http://web.archive.org/web/20190213055618/https://www.bleepingcomputer.com/news/security/facebook-twitter-trackers-whitelisted-by-brave-browser/"
+                >[web.archive.org]</a
+              >
+              <a href="https://archive.fo/X98Xz">[archive.fo]</a>
+            </li>
+            <li id="s6">
+              <a href="https://brave.com/features/">Brave Browser Features</a>
+              <a
+                href="http://web.archive.org/web/20190124134301/https://brave.com/features/"
+                >[web.archive.org]</a
+              >
+            </li>
+            <li id="s7">
+              <a href="https://brave.com/script-blocking-exceptions-update/"
+                >Script Blocking Exceptions Update</a
+              >
+              <a
+                href="http://web.archive.org/web/20190214034944/https://brave.com/script-blocking-exceptions-update/"
+                >[web.archive.org]</a
+              >
+              <a href="http://archive.fo/Qopen">[archive.fo]</a>
+            </li>
+          </ol>
+        </div>
+        <hr />
+        <b>This article was created on 5/7/2018</b><br />
+        <b>This article was last edited on 2/13/2019</b>
+        <!--Dont change-->
+        <p>
+          If you want to edit this article, or contribute your own article(s),
+          contact us on XMPP over in spyware@conference.nuegia.net, or visit us
+          at the git repo on
+          <a href="https://codeberg.org/TheShadow/SpywareWatchdog">Codeberg</a>.
+        </p>
+        <p>
+          All contributions must be licensed under the CC0 license to be
+          accepted.
+        </p>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+          ><img class="icon" src="../images/cc0.png" alt="CC0 License"
+        /></a>
+        <!--Dont change-->
+      </div>
+    </div>
   </body>
 </html>
