@@ -4,13 +4,13 @@ anyone's request. If you are interested in writing articles
 for the site and need help choosing something to review, this
 list is a good place to start.
 
-1password - made a "stub" article: 
+1password — made a "stub" article: 
 https://spyware.neocities.org/articles/1password.html
 
-Ask.com services (excite, myway) - no progress has been made
+Ask.com services (excite, myway) — no progress has been made
 
 Merge information from http://archive.is/baCzK and https://www.ghacks.net/2016/02/08/steam-uses-insecure-out-of-date-chromium-browser/ 
-to the steam article, also run it through MITMproxy to find what requests it makes. - no progress has been made 
+to the steam article, also run it through MITMproxy to find what requests it makes. — no progress has been made 
 
 Create a new class of articles about browser addons, the following explicitly:
 NoScript (allegedly phones home? needs a test to see if that's true or not...)
@@ -19,7 +19,7 @@ Ghostery
 
 No progress made on any of those ^
 
-uTorrent - stub article: https://spyware.neocities.org/articles/utorrent.html
+uTorrent — stub article: https://spyware.neocities.org/articles/utorrent.html
 
 Write about Razor mouse products:
 Useful links:
@@ -61,13 +61,13 @@ https://libreboot.org/faq.html#intel
 
 Some progress made with that. See AMD CPU article. Still need to finish that.
 
-Write about visual studio- no progress
-write about geary - no progress
+Write about visual studio — no progress
+write about geary — no progress
 
 Add this tag to the top of everything:
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
-Ublock Origin - No progress (phoning home? check privacy policy)
+Ublock Origin — No progress (phoning home? check privacy policy)
 
 > please add to overview browsers like Seamonkey, Srware Iron and Sphere
 > browser: https://sphere.tenebris.cc <https://sphere.tenebris.cc/>
