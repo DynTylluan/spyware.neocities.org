@@ -4,7 +4,7 @@
 
 <head>
 	<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
-	<title>Slimjet - Spyware Watchdog</title>
+	<title>Slimjet — Spyware Watchdog</title>
 	<link rel="stylesheet" href="../style.css"/>
 </head>
 
@@ -19,7 +19,7 @@
 			</p>
 			<h2>Spyware Level: <span class="red">EXTREMELY HIGH</span></h2>
 			<p>
-        Slimjet's website claims that it is very committed to user privacy, and that it blocks Google tracking, unlike Google Chrome<sup><a href="#s1">[1]</a></sup>. However this claim is <b><font color=red>not true</font></b>. Slimjet is constantly sending information to google and connecting to google
+        Slimjet's website claims that it is very committed to user privacy, and that it blocks Google tracking, unlike Google Chrome<sup><a href="#s1">[1]</a></sup>. However, this claim is <b><font color=red>not true</font></b>. Slimjet is constantly sending information to google and connecting to google
         services. Slimjet claims to be concerned about privacy but ultimately retains just about all of the spyware features found in Google Chrome, as well as additional spyware added on by FlashPoint. In this way, Slimjet manages to implement all of the spyware that is found in browsers like Google Chrome, except instead of one company having this information, it's split up among several companies...
           </p>
           <h3>Phoning Home</h3>
@@ -29,19 +29,19 @@
           </p>
           <img class="screenshot" src="../images/sj_google_requests.png" alt="Slimjet sending requests to all sorts of google services">
           <p>
-          So, this claim just isn't true at all. It's still got a lot of Google's spyware in it, if it's still connecting to so many Google services. What's kind of surprising is that it didn't seem connect to any servers explicitly operated by FlashPeak when I was testing it. Even though, it claims to collect information about it's users for internal usage.<sup><a href="#s2">[2]</a></sup> So, it must be phoning home as well as sending information to Google. Maybe it sends information through some kind of Google web service?
+          So, this claim just isn't true at all. It's still got a lot of Google's spyware in it, if it's still connecting to so many Google services. What's kind of surprising is that it didn't seem to connect to any servers explicitly operated by FlashPeak when I was testing it. Even though, it claims to collect information about its users for internal usage.<sup><a href="#s2">[2]</a></sup> So, it must be phoning home as well as sending information to Google. Maybe it sends information through some kind of Google web service?
           </p>
           <h3>Default Search Engine is Spyware</h3>
           <p>
           The default search engine is <a href="../articles/bing.html">Bing</a>, which sells your information to advertisers. If that isn't enough, it's
           <i>"served from fpseek.com"</i> which means that not only are you exposing your information to Bing, this is also being logged by fpseek, which
-          has it's own privacy policy<sup><a href="#s3">[3]</a></sup>. Whenever you search something using the default search engine, requests are sent to both Bing and fpseek.
+          has its own privacy policy<sup><a href="#s3">[3]</a></sup>. Whenever you search something using the default search engine, requests are sent to both Bing and fpseek.
           </p>
           <img class="screenshot" src="../images/fpseek.png" alt="Fpseek connection">
           <p>
           So, not only are you sharing everything with Microsoft, now there is another company looking at all of your searches. This is a uniquely bad
           default search engine because of how much information it leaks out. Fpseek itself is a company that seems to be tracking how users interact
-          with advertisments and it says that it uses information it collects about it's users to:
+          with advertisements and it says that it uses information it collects about its users to:
           </p>
           <p><i>
           "...maintain and improve the quality and operation of the Software & Services, including, monitoring viewability of and interaction with advertisements, search results and other products and services provided by Company."
@@ -52,8 +52,8 @@
           </p>
           <h3>Collecting Information about Users</h3>
           <p>
-          Slimjet claims to collects <i>"some anonymous feature usage statistics information"</i>, and claims not to record your IP or sell that information
-          to advertisters. However it is still opt-out spyware.
+          Slimjet claims to collect <i>"some anonymous feature usage statistics information"</i>, and claims not to record your IP or sell that information
+          to advertisers. However, it is still opt-out spyware.
           </p>
           <h3>Using the Microsoft BITS service to upload search history to Google servers</h3>
           <p>
@@ -65,7 +65,7 @@
           <img class="screenshot" src="../images/sj_google_BITS_3.png" alt="Bits3">
           <p>
           Personal information was censored from these images. It's unclear what this is for specifically but this is probably being done to implement the
-          "CLOUD SYNC OF BOOKMARK & DATA" that is advertised on Slimjet's website. This is probably how they upload all of your search history and bookmarks into their cloud services, which seem to be provided by Google. There are no other features or requests made that would require large amounts of data to be sent too an external server in this way, so by process of elimination this is my theory as to how it's implemented.
+          "CLOUD SYNC OF BOOKMARK & DATA" that is advertised on Slimjet's website. This is probably how they upload all of your search history and bookmarks into their cloud services, which seem to be provided by Google. There are no other features or requests made that would require large amounts of data to be sent to an external server in this way, so by process of elimination this is my theory as to how it's implemented.
           </p>
           <img class="screenshot" src="../images/sj_cloud.png" alt="cloud sync feature">
           <p>
