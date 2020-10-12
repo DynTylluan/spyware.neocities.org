@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<link rel="icon" href = "../images/favicon.ico"/>
+		<title>HTTP - Spyware Watchdog</title>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="all"/>
+	</head>
+	<body>
+		<div class="case">
+ 			<div class="nav">
+				<a href="index.html">&larr; Catalog</a>
+			</div>
+  			<div class="main">
+				<img src="../images/w3c_logo.png" alt="World Wide Web Consortum: The maintainers of the HTTP standard"/>
+				<h1>HyperText Transmission Protocol</h1>
+				<p>HTTP is a protocol usually used for transferring HyperText Markup Language documents accross the internet.</p>
+				<h2>Spyware Level: <span class="yellow">Not Rated</span></h2>
+				<p>HTTP is a protocol that is not designed with the privacy of its users in mind. The language used in the HTTP specification explicitly says that the protocol was designed with enabling the datamining of its users in mind, and contains features that are not absolutely necessary for the purpose of the protocol, but allow the protocol compromise user privacy.</p>
+				<h3>"User-Agent" Datamining feature</h3>
+				<p>Section 14.43<sup><a href="#one">[1]</a></sup> of the HTTP specification details the "User-Agent" feature of the protocol that, when implemented, will attach information about your computing enviroment that can be used to track you. The biggest danger of the User-Agent is that there is no way to anonymously opt-out of this- even if you do not provide a user-agent, because almost everyone else does, you will be tracked by the fact that you do <b>not</b> provide that information. There are many strategies to mitigate this, with only varying levels of success, but the problem is that this is the acceptable standard of how HTTP is used and not the forgotten feature that it should be. Not only does the User-Agent feature collect this unncessary information, its purpose is explicitly stated in the protocol specifications to aid in datamining.</p>
+				<p><i>"The User-Agent request-header field contains information about the user agent originating the request. This is for <b>statistical purposes</b>, the tracing of protocol violations, and automated recognition of user agents for the sake of tailoring responses to avoid particular user agent limitations. User agents SHOULD include this field with requests."</i></p>
+				<h3>Acknowledgement of HTTP's privacy problem</h3>
+				<p>In the HTTP specification, the W3C explicitly acknowledges the serious privacy violations that implementations of this protocol are capable of comitting. Section 15.1<sup><a href="#two">[2]</a></sup> of the HTTP specification has a very detailed analysis of the implications of the comprimization of privacy that the User-Agent allows to happen and suggests how to use the User-Agent feature: as an opt-in feature where the privacy concerns of using such a feature are properly explained to the user. Even though this is a good section, it shows a very naive viewpoint from the W3C, the expectation that this feature would not be abused, and the expectation that implementers of this standard would respect the privacy of their users and would not use these features of the protocol to datamine users.</p>
+				<p>At best, you could call this mindset naive. If you want to hold the W3C in contempt, you could call it malicious. It's easy to write in your standard that while you could use this protocol to monitor the behavior of users, you should ask for their permission. But once that standard is widely implemented, and is widely used for the exact malicious purpose that was acknowledged in its specification, who's fault is that?</p>
+			</div>
+   			<hr></hr>
+			<div class="center">
+				<h2>Sources</h2>
+				<p><a id="one">1.</a><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">Section 14 of the HTTP/1.1 Specification</a> <a href="https://web.archive.org/web/20201012081518/https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">[web.archive.org]</a></p>
+				<p><a id="two">2.</a><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec15.html">Section 15 of the HTTP/1.1 Specification</a> <a href="https://web.archive.org/web/20201012082013/https://www.w3.org/Protocols/rfc2616/rfc2616-sec15.html">[web.archive.org]</a></p>
+				<hr></hr>
+				<p>This article was created on 5/14/2018</p>
+				<p>This article was lasted edited on 10/11/2020</p>
+				<hr></hr>
+				<hr></hr>
+				<p>If you want to contribute to this website, you can always <a href="https://codeberg.org/TheShadow/SpywareWatchdog">make a pull request</a>.</p>
+				<p>All contributions must be licensed under the CC0 license to be accepted.</p>
+				<a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+			</div>
+		</div>
+	</body>
+</html>
