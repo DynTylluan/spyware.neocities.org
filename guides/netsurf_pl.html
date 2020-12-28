@@ -2,29 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
         <head>
 			<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
-			<title>Netsurf Spyware Mitigation Guide — Spyware Watchdog</title>
+			<title>Netsurf Poradnik Mitygacji — Spyware Watchdog</title>
 			<link rel="stylesheet" href="../style.css"/>
 		</head>
 		<body>
 			<div class="case">
 					<div class="main">
-							<img src="../images/netsurf.png" alt="Images are in the ../images folder"/>
-							<h1>Netsurf Spyware Mitigation Guide</h1>
+							<img src="../images/netsurf.png" alt="Obrazy są w folderze ../images"/>
+							<h1>Netsurf Poradnik Mitygacji</h1>
 							<center>
 							<p>
-							This guide was tested using Netsurf 3.9.
+							Ten poradnik został przetestowany przy użyciu Netsurf 3.9.
 							</p>
 							</center>
-							<h2>Spyware Level: <span class="yellowgreen">Low</span> → <span class="green">Not Spyware</span></h2>
-							<h3>Mitigation Method 1:</h3>
-							<p>This method is rather simple, change the default search engine and the request to google will no longer happen, if you wish you can do this with the internet disconnected, that will prevent an initial request.</p>
-							<h3>Mitigation Method 2:</h3>
-							<p>This method is a little more involved, we use a source code patch to change the default search engine (and also remove non-privacy friendly options). Simply apply <a href="https://git.parabola.nu/abslibre.git/plain/libre/netsurf/remove_nonprivacy_options.patch">this patch</a> to the source code and recompile.</p>
+							<h2>Poziom Oprogramowania Szpiegowskiego: <span class="yellowgreen">Niski</span> → <span class="green">Brak oprogramowania szpiegowskiego</span></h2>
+							<h3>Metoda Mitygacji 1:</h3>
+							<p>Ta metoda jest dość prosta, zmień domyślną wyszukiwarkę, a żądanie do google nie będzie się już odbywać, jeśli chcesz, możesz to zrobić przy odłączonym Internecie, co uniemożliwi pierwsze żądanie.</p>
+							<h3>Metoda Mitygacji 2:</h3>
+							<p>Ta metoda jest nieco bardziej skomplikowana, używamy łatki do kodu źródłowego, aby zmienić domyślną wyszukiwarkę (a także usunąć opcje nie przyjazne dla prywatności). Wystarczy zastosować <a href="https://git.parabola.nu/abslibre.git/plain/libre/netsurf/remove_nonprivacy_options.patch">tę łatkę</a> do kodu źródłowego i ponownie skompilować.</p>
 					</div>
 					<hr/>
 					<div class="footer">
 						<div class="sources">
-								<h4>Sources</h4>
+								<h4>Źródła</h4>
 								<center>
 								<ol>
 									<a name="1">1.</a><a href="https://git.parabola.nu/abslibre.git/tree/libre/netsurf/remove_nonprivacy_options.patch">Patch</a>  <a href="https://web.archive.org/web/20200409032203/https://git.parabola.nu/abslibre.git/tree/libre/netsurf/remove_nonprivacy_options.patch">[web.archive.org]</a> <a href="https://archive.is/esaPM">[archive.is]</a></br>
