@@ -35,7 +35,7 @@
 			<h3>Brave has built-in telemetry</h3>
 			<p>While running, Brave will make lots of requests to the domain <code>p3a.brave.com</code> as telemetry. They claim they store the collected data for several days<sup><a href="#eight">[8]</a></sup>. Telemetry is the last thing that comes to mind when I imagine a privacy oriented browser. This feature is an opt-out that can be disabled. This opt-out can be disabled <a href="brave://settings/privacy">here</a>.</p>
 			<h3>Brave Today</h3>
-			<p>Brave now has new feature similar to Firefox Pocket called Brave Today. If you don't know what Firefox Pocket is, it's basically an rss-like news feed is shown in every blank tab. This feature Brave has is sadly an opt-out rather than an opt-in and sends lots of requests to Brave's servers. I can't seem to disable it in and of itself, but setting the new tab page to blank in the settings seems to stop the requests.</p>
+			<p>Brave now has new feature similar to Firefox Pocket called Brave Today. If you don't know what Firefox Pocket is, it's basically an rss-like news feed is shown in every blank tab. This feature Brave has is sadly an opt-out rather than an opt-in and sends lots of requests to Brave's servers. I can't seem to disable it in and of itself, but <a href="brave://settings/newTab">setting the tabs to blank</a> seems to stop the requests.</p>
 			<h3>SafeBrowsing</h3>
 			<p>Brave uses SafeBrowsing. It's a feature that tries to "protect" the user from potentially unsafe websites and extensions. However, it sends requests to fetch the information required to do so. Judging by some of the information in <code>Miscellaneous requests worth noting</code>, I wouldn't put it past Brave to use Google's SafeBrowsing implementation rather than their own. This opt-out can be disabled <a href="brave://settings/security">here</a>.</p>
 			<h3>Brave Rewards</h3>
@@ -48,9 +48,9 @@
 			<h3>Miscellaneous requests worth noting</h3>
 			<p>Brave on first run sends a request to fetch the library used for checking spelling errors:</p>
 			<img class="screenshot" src="../images/brave/brave-dict.png" alt="brave spelling library"/>
-			<p>Brave on first run sends a request to <code>variations.brave.com</code>, which if I had to give a guess, has to do with the rewards program:</p>
+			<p>Brave on first run sends a request to <code>variations.brave.com</code>, which if I had to give a guess, has to do with the crypto aspect of the rewards program. It could also be some way of verifying the list of affiliates. The later is unlikely because the request that fetches the list of affiliates is constant to whether or not the seed request is made:</p>
 			<img class="screenshot" src="../images/brave/brave-cert.png" alt="brave verification tool"/>
-			<p>Right after the request to <code>variations.brave.com</code> is made, Brave fetches the list of affiliates through <code>laptop-updates.brave.com</code>. However, this connection is made whether or not the previous connection was made to begin with:</p>
+			<p>Right after the request to <code>variations.brave.com</code> is made, Brave fetches the list of affiliates through <code>laptop-updates.brave.com</code>.</p>
 			<img class="screenshot" src="../images/brave/custom-headers.png" alt="custom headers"/>
 			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information<sup><a href="#four">[4]</a></sup>? When I entered the url into the browser to explore, I was directed to Google's error 404 page<sup><a href="#nine">[9]</a></sup>. This seems kind of unsettling to me that one of Brave's domains would do this:</p>
 			<img class="screenshot" src="../images/brave/brave-static.png" alt="static brave"/>
