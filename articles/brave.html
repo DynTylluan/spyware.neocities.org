@@ -50,7 +50,7 @@
 			<img class="screenshot" src="../images/brave/brave-dict.png" alt="brave spelling library"/>
 			<p>Brave on first run sends a request to <code>variations.brave.com</code>, which if I had to give a guess, has to do with the crypto aspect of the rewards program. It could also be some way of verifying the list of affiliates. The later is unlikely because the request that fetches the list of affiliates is constant to whether or not the seed request is made:</p>
 			<img class="screenshot" src="../images/brave/brave-cert.png" alt="brave verification tool"/>
-			<p>Right after the request to <code>variations.brave.com</code> is made, Brave fetches the list of affiliates through <code>laptop-updates.brave.com</code>.</p>
+			<p>Right after the request to <code>variations.brave.com</code> is made, Brave fetches the list of affiliates through <code>laptop-updates.brave.com</code>. As I've stated before, the previous request doesn't seem to be a requirement for this request.</p>
 			<img class="screenshot" src="../images/brave/custom-headers.png" alt="custom headers"/>
 			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information<sup><a href="#four">[4]</a></sup>? When I entered the url into the browser to explore, I was directed to Google's error 404 page<sup><a href="#nine">[9]</a></sup>. This seems kind of unsettling to me that one of Brave's domains would do this:</p>
 			<img class="screenshot" src="../images/brave/brave-static.png" alt="static brave"/>
