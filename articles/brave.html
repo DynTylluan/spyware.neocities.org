@@ -55,7 +55,7 @@
 			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information<sup><a href="#four">[4]</a></sup>? When the url was placed into the browser, it was directed to Google's error 404 page<sup><a href="#nine">[9]</a></sup>. This seems kind of unsettling that one of Brave's domains would do that:</p>
 			<img class="screenshot" src="../images/brave/brave-static.png" alt="static brave"/>
 			<img class="screenshot" src="../images/brave/google-brave.png" alt="google error 404"/>
-			<p>A quick <code>curl --head static1.brave.com</code> shows that Brave uses Google's gstatic, which also uses Cloudflare as well:</p>
+			<p>A quick <code>curl --head static1.brave.com</code> shows that Brave uses Google's gstatic, which uses Cloudflare as well:</p>
 			<img class="screenshot" src="../images/brave/brave-gstatic.png" alt="google error 404"/>
 			<p>On the first run, Brave fetches five extensions from <code>brave-core-ext.s3.brave.com</code> and tries to install them:</p>
 			<img class="screenshot" src="../images/brave/brave-extensions.png" alt="brave extensions"/>
