@@ -1,0 +1,108 @@
+<!--Old Style-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+	<title>Slimjet — Spyware Watchdog</title>
+	<link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+	<div class="case">
+		<div class="nav"><a href="index.html">&larr; Katalog</a></div>
+		<div class="main">
+			<img src="../images/slimjet_logo.png" alt="Slimjet Logo"/>
+			<h1>Slimjet</h1>
+			<p>
+                Slimjet jest klonem przeglądarki internetowej SlimBrowser od FlashPeak która wykorzystuje kod źródłowy Chromium.
+			</p>
+			<h2>Poziom Oprogramowania Szpiegowskiego: <span class="red">Ekstermalnie Wysoki</span></h2>
+			<p>
+        Na swojej stronie internetowej Slimjet twierdzi że jest bardzo zaangażowana w dbanie o prywatność użytkownika i blokuje śledzenie Google, w przeciwieństwie do Google Chrome<sup><a href="#s1">[1]</a></sup>. Jednak, to twierdzenie jest <b><font color=red>nieprawdziwe</font></b>. Slimjet stale wysyła informacje do Google i łączy się z ich 
+        usługami. Slimjet twierdzi że obawia się o prywatność ale ostatecznie zachowuje prawie wszystkie funkcje szpiegowskie znalezione w Google Chrome, jak również dodatkowe śledzenie dodane przez FlashPoint. W ten sposób, Slimjet udaje się zaimplementować całe oprogramowanie szpiegowskie które można znaleźć w przeglądarkach takich jak Google Chrome, z wyjątkiem tego że zamiast do jednej firmy która posiada te informacje, jest ono podzielone na kilka firm...
+          </p>
+          <h3>Kontakt do domu</h3>
+          <p>
+          Mimo że na swojej stronie internetowej FlashPeak twierdzi że: <i>"Slimjet nie wysyła żadnych danych do Google jak Chrome."</i><sup><a href="#s1">[1]</a></sup>
+          w momencie kiedy uruchamiam Slimjet przy uruchomionym MITMproxy, zostaje powitany tym:
+          </p>
+          <img class="screenshot" src="../images/sj_google_requests.png" alt="Slimjet wysyła żądania do każdego rodzaju usług Google">
+          <p>
+          Więc, to twierdzenie najzwyczajniej w świecie jest nieprawdziwe. Wciąż Slimjet posiada szpiegowskie rzeczy Google, skoro ciągle łączy się z różnymi usługami Google. Zaskakujące jest to że wciąż nie połączono mnie z żadnym serwerem FlashPeak gdy to testuję. Mimo to, FlashPeak twierdzi że zbiera informacje o swoich użytkownikach do wewnętrznego użytku.<sup><a href="#2">[2]</a></sup> Więc, musi to być kontakt do domu jak również wysyłanie informacji do Google. Może wysyła informacje przez jakąś usługę Google?
+          </p>
+          <h3>Domyślna wyszukiwarka internetowa w Slimjet to szpieg</h3>
+          <p>
+          Domyślną wyszukiwarką internetową jest <a href="../articles/bing.html">Bing</a>, która sprzedaje twoje informacje do reklamodawców. Jeśli to
+          nie wystarcza, wyszukiwanie jest <i>"serwowane przez fpseek.com"</i> co oznacza że nie tylko ujawniasz swoje informacje dla Bing, ale one są
+          również przechwytywane przez fpseek, który ma własną politykę prywatności<sup><a href="#s3">[3]</a></sup>. Za każdym razem gdy szukasz coś przez
+          domyślną wyszukiwarkę, twoje żądania są wysyłane jednocześnie do Bing i fpseek.
+          </p>
+          <img class="screenshot" src="../images/fpseek.png" alt="Połączenie z fspeek">
+          <p>
+          Więc, nie tylko udostępniasz wszystkie dane Microsoftowi, teraz jeszcze inna firma przegląda twoje wyszukiwania. To jest wyjątkowo zła
+          domyślna wyszukiwarka internetowa z powodu ilości wycieku informacji. Fpseek samo w sobie jest firmą która wydaje się szpiegować w jaki
+          sposób użytkownicy wchodzą w interakcję z reklamami, i twierdzi że zbiera dane o użytkownikach do:
+          </p>
+          <p><i>
+          "...utrzymania i ulepszania jakości i działanie oprogramowania i usług, w tym, monitorowania wyświetlania i interakcji z reklamami, wynikami wyszukiwania oraz innymi usługami i produktami dostarczanych przez firmę."
+          </i><sup><a href="#s3">[3]</a></sup></p>
+          <p>
+          Więc, wygląda na to że twoje wyszukiwania są wysyłane do dwóch firm reklamowych zamiast do jednej. Przynajmniej wtedy gdy wyszukiwarka internetowa
+          zostanie zmieniona na alternatywną, taką jak DuckDuckGo, żądania do fpseek ustają.
+          </p>
+          <h3>Zbieranie informacji o użytkownikach</h3>
+          <p>
+          Slimjet twierdzi że zbiera <i>"pewne anonimowe informacje dotyczące statystyk używania funkcji"</i>, oraz twierdzi że nie przechwytuje twojego
+          adresu IP bądź sprzedaje te informacje do reklamodawców. Jednak, to ciągle jest szpiegowskie oprogramowanie typu opt-out.
+          </p>
+          <h3>Korzystanie z usługi BITS Microsoftu do wysyłania historii wyszukiwania na serwery Google</h3>
+          <p>
+          Gdy uruchamiasz Slimjet, zacznie on używać BITS (Background Intelligent Transfer Service) które zostało zaprojektowane do używania wolnej przepustowności
+          aby przesyłać aktualizacje i inne informacje. Te żądania są przesyłane między Slimjet a serwerem Google, z potwierdzeniem z Process Monitor i MITMproxy: 
+          </p>
+          <img class="screenshot" src="../images/sj_google_BITS.png" alt="Bits1">
+          <img class="screenshot" src="../images/sj_google_BITS_2.png" alt="Bits2">
+          <img class="screenshot" src="../images/sj_google_BITS_3.png" alt="Bits3">
+          <p>
+          Prywatne informacje zostały ocenzurowane z tych zdjęć. Nie jest jasne do czego to służy, ale prawdopodobnie jest to robione w celu zaimplementowania
+          "SYNCHRONIZACJI ZAKŁADEK I DANYCH" która jest reklamowana na stronie Slimjet. Prawdopodobnie w ten sposób przesyłają całą twoją historię wyszukiwania i zakładki do swojej chmury, która wygląda na dostarczoną przez Google. Nie ma innych opcji ani żądań które wymagają dużych ilości danych do przesłania na inny serwer tą drogą, więc przez proces eliminacji to jest moja teoria, jak to zostało zaimplementowane.
+          </p>
+          <img class="screenshot" src="../images/sj_cloud.png" alt="funkcja synchronizacji w chmurze">
+          <p>
+          Oczywiście można powiedzieć że każdy rodzaj usługi synchronizującej historię wyszukiwania "w chmurze" to koszmar prywatności. Teraz zarówno Google jak i Slimjet mają dostęp do twojej historii przeglądania...
+          </p>
+		</div>
+		<hr>
+		<div class="footer">
+			<div class="sources">
+				<h4>Sources:</h4>
+				<ol>
+					<li id="s1">
+            <a href="https://www.slimjet.com/">Fastest web browser that automatically blocks ads</a>
+            <a href="http://web.archive.org/web/20180624103729/https://www.slimjet.com/">[web.archive.org]</a>
+            <a href="http://archive.is/67qZa">[archive.is]</a>
+          </li>
+					<li id="s2">
+            <a href="https://www.slimjet.com/en/privacy-policy.htm">Privacy Policy</a>
+            <a href="http://web.archive.org/web/20180624104143/https://www.slimjet.com/en/privacy-policy.htm">[web.archive.org]</a><br>
+          </li>
+          <li id="s3">
+            <a href="http://info.fpseek.com/privacy-policy/">Privacy Policy – Fpseek</a>
+            <a href="http://web.archive.org/web/20170619202653/http://info.fpseek.com/privacy-policy/">[web.archive.org]</a>
+            <a href="http://archive.is/fHly1">[archive.is]</a><br>
+          </li>
+				</ol>
+			</div>
+			<hr>
+			<b>This article was last edited on 8/4/2018</b>
+			<!--Dont change-->
+			<p>If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.</p>
+			<p>All contributions must be licensed under the CC0 license to be accepted.</p>
+			<a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+			<!--Dont change-->
+		</div>
+	</div>
+</body>
+
+</html>
