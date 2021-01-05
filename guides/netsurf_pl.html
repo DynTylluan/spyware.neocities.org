@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+        <head>
+			<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+			<title>Netsurf Poradnik Mitygacji — Spyware Watchdog</title>
+			<link rel="stylesheet" href="../style.css"/>
+		</head>
+		<body>
+			<div class="case">
+					<div class="main">
+							<img src="../images/netsurf.png" alt="Obrazy są w folderze ../images"/>
+							<h1>Netsurf Poradnik Mitygacji</h1>
+							<center>
+							<p>
+							Ten poradnik został przetestowany przy użyciu Netsurf 3.9.
+							</p>
+							</center>
+							<h2>Poziom Oprogramowania Szpiegowskiego: <span class="yellowgreen">Niski</span> → <span class="green">Brak oprogramowania szpiegowskiego</span></h2>
+							<h3>Metoda Mitygacji 1:</h3>
+							<p>Ta metoda jest dość prosta, zmień domyślną wyszukiwarkę, a żądanie do google nie będzie się już odbywać, jeśli chcesz, możesz to zrobić przy odłączonym Internecie, co uniemożliwi pierwsze żądanie.</p>
+							<h3>Metoda Mitygacji 2:</h3>
+							<p>Ta metoda jest nieco bardziej skomplikowana, używamy łatki do kodu źródłowego, aby zmienić domyślną wyszukiwarkę (a także usunąć opcje nie przyjazne dla prywatności). Wystarczy zastosować <a href="https://git.parabola.nu/abslibre.git/plain/libre/netsurf/remove_nonprivacy_options.patch">tę łatkę</a> do kodu źródłowego i ponownie skompilować.</p>
+					</div>
+					<hr/>
+					<div class="footer">
+						<div class="sources">
+								<h4>Źródła</h4>
+								<center>
+								<ol>
+									<a name="1">1.</a><a href="https://git.parabola.nu/abslibre.git/tree/libre/netsurf/remove_nonprivacy_options.patch">Patch</a>  <a href="https://web.archive.org/web/20200409032203/https://git.parabola.nu/abslibre.git/tree/libre/netsurf/remove_nonprivacy_options.patch">[web.archive.org]</a> <a href="https://archive.is/esaPM">[archive.is]</a></br>
+								</ol>
+								</center>
+						</div>
+						<hr/>
+						<p>If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.</p>
+						<p>All contributions must be licensed under the CC0 license to be accepted.</p>
+						<a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+					</div>
+			</div>
+		</body>
+</html>
+

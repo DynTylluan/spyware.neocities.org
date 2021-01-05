@@ -130,8 +130,8 @@ xmp {
 .yellowgreen {
 	color: #c8e63c;
 }
-.yellow {
-	color: #ffff00;
+.white {
+	color: white;
 }
 .orange {
 	color: #ff6100;
@@ -168,4 +168,8 @@ xmp {
 
 .lime {
 	color: lime;
+}
+
+.yellow {
+	color: yellow;
 }
