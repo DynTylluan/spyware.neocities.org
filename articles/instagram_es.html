@@ -1,0 +1,169 @@
+<!--Old Style-->
+<!DOCTYPE HTML>
+<html lang=”en-us”>
+   <head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Instagram — Spyware Watchdog</title>
+  </head>
+  <body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <img src="../images/ig_logo.png" alt="Instagram logo">
+  <h1>Instagram</h1>
+  <p>
+  Instagram, desarrollada por <a href="https://en.wikipedia.org/wiki/Facebook">
+  Facebook</a>, está diseñada para ser una aplicación gratuita para teléfonos
+  inteligentes que permite a sus usuarios publicar fotos y videos a un muro
+  o <i>feed</i>, casi como en cualquier otra plataforma de <i>microblogging</i>.
+  Es popular entre adolescentes y adultos jóvenes. De hecho, varios negocios
+  actualmente están uniéndose a Instagram y creando sus propios perfiles.
+  </p>
+  <h2>Nivel de Spyware: <font color="red">EXTREMADAMENTE ALTO</font></h2>
+  <p>
+  Instagram es spyware porque te identifica con metadatos EXIF y demanda
+  acceso directo a grandes cantidades de información personal que no tiene
+  relación con los servicios que provee.
+  </p>
+
+  <h3>Instagram registra tus ubicaciones del GPS escaneando los datos EXIF de tus
+  fotos</h3>
+  <p>
+  Cada vez que un usuario toma una foto con un teléfono moderno, las coordenadas
+  del GPS son almacenadas en los metadatos de la foto. Esto puede desactivarse
+  fácilmente. Sin embargo, muchos usuarios no saben que sus teléfonos hacen
+  esto, e Instagram toma ventaja de esto. La aplicación escanea todas las
+  fotos del usuario en busca de sus datos EXIF<sup><a href="#1">[1]</a></sup>.
+  Cuando encuentra los datos, registra las coordenadas del GPS en una
+  base de datos. Dicha base de datos permite saber exactamente dónde ha estado
+  el usuario y los lugares donde ha tomado las fotos. La única forma de
+  prevenir esto es desactivar los datos EXIF de tu cámara (deberías hacerlo por
+  los numerosos problemas de privacidad que representan los datos EXIF)
+  </p>
+
+  <h3>La aplicación demanda demasiados permisos y castiga al usuario si éste
+  se los deniega</h3>
+  <p>
+  Instagram es muy exigente cuando de permisos se habla. Cuando se probó
+  la aplicación en un teléfono de prueba, ésta solicitó acceso a:
+  </p>
+  <ul>
+  <li>Nombre completo de la persona dueña del teléfono</li>
+  <li>Contactos del teléfono</li>
+  <li>Calendario del teléfono</li>
+  <li>Envío y recepción de mensajes SMS (que podrían costar dinero)</li>
+  <li>Todos los archivos en el teléfono y la tarjeta MicroSD</li>
+  <li>Cámara del teléfono</li>
+  <li>Micrófono del teléfono</li>
+  <li>Identificadores únicos: número IMEI, compañía telefónica, estado
+  de la tarjeta SIM y número de teléfono</li>
+  <li>Control del motor de vibración</li>
+  </ul>
+  <p>
+  Denegar a la aplicación el acceso a: <i>Nombre de la persona dueña, contactos
+  del teléfono, calendario, permiso para enviar y recibir mensajes SMS e
+  identificadores únicos</i> resultó en mensajes molestos de reclamo
+  por parte de la aplicación con excusas sobre por qué se requieren esos
+  permisos.
+  </p>
+  <p>
+  Por otro lado, si se deniega el acceso a: <i>Archivos en el teléfono y la
+  tarjeta MicroSD, cámara, micrófono y motor vibrador</i>, la aplicación
+  va a castigar al usuario denegándole el acceso a varias funciones de la
+  aplicación que podrían funcionar perfectamente sin alguno de esos permisos.
+  </p>
+
+  <h3>Debes proveer un número de teléfono o dirección de correo electrónico
+  para registrarte</h3>
+  <p>
+  Para poder registrarse en Instagram, debes proveer ya sea un número de
+  teléfono o un correo electrónico. No se te permite crear una cuenta si no
+  provees alguno de estos datos. Esto es obviamente una forma de identificar
+  al usuario por parte de Instagram.
+  </p>
+  <p>
+  Si te registraste con un número telefónico y desinstalas la aplicación,
+  empezarás a recibir mensajes constantes para que "veas qué hay de nuevo
+  en Instagram". Afortunadamente dejarás de recibir estos mensajes después de
+  alrededor de un mes, o puedes dejar de recibirlos simplemente bloqueando 
+  el número.
+  </p>
+  <img class="screenshot" src="../images/ig_sshot.png" alt="screenshot">
+
+  <h3>Instagram anuncia lo que haces en la aplicación a otros usuarios</h3>
+  <p>
+  En enero de 2018, Instagram lanzó una nueva característica que
+  anuncia lo que haces en la aplicación a cualquiera que te envíe un mensaje
+  directo en ésta<sup><a href="#3">[3]</a></sup>. Pero además, esto va más allá,
+  también anuncia qué comentarios lees y a qué fotos das "me gusta" en la
+  aplicación. En las plataformas de microblogging como Instagram, la
+  mayoría de usuarios preferirían mantener sus acciones privadas. Hay usuarios
+  que de hecho se han quejado sobre esta característica, pero Instagram
+  aseguró que llegó para quedarse. Además, no hay forma de desactivarla.
+  </p>
+
+  <h3>La aplicación podría estar escuchando tus conversaciones</h3>
+  <p>
+  En septiembre de 2017, usuarios de Instagram reportaron que aparecían
+  anuncios en sus muros que publicitaban artículos de los que habían
+  hablado a otras personas pero que nunca habían buscado en internet.
+  Mientras que se sabe que Instagram hace uso de métodos de rastreo como
+  <i>super cookies</i> (cookies que se transmiten a otros
+  dispositivos en tu red para evitar ser elminadas), esto era otro nivel.
+  Una persona hizo una prueba mencionando en una conversación un proyector
+  <sup><a href="#4">[4]</a></sup>. No había hablado de proyectores con alguien
+  antes. Esperó 15 horas y cuando revisó su muro de Instagram en la mañana,
+  había un anuncio publicitando un proyector. Tristemente, esta es una prueba
+  clara de que de efectivamente, Instagram escucha tus conversaciones.
+  Por supuesto cuando se cuestionó a Instagram al respecto, la empresa
+  negó que esto fuera cierto, a pesar de la evidencia de que la aplicación
+  escucha los micrófonos de los usuarios.
+  </p>
+
+   <hr>
+  <center>
+  <h2>Referencias</h2>
+
+  <p>
+  <a name="1">1</a>
+  <a href="https://www.makeuseof.com/tag/ways-instagram-spying-you/">Make Use Of — Ways Instagram Is Spying on You</a>
+  <a href="https://archive.is/pHY8J">[archive.is]</a>
+  <a href="https://web.archive.org/web/20180131084312/https://www.makeuseof.com/tag/ways-instagram-spying-you/">[archive.org]</a>
+  <br>
+
+
+
+  <a name="2">2</a>
+  <a href="https://help.instagram.com/478745558852511/?_fb_noscript=1">Instagram's TOS</a>
+  <a href="https://archive.fo/9nxU8">[archive.is]</a>
+  <br>
+
+
+
+  <a name="3">3</a>
+  <a href="https://hellogiggles.com/news/instagram-compromising-privacy-dm-feature/">HelloGiggles Article on the New DM feature</a>
+  <a href="https://archive.fo/bvtic">[archive.is]</a>
+  <br>
+
+
+  <a name="4">4</a>
+  <a href="https://medium.com/@damln/instagram-is-listening-to-you-97e8f2c53023">Instagram Listens In</a>
+  <a href="https://archive.is/Utdc2">[archive.is]</a>
+  <br>
+  </p>
+
+
+
+  <hr>
+  <p><b>
+  This article was last edited on 2/24/2019<br>
+  This article was translated on 1/11/2021
+  </b></p>
+   <p>
+ If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
+ </p>
+  <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
+  <p><a href="../articles/index.html">Back to catalog</a></p>
+  </center>
+  </body>
+
+</html>
