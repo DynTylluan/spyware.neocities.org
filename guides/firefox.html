@@ -16,9 +16,9 @@
 								<h1>Mozilla Firefox Spyware Mitigation Guide</h1>
 								<p>Note: This guide is deprecated. Sometime in the future it will be updated again.</p>
 								<p>You may want to see <a href="https://codeberg.org/shadow/SpywareWatchdog/issues/58">this</a> for more information.</p>
-								<p>After configuring Mozilla Firefox with ghacks-user.js, according to this guide it's rating changes like so:</p>
+								<p>After configuring Mozilla Firefox with arkenfox's user.js, according to this guide it's rating changes like so:</p>
 								<h2>Spyware Rating: <span class="orange">High</span> &rarr; <span class="green">Not Spyware</span></h2>
-								<p>The ghacks user.js is a template which aims to provide as much privacy and enhanced security as possible, and to reduce tracking and fingerprinting as much as possible — while minimizing any loss of functionality and breakage (but it will happen).<sup><a href="#two">[2]</a></sup></p>
+								<p>The arkenfox's user.js is a template which aims to provide as much privacy and enhanced security as possible, and to reduce tracking and fingerprinting as much as possible — while minimizing any loss of functionality and breakage (but it will happen).<sup><a href="#two">[2]</a></sup></p>
 								<br/>
 								<p>
 										Before beginning this guide it is important that you try and cross-reference it with other guides,
@@ -69,8 +69,8 @@
 										</tr>
 								</table>
 								<br/>
-								<p>Delete everything from the new profile and get ghacks user.js:</p>
-								<code class="big-code">cd /path/to/your/profile && rm -r * && wget https://raw.githubusercontent.com/ghacksuserjs/ghacks-user.js/master/user.js</code>
+								<p>Delete everything from the new profile and get arkenfox's user.js:</p>
+								<code class="big-code">cd /path/to/your/profile && rm -r * && wget https://raw.githubusercontent.com/arkenfox/user.js/master/user.js</code>
 								<p>You may want to edit the file to your needs, if so:</p>
 								<code class="big-code">$EDITOR user.js</code>
 								<p>
@@ -102,10 +102,10 @@
 										<li>webcompat@mozilla.org.xpi — Web Compatibility Reporter</li>
 								</ul>
 								<p>
-									It is highly recommended to also check other user.js template settings from ongoing <i>"ghacks-user.js project"</i><sup><a href="#one">[1]</a></sup> for further hardening Firefox privacy, security and anti-fingerprinting.
+									It is highly recommended to also check other user.js template settings from ongoing <i>"arkenfox-user.js project"</i><sup><a href="#one">[1]</a></sup> for further hardening Firefox privacy, security and anti-fingerprinting.
 								</p>
 								<br/>
-								<p>Run <code>firefox -no-remote -ProfileManager</code> again and start the profile you created.  Delete any others if needed. Check to make sure, after the first start, that another profile which does <i>not</i> use ghacks was not created by Firefox.</p>
+								<p>Run <code>firefox -no-remote -ProfileManager</code> again and start the profile you created.  Delete any others if needed. Check to make sure, after the first start, that another profile which does <i>not</i> use arkenfox was not created by Firefox.</p>
 								<hr/>
 								<h2>Other Guides</h2>
 								<p>
@@ -124,8 +124,8 @@
 								<h2>Sources</h2>
 								<ol>
 									<li><a href="https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg">https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg</a> (Firefox Logo)</li>
-									<li id="one"><a href="https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">ghacksuserjs/ghacks-user.js</a> <a href="http://web.archive.org/web/20181015031306/https://github.com/ghacksuserjs/ghacks-user.js/blob/master/user.js">[web.archive.org]</a> <a href="http://archive.is/GXIBO">[archive.is]</a></li>
-									<li id="two"><a href="https://github.com/ghacksuserjs/ghacks-user.js/blob/master/README.md">https://github.com/ghacksuserjs/ghacks-user.js/blob/master/README.md</a></li>
+									<li id="one"><a href="https://github.com/arkenfox/user.js/blob/master/user.js">arkenfox/user.js</a> <a href="http://web.archive.org/web/20181015031306/https://github.com/arkenfox/user.jss/blob/master/user.js">[web.archive.org]</a> <a href="http://archive.is/GXIBO">[archive.is]</a></li>
+									<li id="two"><a href="https://github.com/arkenfox/user.js/blob/master/README.md">https://github.com/arkenfox/user.jss/blob/master/README.md</a></li>
 								</ol>
 								<hr/>
 								<p>
