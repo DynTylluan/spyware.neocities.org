@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang=”es-ES”>
+   <head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Spyware Watchdog</title>
+  </head>
+  <body>
+  <h1>Pale Moon Browser - Mitigación de Spyware</h1>
+  <p><a href="/">Volver al Inicio</a><br>
+  <a href="../articles/palemoon_es.html">Volver a Palemoon</a>
+  </p>
+  <img src="../images/palemoon_logo.png">
+  <p>
+  Después de configurar Pale Moon de acuerdo con esta guía, su calificación cambia así:
+  </p>
+  <h3>Nivel de Spyware: <font color=yellow>Medio</font> => <font color=lime>No es Spyware</font></h3>
+  <p>
+  Lo primero que debes hacer luego de haber descargado Pale Moon, es desconectarte de internet. Luego instala el navegador y cambia la página de inicio a algo más. En el diálogo de opciones:
+  </p>
+  <img src="../images/pm_hp.png" alt="Pantalla de opciones de Pale Moon">
+  <p>
+  El siguiente paso es deshabilitar el chequeo de actualizaciones, puedes hacerlo así:
+  </p>
+  <img src="../images/pm_ud.png" alt="Pantalla de opciones de Pale Moon">
+  <p>
+  Finalmente, deberías establecer las siguientes opciones en about:config:
+  </p>
+     <table border background="../images/bg.jpg" style="width:800px">
+  <tr>
+  <th>Función Spyware</th>
+  <th>Opción de about:config</th>
+  <th>Valor de la opción</th>
+  </tr>
+  <tr>
+  <td>Bloqueo de Addons</td>
+  <td>extensions.blocklist.enabled</td>
+  <td>false</td>
+  </tr>
+  <tr>
+  <td>Consulta OCSP</td>
+  <td>services.sync.prefs.sync.security.OCSP.enabled</td>
+  <td>false</td>
+  </tr>
+  <tr>
+  <td>Consulta OCSP</td>
+  <td>security.OCSP.GET.enabled</td>
+  <td>false</td>
+  </tr>
+   <tr>
+  <td>Consulta OCSP</td>
+  <td>security.OCSP.require</td>
+  <td>false</td>
+  </tr>
+     <tr>
+  <td>Consulta OCSP</td>
+  <td>security.OCSP.enabled</td>
+  <td>0</td>
+  </tr>
+     <tr>
+  <td>Geolocalización</td>
+  <td>geo.enabled</td>
+  <td>false</td>
+  </tr>
+  </table>
+       <hr>
+  <p><b>
+
+  </b></p>
+   <p>
+ Si quieres editar este artículo, o contribuir con tu(s) propio(s) artículo(s), visítanos en el repositorio git de <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. Todas las contribuciones deben estar bajo la licencia CC0 para ser aceptadas.
+ </p>
+  <a href="../LICENSE.txt"><img src="../images/cc0.png" alt="CC0 License"></a>
+  </body>
+
+</html>

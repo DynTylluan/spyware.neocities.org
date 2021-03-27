@@ -1,0 +1,73 @@
+<!--Old Style-->
+<!DOCTYPE HTML>
+<html lang=”es-ES”>
+   <head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Pale Moon — Spyware Watchdog</title>
+  </head>
+  <body>
+  <img src="../images/palemoon_logo.png" alt="Pale Moon logo">
+  <h1>Pale Moon</h1>
+  <p>
+  Pale Moon es un fork de una versión vieja de <a href="../articles/firefox_es.html">Firefox</a>, antes del cambio de interfaz de usuario que molestó a tanta gente. La versión 28.4 fue usada para escribir este artículo. Este artículo sirve de reemplazo para uno más viejo (<a href="../articles/palemoon_old.html">[Inglés]</a>).
+  </p>
+  <p>
+  <h2>Nivel de Spyware: <font color=yellow>Medio</font></h2>
+  <p>Después de <a href="../guides/palemoon_es.html">mitigarlo</a>, este software <font color=lime><b>No es Spyware</b></font>.
+  </p>
+  <p>
+  Palemoon se conecta a servicios de analítica, y estas peticiones <b>sólo pueden evitarse en ejecuciones posteriores</b>. Tiene restricciones y bloqueos, sugerencias de búsqueda y actualizaciones automáticas.
+  También envía certificados SSL de los sitios que visitas.
+  </p>
+  <h3>Google Analytics en la Página de Inicio</h3>
+  <p>
+  Por defecto, la página de inicio de Pale Moon está configurada a https://palemoon.start.me, y automáticamente hará una conección a ella cuando ejecutes por primera vez.
+  Esta página hace conexiones a Google Analytics, que puede identificarte y rastrearte a través del internet.
+  </p>
+  <img class="screenshot" src="../images/pm_analytics.png" alt="Peticiones enviadas por Pale Moon a Google Analytics desde la página de inicio">
+  <h3>Bloqueo de Extensiones que optimizan la Privacidad</h3>
+  <p>
+Pale Moon por defecto no te permitirá instalar la extensión NoScript; citando la razón para bloquear una extensión tan importante: <i>"Es sabido que NoScript causa severos daños con una gran (y creciente) cantidad de sitios web. A no ser que sea cuidadosamente configurado para cada sitio visitado,
+NoScript causará problemas de visualización, y de funcionalidad."</i><sup><a href="#1">[1]</a></sup>
+<b><font color=yellow>Para deshabilitar esta restricción, cambia <code>extensions.blocklist.enabled</code> a <code>false</code> en about:config.</font></b>
+  </p>
+  <h3>Actualizaciones Automáticas</h3>
+  <p>
+  Pale Moon se actualizará automáticamente, a las extensiones y motores de búsqueda, al igual que su archivo blocklist.xml con las extensiones que considera "maliciosas". Algunas de estas cosas se pueden deshabilitar desde la interfaz gráfica, mientras que otras solamente desde about:config.
+  </p>
+
+  <h3>Sugerencias de Búsqueda</h3>
+  <p>El motor de búsqueda por defecto es DuckDuckGo, sin embargo las sugerencias de búsqueda están habilitadas por defecto, lo que puede enviar una petición por cada tecla que has presionado, todo mientras piensas que se queda en el navegador hasta que presionas Enter. Puede deshabilitarse con un click derecho en la barra de búsqueda.
+  </p>
+
+  <h3>Consultas OCSP</h3>
+  <p>Automáticamente revisará cada certificado SSL de cada sitio para verificar si es válido, lo que requiere compartirlo con terceros. Se puede deshabilitar desde la interfaz gráfica.</p>
+  <hr>
+  <center>
+  <h2>Fuentes</h2>
+  <p>
+
+  <a name="1">1.</a>
+  <a href="https://blocklist.palemoon.org/info/?id=pm112">This Add-on to your browser has been blocked or disabled.</a>
+  <a href="https://web.archive.org/web/20180514135250/http://blocklist.palemoon.org/info/?id=pm112">[web.archive.org]</a>
+  <a href="https://archive.is/EiraE">[archive.is]</a>
+  <br>
+
+  </p>
+  <p>
+  <br>Este artículo es sólo una traducción, pudiera quedar desactualizado con el tiempo. Puedes encontrar el artículo original <a href="../articles/palemoon.html">aquí</a>.
+  </p>
+
+  <hr>
+    <p><b>
+  El artículo original fue creado el 19/03/2019<br>
+  </b></p>
+     <p>
+ Si quieres editar este artículo, o contribuir con tu(s) propio(s) artículo(s), visítanos en el repositorio git de <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. Todas las contribuciones deben estar bajo la licencia CC0 para ser aceptadas.
+ </p>
+  <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
+  <p><a href="../articles/index.html">De vuelta al catálogo</a></p>
+  </center>
+  </body>
+</html>
