@@ -163,7 +163,28 @@ xmp {
 	text-align: center;
 }
 .directory-list {
-	text-align: center;
+	border: 2px solid #814c3a;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.directory-list h2 {
+	text-align: left;
+	padding-top: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.directory-list ul {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.directory-list li {
+	padding: 1%;
+	text-align: left;
 }
 
 .lime {
