@@ -1,64 +1,42 @@
-<!-- NOTICE!!!! -->
-
-<!-- BEFORE MAKING A PULL REQUEST OR PUSH PLEASE ALWAYS CHECK WITH THE VALIDATOR -->
-<!-- http://validator.w3.org/#validate-by-input -->
-
-<!-- NOTICE!!!! -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-	<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
-	<title>SeaMonkey — Spyware Watchdog</title>
-	<link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <div class="case">
-      <div class="nav"><a href="index.html">&larr; Catalog</a></div>
-      <div class="main">
-        <img src="../images/seamonkey/SeaMonkey.svg" alt="SeaMonkey Logo"/>
-        <h1>SeaMonkey</h1>
-        <p>
-			SeaMonkey is a web browser, email client, news reader, HTML editor and an IRC client.<sup><a href="#s2">[2]</a></sup>
-        </p>
-        <h2>Spyware Level: <span class="orange">High</span></h2>
-        <p>
-         SeaMonkey makes about 35 requests on first start, with a connection to Google SafeBrowsing recurring about every 30 minutes.  While the latter can be <a href="../guides/seamonkey.html">partially disabled</a>, there is no apparent way to disable connections to <code>location.services.mozilla.com</code> and <code>shavar.services.mozilla.com</code> (which is GoogleSafe Browsing related). 
-		<br/>
-        </p>
-		<img class="screenshot" src="../images/seamonkey/seamonkey.png" alt="SeaMonkey Requests in Mitmproxy"/>
-      </div>
-      <hr/>
-      <div class="footer">
-        <div class="sources">
-          <h4>Sources:</h4>
-          <ol>
-            <li id="s1">
-			  <a href="https://commons.wikimedia.org/wiki/File:SeaMonkey.svg">SeaMonkey Logo (WikiMedia)</a>
-            </li>
-            <li id="s2">
-			  <a href="https://www.seamonkey-project.org/about">https://www.seamonkey-project.org/about</a>
-			  <a href="http://web.archive.org/web/20201130073628/https://www.seamonkey-project.org/about">[web.archive.org]</a>
-            </li>
-          </ol>
-        </div>
-        <hr/>
-        <b>This article was created on 1/17/2021</b><br/>
-        <b>This article was last edited on 1/17/2021</b>
-        <!--Dont change-->
-        <p>
-          If you want to edit this article, or contribute your own article(s), visit us
-          at the git repo on
-          <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.
-        </p>
-        <p>
-          All contributions must be licensed under the CC0 license to be
-          accepted.
-        </p>
-        <a href="../LICENSE.txt">
-          <img class="icon" src="../images/cc0.png" alt="CC0 License"/>
-        </a>
-        <!--Dont change-->
-      </div>
-    </div>
-  </body>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<meta http-equiv="onion-location" content="http://spywaredrcdg5krvjnukp3vbdwiqcv3zwbrcg6qh27kiwecm4qyfphid.onion/articles/seamonkey.html"/>
+		<link rel="icon" href = "../images/favicon.ico"/>
+		<title>SeaMonkey - Spyware Watchdog</title>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="all"/>
+	</head>
+	<body>
+		<div class="case">
+				<div class="nav">
+					<a href="index.html">&larr; Catalog</a>
+				</div>
+			<div class="main">
+				<img src="../images/seamonkey/SeaMonkey.svg" alt="SeaMonkey Logo"/>
+				<h1>SeaMonkey</h1>
+				<p>SeaMonkey is a web browser, email client, news reader, HTML editor and an IRC client.<sup><a href="#two">[2]</a></sup></p>
+				<h2>Spyware Level: <span class="yellow">Medium</span></h2>
+				<p>SeaMonkey makes about 35 requests on first start, with a connection to Google SafeBrowsing recurring about every 30 minutes, though it can be <a href="../guides/seamonkey.html">disabled</a>.</p>
+				<img class="screenshot" src="../images/seamonkey/seamonkey.png" alt="SeaMonkey Requests in Mitmproxy"/>
+			</div>
+			<hr/>
+			<div class="center">
+				<h4>Sources:</h4>
+				<p><a id="one">1.</a>
+				<a href="https://commons.wikimedia.org/wiki/File:SeaMonkey.svg">SeaMonkey Logo (WikiMedia)</a></p>
+				<p><a id="two">2.</a>
+				<a href="https://www.seamonkey-project.org/about">https://www.seamonkey-project.org/about</a><a href="http://web.archive.org/web/20201130073628/https://www.seamonkey-project.org/about">[web.archive.org]</a></p>
+				<hr></hr>
+				<b>This article was created on 1/17/2021</b><br/>
+				<b>This article was last edited on 5/3/2021</b>
+				<hr></hr>
+				<p>If you want to contribute to this website, you can always <a href="https://codeberg.org/shadow/SpywareWatchdog">make a pull request</a>.</p>
+				<p>All contributions must be licensed under the CC0 license to be accepted.</p>
+				<a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+			</div>
+		</div>
+	</body>
 </html>

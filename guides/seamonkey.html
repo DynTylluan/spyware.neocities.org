@@ -1,51 +1,48 @@
-<!-- NOTICE!!!! -->
-
-<!-- BEFORE MAKING A PULL REQUEST OR PUSH PLEASE ALWAYS CHECK WITH THE VALIDATOR -->
-<!-- http://validator.w3.org/#validate-by-input -->
-
-<!-- NOTICE!!!! -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-	<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
-	<title>SeaMonkey — Spyware Watchdog</title>
-	<link rel="stylesheet" href="../style.css" />
-  </head>
-  <body>
-    <div class="case">
-      <div class="main">
-        <img src="../images/seamonkey/SeaMonkey.svg" alt="SeaMonkey Logo"/>
-        <h1>SeaMonkey</h1>
-		<p>This guide was tested on version 2.53.5.</p>
-        <h2>Spyware Level: <span class="orange">High</span> → <span class="yellow">Medium</span></h2>
-		<p>Ideally disable internet connections before the first run of the browser.</p>
-		<p>In Edit→Preferences→Browser set "Blank page" for "Browser Startup" (or set your own homepage).  Do the same for "New Window" and "New Tab" (which are also options in the "Display on" drop down menu).</p>
-		<img class="screenshot" src="../images/seamonkey/seamonkey_startonblankpage.png" alt="seamonkey_startonblankpage.png"/>
-		<p>In Edit→Preferences→Privacy &amp; Security uncheck everything under "Safe Browsing".</p>
-		<img class="screenshot" src="../images/seamonkey/seamonkey_disablesafebrowsing.png" alt="seamonkey_disablesafebrowsing.png"/>
-
-		<p>You can disable automatic updates for add-ons in Edit→Preferences→Advanced→Software Installation, and unchecking "Automatically check for updates" and "Automatically download and install the updates".</p>
-		<img class="screenshot" src="../images/seamonkey/seamonkey_disableautomaticupdates.png" alt="seamonkey_disableautomaticupdates.png"/>
-      </div>
-      <div class="footer">
-        <hr/>
-        <b>This article was created on 1/17/2021</b><br/>
-        <b>This article was last edited on 1/17/2021</b>
-        <!--Dont change-->
-        <p>
-          If you want to edit this article, or contribute your own article(s), visit us
-          at the git repo on
-          <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.
-        </p>
-        <p>
-          All contributions must be licensed under the CC0 license to be
-          accepted.
-        </p>
-        <a href="../LICENSE.txt">
-          <img class="icon" src="../images/cc0.png" alt="CC0 License"/>
-        </a>
-        <!--Dont change-->
-      </div>
-    </div>
-  </body>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<meta http-equiv="onion-location" content="http://spywaredrcdg5krvjnukp3vbdwiqcv3zwbrcg6qh27kiwecm4qyfphid.onion/guides/seamonkey.html"/>
+		<link rel="icon" href = "../images/favicon.ico"/>
+		<title>SeaMonkey - Spyware Watchdog</title>
+		<link href="../style.css" rel="stylesheet" type="text/css" media="all"/>
+	</head>
+	<body>
+		<div class="case">
+			<div class="nav">
+				<a href="../index.html">&larr; Home</a>
+				<a class="right" href="../articles/seamonkey.html">SeaMonkey &rarr; </a>
+			</div>
+			<div class="main">
+				<img src="../images/seamonkey/SeaMonkey.svg" alt="SeaMonkey Logo"/>
+				<h1>SeaMonkey</h1>
+				<div class="center">
+					<p>This guide was tested on version 2.53.5.</p>
+				</div>
+				<h2>Spyware Level: <span class="yellow">Medium</span> -> <span class="lime">Low</span></h2>
+				<p>Ideally disable internet connections before the first run of the browser.</p>
+				<p>Type in the url about:config and search for these options and set them to the following:</p>
+				<p><code>app.update.enabled -> false</code></p>
+				<p><code>browser.safebrowsing.provider.mozilla.updateURL -> http://safebrowsing-disabled</code></p>
+				<p><code>browser.search.geoip.url -> http://location-services-disabled</code></p>
+				<p><code>browser.startup.homepage -> about:blank</code></p>
+				<p><code>extensions.blocklist.enabled -> false</code></p>
+				<p><code>extensions.update.enabled -> false</code></p>
+				<p><code>startup.homepage_override_url -> about:blank</code></p>
+				<p><code>browser.safebrowsing.malware.enabled -> false</code></p>
+				<p><code>browser.safebrowsing.phishing.enabled -> false</code></p>
+				<div class="center">
+					<hr></hr>
+					<b>This article was created on 1/17/2021</b><br/>
+					<b>This article was last edited on 5/3/2021</b>
+					<hr></hr>
+					<p>If you want to contribute to this website, you can always <a href="https://codeberg.org/shadow/SpywareWatchdog">make a pull request</a>.</p>
+					<p>All contributions must be licensed under the CC0 license to be accepted.</p>
+					<a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

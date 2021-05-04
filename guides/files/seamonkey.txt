@@ -1,0 +1,22 @@
+/* 
+ * This is the spywarewatchdog user.js
+ * Feel free to change it to your needs :) 
+ */
+
+/* This disables auto updates for the browser. */
+user_pref("app.update.enabled", false);
+/* This disables SeaMonkey from fetching safebrowsing information. */
+user_pref("browser.safebrowsing.provider.mozilla.updateURL", "http://safebrowsing-disabled");
+/* Ditto the above, but for location services. */
+user_pref("browser.search.geoip.url", "http://location-services-disabled");
+/* This disables the homepage. */
+user_pref("browser.startup.homepage", "about:blank");
+/* This disables the addon blocklist. */
+user_pref("extensions.blocklist.enabled", false);
+// This disables extension updates */
+user_pref("extensions.update.enabled", false);
+/* This disables the new version page. */
+user_pref("startup.homepage_override_url", "about:blank");
+/* Not really needed, but it doesn't hurt to try. */
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
