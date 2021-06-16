@@ -58,6 +58,8 @@
 			<img class="screenshot" src="../images/brave/brave-gstatic.png" alt="google error 404"/>
 			<p>On the first run, Brave fetches five extensions from <code>brave-core-ext.s3.brave.com</code> and tries to install them:</p>
 			<img class="screenshot" src="../images/brave/brave-extensions.png" alt="brave extensions"/>
+			<h3>Quick update</h3>
+			<p>While going through Brave's github repository to explore, I came across a page that details how they handle some of the connections they make.<sup><a href="#ten">[3]</a></sup> As it turns out, they do use google's safebrowsing instead of their own. They do this by proxying the required onnections through their own servers. The same applies to the connection being made to fetch plugin information.</p>
 			<hr></hr>
 			<div class="center">
 				<h4>Sources</h4>
@@ -87,6 +89,9 @@
 				<a href="https://web.archive.org/web/20201229081726/https://brave.com/privacy-preserving-product-analytics-p3a">[web.archive.org]</a></p>
 				<p><a id="nine">9.</a>
 				<a href="https://static1.brave.com">Brave's static site</a>
+				<a href="https://archive.is/wWgtG">[archive.is]</a></p>
+				<p><a id="ten">10.</a>
+				<a href="https://github.com/brave/brave-browser/wiki/Deviations-from-Chromium-(features-we-disable-or-remove)">Brave's Deviations from Chromium</a>
 				<a href="https://archive.is/wWgtG">[archive.is]</a></p>
 				<hr></hr>
 				<b>This article was created on 5/7/2018</b><br/>
