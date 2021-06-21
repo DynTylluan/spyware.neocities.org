@@ -34,14 +34,15 @@
 				<p><code>api.rewards.brave.com</code></p>
 				<p><code>grant.rewards.brave.com</code></p>
 			</div>
+			<p>A quick update: These requests have been reported as a bug and for the most part have been fixed (with a couple exceptions). I'll remove this section once the bug has been completely fixed.<sup><a href="#twelve">[12]</a></sup></p>
 			<h3>Miscellaneous requests worth noting</h3>
 			<p>Brave on first run sends a request to fetch the library used for checking spelling errors:</p>
 			<img class="screenshot" src="../images/brave/brave-dict.png" alt="brave spelling library"/>
-			<p>Brave on startup sends a request to <code>variations.brave.com</code>. By the looks of this issue,<sup><a href="#eleven">[11]</a></sup> brave uses this to turn on and off features. There isn't a way to disable this as of yet.</p>
+			<p>Brave on startup sends a request to <code>variations.brave.com</code>. Brave uses this to turn on and off features. There isn't a way to disable this as of yet.<sup><a href="#eleven">[11]</a></sup>.</p>
 			<img class="screenshot" src="../images/brave/brave-cert.png" alt="brave verification tool"/>
 			<p>Brave fetches the list of affiliates through <code>laptop-updates.brave.com</code>:</p>
 			<img class="screenshot" src="../images/brave/custom-headers.png" alt="custom headers"/>
-			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information<sup><a href="#four">[4]</a></sup>? When the url was placed into the browser, it was directed to Google's error 404 page<sup><a href="#nine">[9]</a></sup>. This seems kind of unsettling that one of Brave's domains would do that:</p>
+			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information<sup><a href="#four">[4]</a></sup>? When the url was placed into the browser, it was directed to Google's error 404 page<sup><a href="#nine">[9]</a></sup>.</p>
 			<img class="screenshot" src="../images/brave/brave-static.png" alt="static brave"/>
 			<img class="screenshot" src="../images/brave/google-brave.png" alt="google error 404"/>
 			<p>A quick <code>curl --head static1.brave.com</code> shows that Brave uses Google's gstatic, which uses Cloudflare as well:</p>
@@ -94,6 +95,9 @@
 				<p><a id="eleven">11.</a>
 				<a href="https://github.com/brave/brave-browser/issues/15711">Allow to opt-out of Griffin variations</a>
 				<a href="https://web.archive.org/web/20210612013031/https://github.com/brave/brave-browser/issues/15711">[web.archive.org]</a></p>
+				<p><a id="twelve">12.</a>
+				<a href="https://github.com/brave/brave-browser/issues/14277">Only make requests to *.rewards.brave.com...</a>
+				<a href="https://web.archive.org/web/20210621011812/https://github.com/brave/brave-browser/issues/14277">[web.archive.org]</a></p>
 				<hr></hr>
 				<b>This article was created on 5/7/2018</b><br/>
 				<b>This article was last edited on 6/19/2021</b>
