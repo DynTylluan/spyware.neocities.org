@@ -20,15 +20,15 @@
 			<h2>Spyware Level: <span class="orange">High</span></h2>
 			<p>Brave is self updating software, uses <a href="../articles/google.html">Google</a> as the default search engine, has built-in telemetry, and even has an opt-out rss-like news feed similar to Firefox Pocket. These shouldn't be the things that come to mind if someone were to imagine a privacy oriented browser.</p>
 			<h3>Auto-updates</h3>
-			<p>Brave will check for updates every time you run it, and you can't turn it off from the browser. Athough, it's on Brave's low priority list to add an option to do so<sup><a href="#two">[2]</a></sup>. The reason why it's low priority would be because it's been over a year and there hasn't been an implementation of it yet.</p>
+			<p>Brave will check for updates every time you run it, and you can't turn it off from the browser. Athough, it's on Brave's low priority list to add an option to do so.<sup><a href="#two">[2]</a></sup> The reason why it's low priority would be because it's been over a year and there hasn't been an implementation of it yet.</p>
 			<h3>Brave has built-in telemetry</h3>
-			<p>While running, Brave will make lots of requests to the domain <code>p3a.brave.com</code> as telemetry. They claim they store the collected data for several days<sup><a href="#eight">[8]</a></sup>. This feature is an opt-out that can be disabled. This opt-out can be disabled <a href="brave://settings/privacy">here</a>.</p>
+			<p>While running, Brave will make lots of requests to the domain <code>p3a.brave.com</code> as telemetry. They claim they store the collected data for several days.<sup><a href="#eight">[8]</a></sup> This feature is an opt-out that can be disabled. This opt-out can be disabled <a href="brave://settings/privacy">here</a>.</p>
 			<h3>Brave Today</h3>
 			<p>Brave now has new feature similar to Firefox Pocket called Brave Today. If you don't know what Firefox Pocket is, it's basically an rss-like news feed that's shown in every blank tab. This feature Brave has is sadly an opt-out rather than an opt-in and sends lots of requests to Brave's servers. It can't seem to be disabled it in and of itself, but <a href="brave://settings/newTab">setting the tabs to blank</a> seems to stop the requests.</p>
 			<h3>SafeBrowsing</h3>
 			<p>Brave uses SafeBrowsing. It's a feature that tries to "protect" the user from potentially unsafe websites and extensions. However, it sends requests to fetch the information required. Brave's SafeBrowsing is powered by google.<sup><a href="#ten">[10]</a></sup> This opt-out can be disabled <a href="brave://settings/security">here</a>.</p>
 			<h3>Brave Rewards</h3>
-			<p>Brave has a rewards program. You can find more information about it here<sup><a href="#three">[3]</a></sup>. At first glance it looks like the rewards program is an opt-in, but the browser makes requests to these domains regardless if you sign up or not:</p>
+			<p>Brave has a rewards program. You can find more information about it here.<sup><a href="#three">[3]</a></sup> At first glance it looks like the rewards program is an opt-in, but the browser makes requests to these domains regardless if you sign up or not:</p>
 			<div class="center">
 				<p><code>rewards.brave.com</code></p>
 				<p><code>api.rewards.brave.com</code></p>
@@ -38,11 +38,11 @@
 			<h3>Miscellaneous requests worth noting</h3>
 			<p>Brave on first run sends a request to fetch the library used for checking spelling errors:</p>
 			<img class="screenshot" src="../images/brave/brave-dict.png" alt="brave spelling library"/>
-			<p>Brave on startup sends a request to <code>variations.brave.com</code>. Brave uses this to turn on and off features. There isn't a way to disable this as of yet.<sup><a href="#eleven">[11]</a></sup>.</p>
+			<p>Brave on startup sends a request to <code>variations.brave.com</code>. Brave uses this to turn on and off features. There isn't a way to disable this as of yet.<sup><a href="#eleven">[11]</a></sup></p>
 			<img class="screenshot" src="../images/brave/brave-cert.png" alt="brave verification tool"/>
 			<p>Brave fetches the list of affiliates through <code>laptop-updates.brave.com</code>:</p>
 			<img class="screenshot" src="../images/brave/custom-headers.png" alt="custom headers"/>
-			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information<sup><a href="#four">[4]</a></sup>? When the url was placed into the browser, it was directed to Google's error 404 page<sup><a href="#nine">[9]</a></sup>.</p>
+			<p>Brave makes a request to <code>static1.brave.com</code> every once and a while, which looks like it's used to fetch plugin information?<sup><a href="#four">[4]</a></sup> When the url was placed into the browser, it was directed to Google's error 404 page.<sup><a href="#nine">[9]</a></sup></p>
 			<img class="screenshot" src="../images/brave/brave-static.png" alt="static brave"/>
 			<img class="screenshot" src="../images/brave/google-brave.png" alt="google error 404"/>
 			<p>A quick <code>curl --head static1.brave.com</code> shows that Brave uses Google's gstatic, which uses Cloudflare as well:</p>
