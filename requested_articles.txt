@@ -73,7 +73,7 @@ Ublock Origin — No progress (phoning home? check privacy policy)
 > browser: https://sphere.tenebris.cc <https://sphere.tenebris.cc/>
 
 Did Iron and Sphere
-Didn't do Seamonkey yet....
+
 
 Write about the Bromite Android Browser
 
@@ -89,4 +89,4 @@ No progress has been made yet.
 
 Write an article about Facebook.
 Write an article about TikTok.
-Write an article about Web Browser.
+
