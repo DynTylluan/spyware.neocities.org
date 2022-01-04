@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+		<head>
+				<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+				<title>Tor Browser Spyware Mitigation Guide — Spyware Watchdog</title>
+				<link rel="stylesheet" href="../style.css"/>
+		</head>
+		<body>
+				<div class="case">
+						<div class="nav">
+								<a href="../index.html">&larr; Home</a>
+								<a class="right" href="../articles/tbb.html">Tor Browser &rarr; </a>
+								<img src="../images/tor_browser_logo.png" alt="Tor Browser Bundle Logo"/>
+						</div>
+						<h1>Tor Browser Mitigation Guide</h1>
+						<p><b>Note</b>:  Changing browser settings on TBB is not recommended by some, as they argue it is bad because it increases fingerprinting.  Please also note that this is SpywareWatchdog, and not FingerprintWatchdog.</p>
+						<br/>
+						<p>After following this guide the rating changes thusly:</p>
+						<h2>Spyware Rating: <span class="yellowgreen">Low</span> &rarr; <span class="green">Not Spyware</span></h2>
+						<p> Besides using the torrc configuration file, or host files, the only way to completely remove the connections is to unpack two omni.ja files, and remove all the addresses, and then re-zip the omni.ja files.</p>
+						<br/>
+						<p>Find your omni.ja files:</p>
+						<code class="big-code">
+							find . -name omni.ja
+						</code>
+						<p>Unpack them (do this for both of them separately):</p>
+						<code class="big-code">
+							mkdir unpack
+							<br/>
+							mv omni.ja unpack
+							<br/>
+							cd unpack
+							<br/>
+							unzip omni.ja
+						</code>
+						<p>Remove telementry:</p>
+						<code class="big-code">
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/https\:\/\/firefox\.settings\.services\.mozilla\.com\/v1\/buckets\/main\/collections\/nimbus-desktop-experiments\/records//g';
+							<br/>
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/https\:\/\/firefox\.settings\.services\.mozilla\.com\/v1\/buckets\/main-preview\/collections\/search-config\/records//g';
+							<br/>
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/https\:\/\/firefox\.settings\.services\.mozilla\.com\/v1\/buckets\/main\/collections\/search-config\/records//g';
+							<br/>
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/https\:\/\/firefox\.settings\.services\.mozilla\.com\/v1//g';
+							<br/>
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/onecrl\.content-signature\.mozilla\.org//g';
+							<br/>
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/remote-settings\.content-signature\.mozilla\.org//g';
+							<br/>
+							find ./Browser/ -type f -print0 | xargs -0 sed -i 's/normandy\.content-signature\.mozilla\.org//g';
+						</code>
+						<p>Replace the omni.ja files:</p>
+						<code class="big-code">
+							mv omni.ja back.omni.ja
+							<br/>
+							zip -0DXqr omni.ja *
+							<br/>
+							mv omni.ja ..
+						</code>
+						<p>Disable auto updates:</p>
+						<code class="big-code">
+							mkdir -p Browser/distribution/
+						</code>
+						<p>Create file <code>Browser/distribution/policies.json</code> and put in:</p>
+						<code class="big-code">{<br/>  "policies": {<br/>    "DisableAppUpdate": true<br/> }<br/>}</code>
+						<br/>
+						<p>All done!</p>
+						<hr/>
+						<p>If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
+						</p>
+
+						<a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
+						</div>
+				</div>
+		</body>
+</html>
