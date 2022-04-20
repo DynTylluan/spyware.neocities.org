@@ -22,6 +22,7 @@
 						<p>Please be aware that it is possible there may be even more spyware that needs removing than is covered in this guide.</p>
 						<br/>
 						<p> Besides using the torrc configuration file, or host files, the only way to completely remove the connections is to unpack two omni.ja files, and remove all the addresses, and then re-zip the omni.ja files.</p>
+                        <p>After downloading the latest TBB tarball (in our tests mitigation did not work with TBB from distro repos) either use <a href="files/tbbmitigation.sh">this script</a> (give it your <code>tor-browser_en-US/</code> directory as argument) or follow these instructions:</p>
 						<br/>
 						<p>Find your omni.ja files:</p>
 						<code class="big-code">
@@ -55,7 +56,7 @@
 						</code>
 						<p>Replace the omni.ja files:</p>
 						<code class="big-code">
-							mv omni.ja back.omni.ja
+							rm omni.ja
 							<br/>
 							zip -0DXqr omni.ja *
 							<br/>
