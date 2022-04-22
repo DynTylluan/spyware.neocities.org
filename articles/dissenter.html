@@ -1,108 +1,60 @@
-<!--Old Style-->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-   <head>
-    <link rel="stylesheet" href="../style.css"/>
-    <meta charset="UTF-8">
+  <head>
+    <meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Dissenter — Spyware Watchdog</title>
+    <link rel="stylesheet" href="../style.css"/>
   </head>
   <body>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <p>
-  <img src="../images/dissenter_logo.png" alt="Dissenter Logo">
-  <h1>Dissenter</h1>
-  <p>
-Dissenter is a web browser and plugin released by the social network company Gab.
-  </p>
-  <h2>Spyware Level: <font color="orange">High</font></h2>
-  <p>
-The Dissenter browser is a fork of the <a href="../articles/brave.html">Brave</a> web browser. It phones home to
-Brave for autoupdates and safebrowsing, which is hosted by Brave. The default search engine is <a href="../articles/duckduckgo.html">DuckDuckGo</a>.
-The browser has two extensions preinstalled. One extension, "Shields", blocks certain advertisement scripts. The other,
-"Dissenter" allows you to access the Dissenter social network. This extension phones home to several places whenever you open it,
-including Google and Twitter. The Dissenter social network also inherently must collect more information about the user's browsing
-habits than the current alternatives that already exist. It also doesn't help that their privacy policy is basically empty.
-  </p>
-  <h3>Phoning home</h3>
-  <p>
-When the Dissenter Browser is started, it will make several connections to Brave's autoupdate services:
-  </p>
-  <img class="screenshot" src="../images/dissenter_phone_home_1.png" alt="Dissenter Browser phoning home to Brave">
-  <p>
-Every once in a while, the Browser will send a request to Brave's instance of the Google safebrowsing service:
-  </p>
-  <img class="screenshot" src="../images/dissenter_safebrowsing.png" alt="Dissenter Browser phoning home to Brave">
-  <p>
-  <p>
-  Whenever the Dissenter extension is opened, it will phone home to several companies:
-  </p>
-   <img class="screenshot" src="../images/dissenter_ext_ph.png" alt="Dissenter Extension phoning home">
-  <center>
-  <p>
-  This includes:
-  </p>
-  </center>
-  <ul>
-  <li>Google</li>
-  <li>Twitter</li>
-  <li>Doubleclick (Google owned telemetry company)</li>
-  <li>FontAwesome</li>
-  <li>Cloudflare</li>
-  </ul>
-  <center>
-  <p>
-  This happens every time the extension is opened.
-  </p>
-  </center>
-  <h3>Opt-out telemetry</h3>
-  <p>
-  Dissenter will send crash reports to Gab automatically. This is on by default and you have to opt-out.
-  </p>
-  <p><i>
-  "When Gab crashes, it creates a report that can be sent to us to help us fix whatever caused the problem. This report contains technical information about your computer system which is typically distinctive. You can choose whether to send us these reports. Even if you have chosen to send reports in the past, you can turn off future reports in settings. Crash reports may contain personal information."
-  </i> <sup><a href="#1">[1]</a></sup>.</p>
-  <h3>Dissenter bypasses its own tracker filter</h3>
-  <p>
-  Dissenter comes with its own content blocker called Shields that is meant to block trackers as you browse the web.
-  This content blocker can block requests made by regular websites, but it does not block content that
-  is loaded by the Dissenter extension. The Dissenter extension makes requests to trackers that would have been
-  blocked by its own filter- by it's <b><font color=yellow>own standards</font></b> Dissenter makes connections to
-  tracking websites that are not necessary and not private. The spyware site <code>googleads.g.doubleclick.net</code>
-  is correctly blocked by Shields when a normal website tries to access it, but this connection is not blocked when Dissenter accesses it...
-  This is an interesting double standard when it comes to privacy.
-  </p>
-  <img class="screenshot" src="../images/sheilds_blocking.png">
-  <hr>
-  <h2>Inherent issues with Dissenter</h2>
-  <p>
-  Dissenter has the inherent problem that it associates the web pages you have visited with the discussions you are having or trying to have.
-  If you want to check an article's comments on Dissenter, you have to tell Gab that you visited that article. This gives Gab a very good profile
-  of what sites you visit and what articles you read. Currently, alternatives exist to this model that are already in place. For example, you can
-  create a thread on an Imageboard, Reddit-like website, or other web forum format, which sets an archived link to the article as the topic of discussion.
-  This format is much more private because the parties involved have much less information about what their users did. The news website has no
-  idea who read its article, because the traffic went to the archival service. The forum that you can freely comment on also doesn't know what
-  articles you looked at or what discussions you tried to have. If we only consider privacy, this method is a somewhat better way of achieving this goal.
-  </p>
-  <hr>
-  <center>
-  <h2>Sources</h2>
-  <p>
-  <a name="1">1.</a>
-  <a href="https://dissenter.com/about/privacy-policy">Dissenter Privacy Policy</a>
-  <a href="https://web.archive.org/web/20190516235423/https://dissenter.com/about/privacy-policy">[web.archive.org]</a>
-  <a href="https://archive.fo/A6AgI">[archive.fo]</a>
-  <a href="https://ghostarchive.org/archive/KTY4t?kreymer=false">[ghostarchive.org]</a>
-  <br>
-  </p>
-  <hr>
-  <p><b>
-  This article was last edited on 8/17/2021
-  </b></p>
-   <p>
- If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
- </p>
-  <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
-  <p><a href="../articles/index.html">Back to catalog</a></p>
-  </center>
+    <div class="case">
+      <div class="nav"><a href="index.html">&larr; Catalog</a></div>
+      <div class="main">
+        <img src="../images/dissenter_logo.png" alt="Dissenter Logo"/>
+        <h1>Dissenter</h1>
+        <p>Dissenter is a web browser and plugin released by the social network company Gab.</p>
+        <h2>Spyware Level: <span class="orange">High</span></h2>
+        <p>The Dissenter browser is a fork of the <a href="../articles/brave.html">Brave</a> web browser. It phones home to Brave for autoupdates and safebrowsing, which is hosted by Brave. The default search engine is <a href="../articles/duckduckgo.html">DuckDuckGo</a>. The browser has two extensions preinstalled. One extension, "Shields", blocks certain advertisement scripts. The other, "Dissenter" allows you to access the Dissenter social network. This extension phones home to several places whenever you open it, including Google and Twitter. The Dissenter social network also inherently must collect more information about the user's browsing habits than the current alternatives that already exist. It also doesn't help that their privacy policy is basically empty.</p>
+        <h3>Phoning home</h3>
+        <p>When the Dissenter Browser is started, it will make several connections to Brave's autoupdate services:</p>
+        <img class="screenshot" src="../images/dissenter_phone_home_1.png" alt="Dissenter Browser phoning home to Brave"/>
+        <p>Every once in a while, the Browser will send a request to Brave's instance of the Google safebrowsing service:</p>
+        <img class="screenshot" src="../images/dissenter_safebrowsing.png" alt="Dissenter Browser phoning home to Brave"/>
+        <p>Whenever the Dissenter extension is opened, it will phone home to several companies:</p>
+        <img class="screenshot" src="../images/dissenter_ext_ph.png" alt="Dissenter Extension phoning home"/>
+        <p>This includes:</p>
+        <ul>
+          <li>Google</li>
+          <li>Twitter</li>
+          <li>Doubleclick (Google owned telemetry company)</li>
+          <li>FontAwesome</li>
+          <li>Cloudflare</li>
+        </ul>
+        <p>This happens every time the extension is opened.</p>
+        <h3>Opt-out telemetry</h3>
+        <p>Dissenter will send crash reports to Gab automatically. This is on by default and you have to opt-out.</p>
+        <p><i>"When Gab crashes, it creates a report that can be sent to us to help us fix whatever caused the problem. This report contains technical information about your computer system which is typically distinctive. You can choose whether to send us these reports. Even if you have chosen to send reports in the past, you can turn off future reports in settings. Crash reports may contain personal information."</i> <sup><a href="#s1">[1]</a></sup>.</p>
+        <h3>Dissenter bypasses its own tracker filter</h3>
+        <p>Dissenter comes with its own content blocker called Shields that is meant to block trackers as you browse the web. This content blocker can block requests made by regular websites, but it does not block content that is loaded by the Dissenter extension. The Dissenter extension makes requests to trackers that would have been blocked by its own filter- by it's <b><span class="yellow">own standards</span></b> Dissenter makes connections to tracking websites that are not necessary and not private. The spyware site <code>googleads.g.doubleclick.net</code> is correctly blocked by Shields when a normal website tries to access it, but this connection is not blocked when Dissenter accesses it... This is an interesting double standard when it comes to privacy.</p>
+        <img class="screenshot" src="../images/sheilds_blocking.png" alt="Sheilds blocking"/>
+        <h3>Inherent issues with Dissenter</h3>
+        <p>Dissenter has the inherent problem that it associates the web pages you have visited with the discussions you are having or trying to have. If you want to check an article's comments on Dissenter, you have to tell Gab that you visited that article. This gives Gab a very good profile of what sites you visit and what articles you read. Currently, alternatives exist to this model that are already in place. For example, you can create a thread on an Imageboard, Reddit-like website, or other web forum format, which sets an archived link to the article as the topic of discussion. This format is much more private because the parties involved have much less information about what their users did. The news website has no idea who read its article, because the traffic went to the archival service. The forum that you can freely comment on also doesn't know what articles you looked at or what discussions you tried to have. If we only consider privacy, this method is a somewhat better way of achieving this goal.</p>
+      </div>
+      <hr/>
+      <div class="footer">
+        <div class="sources">
+          <h4>Sources:</h4>
+          <ol>
+            <li id="s1"><a href="https://dissenter.com/about/privacy-policy">Dissenter Privacy Policy</a> <a href="https://web.archive.org/web/20190516235423/https://dissenter.com/about/privacy-policy">[web.archive.org]</a> <a href="https://archive.fo/A6AgI">[archive.fo]</a> <a href="https://ghostarchive.org/archive/KTY4t?kreymer=false">[ghostarchive.org]</a></li>
+          </ol>
+        </div>
+        <hr/>
+        <b>This article was last edited on 8/17/2021</b>
+        <p>If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.</p>
+        <p>All contributions must be licensed under the CC0 license to be accepted.</p>
+        <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+      </div>
+    </div>
   </body>
 </html>
