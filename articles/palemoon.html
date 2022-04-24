@@ -1,76 +1,49 @@
-<!--Old Style-->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-   <head>
-    <link rel="stylesheet" href="../style.css"/>
-    <meta charset="UTF-8">
+  <head>
+    <meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Pale Moon — Spyware Watchdog</title>
+    <link rel="stylesheet" href="../style.css"/>
   </head>
   <body>
-  <img src="../images/palemoon_logo.png" alt="Pale Moon logo">
-  <h1>Pale Moon</h1>
-  <p>
-  Pale Moon is a fork of an old <a href="../articles/firefox.html">Firefox</a> version, before the user interface change that put off many people. Version 28.4 was used to
-  write this article.
-  </p>
-  <p>
-  <h2>Spyware Level: <font color=yellow>Medium</font></h2>
-  <p>After following the <a href="../guides/palemoon.html">mitigation guide</a>, this software is <font color=lime><b>Not Spyware</b></font>.
-  </p>
-  <p>
-  Connects to analytics services, and these requests can <b>only be avoided on subsequent runs</b>. Has block lists, search suggestions, and auto-updates.
-  Sends SSL certificates from the sites you visit.
-  </p>
-  <h3>Google Analytics on Homepage</h3>
-  <p>
-  By default, Pale Moon's home page is set to https://palemoon.start.me, and it will automatically make a connection to it upon its first run.
-  This page connects to Google Analytics, which can fingerprint and track you across the internet.
-  </p>
-  <img class="screenshot" src="../images/pm_analytics.png" alt="Google Analytics requests sent by Pale Moon's default homepage">
-  <h3>Auto-updates</h3>
-  <p>
-  Pale Moon will automatically update itself, addons and search engines, as well as its blocklist.xml file with the addons it considers "malicious". Some of these can be turned off from the GUI, and some only from about:config.
-  </p>
-
-  <h3>Search Suggestions</h3>
-  <p>The default search engine is the privacy-respecting DuckDuckGo, however search suggestions are enabled by default, which could send a request for every letter you've typed, all while you think it stays in-browser until you press Enter. Can be turned off by right-clicking the search bar.
-  </p>
-
-  <h3>OCSP querying</h3>
-  <p>Will automatically check every site's SSL certificate to see if it is valid, which necessitates sending it to a third party. Can be turned off from the GUI.</p>
-
-  <h3>Not spyware related, but worth noting</h3>
-
-  <h3>Blocking privacy-enhancing addons</h3>
-  <p>
-Pale Moon by default won't allow you to install the privacy-enhancing addon NoScript, citing this rationale for
-blocking such an important addon: <i>"NoScript is known to cause severe issues with a large (and growing) number of websites. Unless finely tuned for every website visited,
-NoScript will cause display issues and functional issues."</i><sup><a href="#1">[1]</a></sup>
-<b><font color=yellow>To disable this blocklist, set <code>extensions.blocklist.enabled</code> to <code>false</code> in about:config.</font></b>
-  </p>
-  
-  <center>
-  <hr>
-  <h2>Sources</h2>
-  <p>
-
-  <a name="1">1.</a>
-  <a href="https://blocklist.palemoon.org/info/?id=pm112">This Add-on to your browser has been blocked or disabled.</a>
-  <a href="https://web.archive.org/web/20180514135250/http://blocklist.palemoon.org/info/?id=pm112">[web.archive.org]</a>
-  <a href="https://archive.is/EiraE">[archive.is]</a>
-   <a href="https://ghostarchive.org/archive/q9Ijt?kreymer=false">[ghostarchive.org]</a>
-  <br>
-
-  </p>
-  <hr>
-    <p><b>
-  This article was created on 3/19/2019<br>
-  </b></p>
-     <p>
- If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
- </p>
-  <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
-  <p><a href="../articles/index.html">Back to catalog</a></p>
-  </center>
+    <div class="case">
+      <div class="nav"><a href="index.html">&larr; Catalog</a></div>
+      <div class="main">
+        <img src="../images/palemoon_logo.png" alt="Pale Moon logo"/>
+        <h1>Pale Moon</h1>
+        <p>Pale Moon is a fork of an old <a href="../articles/firefox.html">Firefox</a> version, before the user interface change that put off many people. Version 28.4 was used to write this article.</p>
+        <h2>Spyware Level: <span class="yellow">Medium</span></h2>
+        <p>After following the <a href="../guides/palemoon.html">mitigation guide</a>, this software is <span class="lime"><b>Not Spyware</b></span>.</p>
+        <p>Connects to analytics services, and these requests can <b>only be avoided on subsequent runs</b>. Has block lists, search suggestions, and auto-updates. Sends SSL certificates from the sites you visit.</p>
+        <h3>Google Analytics on Homepage</h3>
+        <p>By default, Pale Moon's home page is set to https://palemoon.start.me, and it will automatically make a connection to it upon its first run. This page connects to Google Analytics, which can fingerprint and track you across the internet.</p>
+        <img class="screenshot" src="../images/pm_analytics.png" alt="Google Analytics requests sent by Pale Moon's default homepage"/>
+        <h3>Auto-updates</h3>
+        <p>Pale Moon will automatically update itself, addons and search engines, as well as its blocklist.xml file with the addons it considers "malicious". Some of these can be turned off from the GUI, and some only from about:config.</p>
+        <h3>Search Suggestions</h3>
+        <p>The default search engine is the privacy-respecting DuckDuckGo, however search suggestions are enabled by default, which could send a request for every letter you've typed, all while you think it stays in-browser until you press Enter. Can be turned off by right-clicking the search bar.</p>
+        <h3>OCSP querying</h3>
+        <p>Will automatically check every site's SSL certificate to see if it is valid, which necessitates sending it to a third party. Can be turned off from the GUI.</p>
+        <h3>Not spyware related, but worth noting</h3>
+        <h3>Blocking privacy-enhancing addons</h3>
+        <p>Pale Moon by default won't allow you to install the privacy-enhancing addon NoScript, citing this rationale for blocking such an important addon: <i>"NoScript is known to cause severe issues with a large (and growing) number of websites. Unless finely tuned for every website visited, NoScript will cause display issues and functional issues."</i><sup><a href="#s1">[1]</a></sup> <b><span class="yellow">To disable this blocklist, set <code>extensions.blocklist.enabled</code> to <code>false</code> in about:config.</span></b></p>
+      </div>
+      <hr/>
+      <div class="footer">
+        <div class="sources">
+          <h4>Sources:</h4>
+          <ol>
+            <li id="s1"><a href="https://blocklist.palemoon.org/info/?id=pm112">This Add-on to your browser has been blocked or disabled.</a> <a href="https://web.archive.org/web/20180514135250/http://blocklist.palemoon.org/info/?id=pm112">[web.archive.org]</a> <a href="https://archive.is/EiraE">[archive.is]</a> <a href="https://ghostarchive.org/archive/q9Ijt?kreymer=false">[ghostarchive.org]</a></li>
+          </ol>
+        </div>
+        <hr/>
+        <b>This article was created on 3/19/2019</b>
+        <p>If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.</p>
+        <p>All contributions must be licensed under the CC0 license to be accepted.</p>
+        <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+      </div>
+    </div>
   </body>
 </html>
