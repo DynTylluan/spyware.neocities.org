@@ -1,40 +1,31 @@
-<!--Old Style-->
-<!DOCTYPE HTML>
-<html lang=”en-us”>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
    <head>
-    <link rel="stylesheet" href="../style.css">
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Falkon — Spyware Watchdog</title>
+    <link rel="stylesheet" href="../style.css"/>
   </head>
   <body>
-  <img src="../images/falkon_logo.png" alt="falkon Logo">
-  <h1>Falkon</h1>
-  <p>
-Falkon is a KDE web browser using QtWebEngine rendering engine, previously known as QupZilla.
-  </p>
-  <h2>Spyware Level: <font color=lightgreen>Probably Not Spyware</font></h2>
-  <p>
-  When another contributor tested this browser on Linux, it made <font color=lime><b>no unsolicited connections.</b></font> When I ran it on Windows, it connected to
-  a domain unrelated to the homepage (DuckDuckGo). But, i'm not sure what it was for, and it wasn't reproduced on Linux. This browser is probably fine, but
-  you should run your own tests and email me about what you found or didn't find.
-  </p>
-  <h3>Phoning Home?</h3>
-  <p>
-  On the first run of Falkon, using the 32-bit Windows version, it connected to these addresses, even though I was on its homepage, which seems to be
-  locally stored because it does not create any requests when I go to it normally. I don't know what these are for.
-  Maybe it's a form of phoning home? The first IP is for the domain: github.map.fastly.net which seems to be part of a CDN.
-  </p>
-  <img class="screenshot" src="../images/falkon_firstrun.png" alt="Is Falkon phoning home?">
-  <hr>
-  <center>
-     <p><b>
-  This article was last edited on 8/24/2018
-  </b></p>
-   <p>
- If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
- </p>
-  <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
-  <p><a href="../articles/index.html">Back to catalog</a></p>
-  </center>
+    <div class="case">
+      <div class="nav"><a href="index.html">&larr; Catalog</a></div>
+      <div class="main">
+        <img src="../images/falkon_logo.png" alt="falkon Logo"/>
+        <h1>Falkon</h1>
+        <p>Falkon is a KDE web browser using QtWebEngine rendering engine, previously known as QupZilla.</p>
+        <h2>Spyware Level: <span class="lightgreen">Probably Not Spyware</span></h2>
+        <p>When another contributor tested this browser on Linux, it made <span class="lime"><b>no unsolicited connections.</b></span> When I ran it on Windows, it connected to a domain unrelated to the homepage (DuckDuckGo). But, i'm not sure what it was for, and it wasn't reproduced on Linux. This browser is probably fine, but you should run your own tests and email me about what you found or didn't find.</p>
+        <h3>Phoning Home?</h3>
+        <p>On the first run of Falkon, using the 32-bit Windows version, it connected to these addresses, even though I was on its homepage, which seems to be locally stored because it does not create any requests when I go to it normally. I don't know what these are for. Maybe it's a form of phoning home? The first IP is for the domain: github.map.fastly.net which seems to be part of a CDN.</p>
+        <img class="screenshot" src="../images/falkon_firstrun.png" alt="Is Falkon phoning home?"/>
+      </div>
+      <hr/>
+      <div class="footer">
+        <b>This article was last edited on 8/24/2018</b>
+        <p>If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>.</p>
+        <p>All contributions must be licensed under the CC0 license to be accepted.</p>
+        <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"/></a>
+      </div>
+    </div>
   </body>
 </html>

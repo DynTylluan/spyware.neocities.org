@@ -1,71 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd" xml:lang="en">
-	<head>
-		<meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
-		<meta name="viewport" content="width=device-width,initial-scale=1"/>
-		<meta http-equiv="onion-location" content="http://spywaredrcdg5krvjnukp3vbdwiqcv3zwbrcg6qh27kiwecm4qyfphid.onion/articles/lynx.html"/>
-		<link rel="icon" href = "../images/favicon.ico"/>
-		<title>WebDiscover - Spyware Watchdog</title>
-		<link href="../style.css" rel="stylesheet" type="text/css" media="all"/>
-	</head>
-	<body>
-		<div class="case">
-			<div class="nav">
-				<a href="index.html">&larr; Catalog</a>
-			</div>
-			<img src="../images/webdiscover_logo.png" alt="Webdiscover logo">
-			<h1>WebDiscover</h1>
-			<p>WebDiscover is a web browser made by WebDiscover Media.</p>
-			<h2>Spyware Level: <span class="red">EXTREMELY HIGH</span></h2>
-			<p>WebDiscover uses the spyware search engine <a href="../articles/yahoo.html">Yahoo</a> as it's default search engine, but on its website it says it uses the spyware search engine <a href="../articles/bing.html">Bing</a> as it's default search engine. It is hard to review since every time I run it, it messes up MITMproxy so I can't see what it's doing. The privacy policy explains that it collects a large amount of personal information from its users, so it is at least not a secret that this browser is spyware. This program acts in a very suspicious way and the privacy policy contains a lot of language in it about the use of the information it collects that elevates it to a <b><span class="red">uniquely bad stance on user privacy and use of user information</span></b>, so I would recommend staying far away from it.</p>
-			<h3>WebDiscover installs itself onto users computers through installer bundling</h3>
-			<p>WebDiscover is mostly installed through other programs as an opt-out. This means that most users did not want to install this browser, and were tricked into doing it by other software's installer programs. For example<sup><a href="#2">[2]</a></sup>: <a href="../images/wd1.jpg">[1]</a> <a href="../images/wd2.jpg">[2]</a> <a href="../images/wd3.jpg">[3]</a> <a href="../images/wd4.jpg">[4]</a> <a href="../images/wd5.jpg">[5]</a> <a href="../images/wd6.jpg">[6]</a> <a href="../images/wd7.jpg">[7]</a> <a href="../images/wd8.jpg">[8]</a> <a href="../images/wd9.jpg">[9]</a> <a href="../images/cdex_bundling.png">[10]</a></p>
-			<h3>WebDiscover collects a large amount of information about its users</h3>
-			<p>According to its privacy policy<sup><a href="#1">[1]</a></sup>, WebDiscover collects the following information about its users as its browser is downloaded and used:</p>
-			<ul>
-				<li>Web Browser type</li>
-				<li>Operating System type and version</li>
-				<li>Domain Name</li>
-				<li>Browser version</li>
-				<li>Browser usage and statistics</li>
-			</ul>
-			<p>Some of this information is typical of the kind of info that is collected by developers who write programs that phone home using the HTTP protocol. However, WebDiscover also collects the following information about its users which is more concerning:</p>
-			<p><i>"We may collect Personal Data and Anonymous Data when you download the Browser. We may also collect Personal Data when you send us information or communications directly. “Personal Data” means data that allows someone to identify or contact you including, without limitation, your name, physical address, electronic mail (email) address, phone number, and credit card information (collectively, your “Personal Data”) for the purposes of recording the transaction when you engage in activities on the Site or through use of the Browser."</i><sup><a href="#1">[1]</a></sup></p>
-			<p>So, WebDiscover will profile your computer, and WebDiscover Media will use every opportunity they get to collect information about you.</p>
-			<h3>WebDiscover sells information about its users</h3>
-			<p>In this quote from the privacy policy:</p>
-			<p><i>"We may share Anonymous Data with selected third parties and business partners..."</i></p>
-			<p>Confirming that the information that WebDiscover collects about you will be sold to advertisers.</p>
-			<h3>WebDiscover uses your personal information in a malicious way</h3>
-			<p>WebDiscover sells your information to advertising companies that will send you junk mail separately from WebDiscover's discretion- it also DOES NOT comply with requests to stop contact, and requires you to separately request each company that it has sold your information to, to stop contacting you. I didn't check if they would comply with those requests or not. The following quotes from the privacy policy should explain this:</p>
-			<p><i>"To opt-out of having future third-party marketing communications sent to you, you will be required to unsubscribe with the applicable third party providers. Despite your request to no longer receive future newsletters or promotional and marketing communications from us, we reserve the right to continue to send you notices of any updates to the Browser, our Software End User License Agreement, and our Privacy Policy."</i><sup><a href="#1">[1]</a></sup></p>
-			<p>WebDiscover also claims that anyone who acts in a way that "damages the reputation" of their company will have all of the personal information that WebDiscover has collected about them disclosed to any party at their discretion.</p>
-			<p><i>"If we determine, in our sole discretion, that you have engaged in conduct which might be considered, unlawful, fraudulent, or which might harm or damage the reputation or standing of WebDiscover Media with either the general public or with a business partner or potential business partner of WebDiscover Media, we reserve the right to release your Personal Information to such persons or third parties as we consider necessary in order to prevent you from causing injury to, or otherwise injuring or interfering, now or in the future, with WebDiscover Media' rights, property or operations or otherwise the rights, property or operations of anyone else who could be harmed by such conduct."</i><sup><a href="#1">[1]</a></sup></p>
-			<p>Which is basically threatening their users that they will use the information they collect to dox anyone who says bad things about their software. This is possibly the most anti-user statement that I have read in a privacy policy.</p>
-			<h3>Phoning Home</h3>
-			<p>When WebDiscover is started, it will begin making requests to <code>ec2-54-191-159-75.us-west-2.compute.amazonaws.com</code></p>
-			<p>This is presumably how it collects a lot of the personal information about its users. This was discovered using Microsoft Network Monitor 3.4.</p>
-			<hr></hr>
-			<div class="center">
-				<h4>Sources</h4>
-				<p><a name="1">1.</a>
-				<a href="https://getwebdiscover.com/privacy/">WebDiscover Privacy Policy</a>
-				<a href="http://web.archive.org/web/20171224213336/https://getwebdiscover.com/privacy/">[web.archive.org]</a>
-				<a href="http://archive.is/Orpq6">[archive.is]</a>
-				<a href="https://ghostarchive.org/archive/8ZIAk?kreymer=false">[ghostarchive.org]</a></p>
-				<p><a name="2">2.</a>
-				<a href="https://www.pcrisk.com/removal-guides/9153-discover-browser-adware">WebDiscover removal instructions</a>
-				<a href="http://archive.is/bE7Qe">[archive.is]</a>
-				<a href="https://ghostarchive.org/archive/5FLVA">[ghostarchive.org]</a>
-				</p>
-				<hr></hr>
-				<p>This article was last edited on 8/4/2018</p>
-				<hr></hr>
-				<p>If you want to contribute to this website, you can always <a href="https://codeberg.org/shadow/SpywareWatchdog">make a pull request</a>.</p>
-				<p>All contributions must be licensed under the CC0 license to be accepted.</p>
-				<a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="application/xhtml+xml;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>WebDiscover - Spyware Watchdog</title>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+  <body>
+    <div class="case">
+      <div class="nav">
+        <a href="index.html">&larr; Catalog</a>
+      </div>
+      <img src="../images/webdiscover_logo.png" alt="Webdiscover logo">
+      <h1>WebDiscover</h1>
+      <p>WebDiscover is a web browser made by WebDiscover Media.</p>
+      <h2>Spyware Level: <span class="red">EXTREMELY HIGH</span></h2>
+      <p>WebDiscover uses the spyware search engine <a href="../articles/yahoo.html">Yahoo</a> as it's default search engine, but on its website it says it uses the spyware search engine <a href="../articles/bing.html">Bing</a> as it's default search engine. It is hard to review since every time I run it, it messes up MITMproxy so I can't see what it's doing. The privacy policy explains that it collects a large amount of personal information from its users, so it is at least not a secret that this browser is spyware. This program acts in a very suspicious way and the privacy policy contains a lot of language in it about the use of the information it collects that elevates it to a <b><span class="red">uniquely bad stance on user privacy and use of user information</span></b>, so I would recommend staying far away from it.</p>
+      <h3>WebDiscover installs itself onto users computers through installer bundling</h3>
+      <p>WebDiscover is mostly installed through other programs as an opt-out. This means that most users did not want to install this browser, and were tricked into doing it by other software's installer programs. For example<sup><a href="#2">[2]</a></sup>: <a href="../images/wd1.jpg">[1]</a> <a href="../images/wd2.jpg">[2]</a> <a href="../images/wd3.jpg">[3]</a> <a href="../images/wd4.jpg">[4]</a> <a href="../images/wd5.jpg">[5]</a> <a href="../images/wd6.jpg">[6]</a> <a href="../images/wd7.jpg">[7]</a> <a href="../images/wd8.jpg">[8]</a> <a href="../images/wd9.jpg">[9]</a> <a href="../images/cdex_bundling.png">[10]</a></p>
+      <h3>WebDiscover collects a large amount of information about its users</h3>
+      <p>According to its privacy policy<sup><a href="#1">[1]</a></sup>, WebDiscover collects the following information about its users as its browser is downloaded and used:</p>
+      <ul>
+        <li>Web Browser type</li>
+        <li>Operating System type and version</li>
+        <li>Domain Name</li>
+        <li>Browser version</li>
+        <li>Browser usage and statistics</li>
+      </ul>
+      <p>Some of this information is typical of the kind of info that is collected by developers who write programs that phone home using the HTTP protocol. However, WebDiscover also collects the following information about its users which is more concerning:</p>
+      <p><i>"We may collect Personal Data and Anonymous Data when you download the Browser. We may also collect Personal Data when you send us information or communications directly. “Personal Data” means data that allows someone to identify or contact you including, without limitation, your name, physical address, electronic mail (email) address, phone number, and credit card information (collectively, your “Personal Data”) for the purposes of recording the transaction when you engage in activities on the Site or through use of the Browser."</i><sup><a href="#1">[1]</a></sup></p>
+      <p>So, WebDiscover will profile your computer, and WebDiscover Media will use every opportunity they get to collect information about you.</p>
+      <h3>WebDiscover sells information about its users</h3>
+      <p>In this quote from the privacy policy:</p>
+      <p><i>"We may share Anonymous Data with selected third parties and business partners..."</i></p>
+      <p>Confirming that the information that WebDiscover collects about you will be sold to advertisers.</p>
+      <h3>WebDiscover uses your personal information in a malicious way</h3>
+      <p>WebDiscover sells your information to advertising companies that will send you junk mail separately from WebDiscover's discretion- it also DOES NOT comply with requests to stop contact, and requires you to separately request each company that it has sold your information to, to stop contacting you. I didn't check if they would comply with those requests or not. The following quotes from the privacy policy should explain this:</p>
+      <p><i>"To opt-out of having future third-party marketing communications sent to you, you will be required to unsubscribe with the applicable third party providers. Despite your request to no longer receive future newsletters or promotional and marketing communications from us, we reserve the right to continue to send you notices of any updates to the Browser, our Software End User License Agreement, and our Privacy Policy."</i><sup><a href="#1">[1]</a></sup></p>
+      <p>WebDiscover also claims that anyone who acts in a way that "damages the reputation" of their company will have all of the personal information that WebDiscover has collected about them disclosed to any party at their discretion.</p>
+      <p><i>"If we determine, in our sole discretion, that you have engaged in conduct which might be considered, unlawful, fraudulent, or which might harm or damage the reputation or standing of WebDiscover Media with either the general public or with a business partner or potential business partner of WebDiscover Media, we reserve the right to release your Personal Information to such persons or third parties as we consider necessary in order to prevent you from causing injury to, or otherwise injuring or interfering, now or in the future, with WebDiscover Media' rights, property or operations or otherwise the rights, property or operations of anyone else who could be harmed by such conduct."</i><sup><a href="#1">[1]</a></sup></p>
+      <p>Which is basically threatening their users that they will use the information they collect to dox anyone who says bad things about their software. This is possibly the most anti-user statement that I have read in a privacy policy.</p>
+      <h3>Phoning Home</h3>
+      <p>When WebDiscover is started, it will begin making requests to <code>ec2-54-191-159-75.us-west-2.compute.amazonaws.com</code></p>
+      <p>This is presumably how it collects a lot of the personal information about its users. This was discovered using Microsoft Network Monitor 3.4.</p>
+      <hr/>
+      <div class="center">
+        <h4>Sources</h4>
+        <p><a name="1">1.</a>
+        <a href="https://getwebdiscover.com/privacy/">WebDiscover Privacy Policy</a>
+        <a href="http://web.archive.org/web/20171224213336/https://getwebdiscover.com/privacy/">[web.archive.org]</a>
+        <a href="http://archive.is/Orpq6">[archive.is]</a>
+        <a href="https://ghostarchive.org/archive/8ZIAk?kreymer=false">[ghostarchive.org]</a></p>
+        <p><a name="2">2.</a>
+        <a href="https://www.pcrisk.com/removal-guides/9153-discover-browser-adware">WebDiscover removal instructions</a>
+        <a href="http://archive.is/bE7Qe">[archive.is]</a>
+        <a href="https://ghostarchive.org/archive/5FLVA">[ghostarchive.org]</a>
+        </p>
+        <hr/>
+        <p>This article was last edited on 8/4/2018</p>
+        <hr/>
+        <p>If you want to contribute to this website, you can always <a href="https://codeberg.org/shadow/SpywareWatchdog">make a pull request</a>.</p>
+        <p>All contributions must be licensed under the CC0 license to be accepted.</p>
+        <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
+      </div>
+    </div>
+  </body>
 </html>
