@@ -8,6 +8,7 @@ body {
 p {
 	max-width: 780px;
 	margin: auto;
+    text-align: justify;
 }
 h1,
 h2,
@@ -139,6 +140,13 @@ xmp {
 .red {
 	color: #ff0000;
 }
+.lime {
+	color: lime;
+}
+
+.yellow {
+	color: yellow;
+}
 .case {
 	border: 2px solid #1a1a1a;
 	border-radius: 15px;
@@ -185,12 +193,4 @@ xmp {
 .directory-list li {
 	padding: 1%;
 	text-align: left;
-}
-
-.lime {
-	color: lime;
-}
-
-.yellow {
-	color: yellow;
 }
