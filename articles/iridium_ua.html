@@ -1,0 +1,82 @@
+<!--Old Style-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+   <head>
+    <link rel="stylesheet" href="../style.css"/>
+    <meta charset="UTF-8">
+    <title>Iridium Browser — Spyware Watchdog</title>
+  </head>
+  <body>
+  <img src="../images/iridium_logo.png" alt="Iridium Logo">
+  <h1>Iridium Browser</h1>
+  <p>
+ Iridium це орієнтоване на приватність відгалуження (форк) Google Chrome. З їх офіційного вебсайту: "<i>Всі модифікації покращують приватність користувача і гарантують застосування найсучасніших і найкращих технологій. Запобігаються автоматичні передачі запитів, інформації про натиски на клавіатуру і інших данних до централізованих серверів. Вони почнуться лише у разі дозволу користувача.</i>" На відміну від інших бравзерів такого типу, саме цей має повний функціонал (підтримує всі розширення, що доступні для Chrome), і тому рекомендується для щоденного використання.
+  </p>
+  <h2>Рівень стеження: <font color=yellowgreen>Низький</font></h2>
+  <p>
+  Якщо виконаєте інструкції <a href="../guides/iridium_ua.html">ґайду пом'якшення шкоди</a>, статус рівня стеження вашої копії бравзеру Iridium зміниться до <font color=lime><b>Стеження відсутнє</b></font>.
+  </p>
+  <p>
+ Єдиний небажаний запит - це запит на функцію Google - SafeBrowsing, яка може легко бути відключена в меню налаштувань. Додатково, функції поліпшення приватності, які не стосуються Google також додані, як от наприклад блокування реп'яшків (кукі) третіх сторін за замовчуванням та видалення локальних данних за закриття програми. Повний перелік відмінностей між Chrome та Iridium можна знайти <a href="https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">за покликанням</a><sup><a href="#1">[1]</a></sup>. Але, цей список <b><font color=red>не є точним</font></b> і кожна заява, яка там робиться мусить бути перевірена користувачем.
+  </p>
+  <h3>"Дзвінки додому"</h3>
+  <p>
+  Iridium робитиме запити до Google для оновлення списку заблокованих функцією SafeBrowsing (безпечний веб-перегляд) сайтів:
+  </p>
+  <img class="screenshot" src="../images/iridium_request.png" alt="Запити safebrowsing бравзеру Iridium">
+  <p>
+  Iridium також завантажує цей список з дзеркала, яке підтримується розробниками. Якщо бравзер постійно "дзвонить додому" до Google, або до сереру розробників, то це цілком можна вважати формою стеження, яка може бути використана для збору інформації про використання програми користувачами. (Почитайте <a href="../articles/http.html">статтю про HTTP</a>)
+  Цей запит виконується кожні 5 хв після старту програми, а потім оновлюється кожні 30 хвилин.
+  </p>
+  <h3>Неправдиві заяви про приватність</h3>
+  <p>
+  Розробники Iridium оголошували, що одне з покращень приватності  Iridium - це використання функції відстежування Google - SafeBrowsing, але з їх власним дзеркалом бази данних Google, маючи на увазі, що ви
+  можете використовувати функцію без постійних "дзвінків додому"(передачі інформції) в Google. Звісно, дзвінки додому до розробників, а не до Google - це також форма відстеження, але все це одне деяке поліпшення приватності користувача<sup><a href="#1">[1]</a></sup>. Принаймні, воно було би покращенням, якби ця заява була правдивою. Насправді ж, можемо бачити з сегменту "Дзвінки Додому" цієї статті, що ця заява просто
+  <b><font color=red>брехня</font></b>, що дуже погано, бо тепер треба відноситись скептично до всіх інших заяв про приватність розробників Iridium.
+  </p>
+  <p>
+  Згідно інформації іншого автора, в його тестах бравзер підключався лише до iridiumbrowser.de. Тому, можливо ця теза про приватність правдива для деяких версій Iridium,
+  і не є правдивою для інших версій Iridium. Якщо ви хочете перевірити це власноруч, то Версія Iridium, яка надсилала запити в Google - це версія 2018.4 для 64-bit Windows, перевірялась на Windows 7.
+  </p>
+  <p>
+  Насправді ж все навіть гірше. Ця заява про приватність не лише неточна, але ще й запит на злиття з виправленням цього (Pull Request)<sup><a href="#2">[2]</a></sup> був відкритий на GitHub розробників ПРОТЯГОМ БІЛЬШЕ ОДНОГО РОКУ і не отримав жодних відповідей від команди розробників.
+  Доволі сумно бачити таку націлену на приватність "верхівку проєкту", але в той же час таке недбале відношення до довгоіснуючих проблемам приватності, які вони ховають за завісами.
+  Тому, дивіться трохи детальніше на стведження, які роблять розробники цього бравзеру.
+  </p>
+
+  <hr>
+  <center>
+  <h2>Sources</h2>
+  <p>
+
+  <a name="1">1.</a>
+  <a href="https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">Differences between Iridium and Chromium</a>
+  <a href="http://web.archive.org/web/20180216153314/https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">[web.archive.org]</a>
+  <a href="https://archive.is/H8MsS">[archive.is]</a>
+  <a href="https://via.hypothes.is/https://github.com/iridium-browser/tracker/wiki/Differences-between-Iridium-and-Chromium">[via.hypothes.is]</a><br>
+
+  <a name="2">2.</a>
+  <a href="https://github.com/iridium-browser/tracker/issues/131">Still access to google safebrowsing servers</a>
+  <a href="http://web.archive.org/web/20180517043109/https://github.com/iridium-browser/tracker/issues/131">[web.archive.org]</a>
+  <a href="https://archive.li/eayJ1">[archive.is]</a>
+  <br>
+
+  </p>
+
+
+  <hr>
+    <p><b>
+  This article was last edited on 5/16/2018
+  </b></p>
+    <p><b>
+  This article was created on 5/5/2018
+  </b></p>
+
+     <p>
+ If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
+ </p>
+  <a href="../LICENSE.txt"><img class="icon" src="../images/cc0.png" alt="CC0 License"></a>
+  <p><a href="../articles/index.html">Back to catalog</a>
+  </center>
+  </body>
+</html>
