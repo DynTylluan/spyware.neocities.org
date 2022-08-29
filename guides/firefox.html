@@ -14,24 +14,14 @@
 						<div class="main">
 								<img alt="Firefox Logo" src="../images/firefox_logo3.png">
 								<h1>Mozilla Firefox Spyware Mitigation Guide</h1>
-								<p>Note: This guide is deprecated. Sometime in the future it will be updated again.</p>
-								<p>You may want to see <a href="https://codeberg.org/shadow/SpywareWatchdog/issues/58">this</a> for more information.</p>
-								<p>After configuring Mozilla Firefox with arkenfox's user.js, according to this guide it's rating changes like so:</p>
+								<p>After configuring Mozilla Firefox with <a href="https://codeberg.org/Narsil/user.js/src/branch/main/desktop">Narsil's user.js</a>, according to this guide it's rating changes like so:</p>
 								<h2>Spyware Rating: <span class="orange">High</span> &rarr; <span class="green">Not Spyware</span></h2>
-								<p>The arkenfox's user.js is a template which aims to provide as much privacy and enhanced security as possible, and to reduce tracking and fingerprinting as much as possible — while minimizing any loss of functionality and breakage (but it will happen).<sup><a href="#two">[2]</a></sup></p>
-								<br/>
-								<p>
-										Before beginning this guide it is important that you try and cross-reference it with other guides,
-										to see which prospective on this topic is the best way to do it for you. At the bottom of the page are links
-										to <a href="#Other_Guides">other guides</a> and projects like this one. You should strongly consider this as <b><span class="orange">
-										you may find other guides more useful than this one.</span></b>
-								</p>
-								<br/>
+								<p>Narsil's user.js is a template which aims to provide as much privacy and enhanced security as possible, and to reduce tracking and fingerprinting as much as possible. It's a fork of arkenfox's user.js, which was used in previous versions of this guide. But Narsil's enhance it for maximum privacy and minimizing automatic connections.</p>
 								<p>For extra privacy &amp; security, disconnect your computer from the internet while following this guide, so that Firefox is unable to phone home by accident.</p>
-								<br/>
 								<p>
 										Mozilla Firefox has a huge amount of spyware features, but they can all be disabled by using predefined profile settings.
 										To do this you need to create new Firefox profile:
+								</p>
 								<ul>
 										<li>Run <code>firefox -no-remote -ProfileManager</code></li>
 										<li>Create a new profile </li>
@@ -69,13 +59,13 @@
 										</tr>
 								</table>
 								<br/>
-								<p>Delete everything from the new profile and get arkenfox's user.js:</p>
-								<code class="big-code">cd /path/to/your/profile && rm -r * && wget https://raw.githubusercontent.com/arkenfox/user.js/master/user.js</code>
+								<p>Delete everything from the new profile and get Narsil's user.js:</p>
+								<code class="big-code">cd /path/to/your/profile && rm -r * && wget https://codeberg.org/Narsil/user.js/raw/branch/main/desktop/user.js</code>
 								<p>You may want to edit the file to your needs, if so:</p>
 								<code class="big-code">$EDITOR user.js</code>
 								<p>
-										If you want to disable OCSP as well, you should also add this to your user.js. These settings are separated
-										because while OCSP is a privacy breach, it is also a security feature.  It works by contacting other servers to verify the authenticity of the address you are connecting to.
+										If you want to enable OCSP, you should also modify these options in the user.js. These settings are disabled in Narsil's user.js
+										because OCSP is a privacy breach, but it is also a security feature.  It works by contacting other servers to verify the authenticity of the address you are connecting to.
 								</p>
 								<p>
 										You should think about it before making a decision. You can read more about OCSP here: <a href="https://scotthelme.co.uk/revocation-is-broken/">
@@ -90,22 +80,72 @@
 										With this installation method, if you change any of the settings in user.js through about:config or Firefox preferences dialogs,
 										they will be reset to the user.js defined values after you restart Firefox.
 										This makes sure they're always back to secure defaults when starting the browser.
-										At the end you need to delete several default plugins in Firefox directory at <code>/path/to/firefox/browser/features</code> (ie <code>/usr/lib/firefox/browser/features/</code>) that can violate privacy:
-								</p>
-								<ul>
-										<li>firefox@getpocket.com.xpi — Pocket</li>
-										<li>followonsearch@mozilla.com.xpi — Follow On Search</li>
-										<li>activity-stream@mozilla.org.xpi — Activity Stream</li>
-										<li>screenshots@mozilla.org.xpi — Screenshots</li>
-										<li>onboarding@mozilla.org.xpi — Onboarding</li>
-										<li>formautofill@mozilla.org.xpi — Autofill</li>
-										<li>webcompat@mozilla.org.xpi — Web Compatibility Reporter</li>
-								</ul>
-								<p>
-									It is highly recommended to also check other user.js template settings from ongoing <i>"arkenfox-user.js project"</i><sup><a href="#one">[1]</a></sup> for further hardening Firefox privacy, security and anti-fingerprinting.
 								</p>
 								<br/>
-								<p>Run <code>firefox -no-remote -ProfileManager</code> again and start the profile you created.  Delete any others if needed. Check to make sure, after the first start, that another profile which does <i>not</i> use arkenfox was not created by Firefox.</p>
+								<p>Run <code>firefox -no-remote -ProfileManager</code> again and start the profile you created. Delete any others if needed. Check to make sure, after the first start, that another profile which does <i>not</i> use our user.js was not created by Firefox.</p>
+
+								<br/>
+								<p>
+									We recommend to also check other user.js settings from <i>"arkenfox-user.js docs"</i><sup><a href="#one">[1]</a></sup> for better understanding
+									of what the user.js is doing. Note that Narsil's user.js is optimized for the maximum privacy and security, but feel free to adapt it to your needs.
+								</p>
+								
+								<h2>Hosts file</h2>
+								<p>
+										Narsil's user.js mitigates most Firefox's privacy issues. But there are still two automatic connections that can't be disabled in the user.js settings.
+										There are two solutions for this (Read Narsil's user.js README) but we will take the easiest path, which makes use of the hosts file. Unlike the other solution, it isn't
+										overwritten with every Firefox update.
+								</p>
+								<br/>
+								<p>
+										We will be using <a href="https://raw.githubusercontent.com/MrRawes/firefox-hosts/firefox-hosts/hosts">Mr Rawes hosts</a> which blocks every
+										connection that Firefox does. Using the user.js, there should be only two automatic connections left. Adding every connection to the hosts file,
+										even the ones that we've already disabled, does not have
+										any negative effect and it may help in case you launch Firefox with a profile not using the custom user.js.
+								</p>
+								<br/>
+								<p>
+										Download the hosts file and add them to your system. In unix-like OSs it's located at <code>/etc/hosts</code>.
+										Note that for updating addons you will need to remove addons.mozilla.org from the hosts file, go to about:addons
+										in your browser and in the options menu click on "Check for updates". This is necessary because the user.js disables
+										automatic updates. Firefox won't update itself either, make sure to keep it updated using your package manager.
+								</p>
+
+								
+								<h2>Mozilla.cfg</h2>
+								<p>	This is unnecessary if you used the user.js method, but it's interesting to have this other option.
+									Important settings are enforced/locked within mozilla.cfg, the major difference with the user.js is that those settings cannot be changed by addons/updates/Firefox or unwanted/accidental
+									manipulation. To change those settings you can edit the mozilla.cfg.
+								</p>
+								<p>	We will use a modified mozilla.cfg from <a href="https://codeberg.org/Narsil/mozilla.cfg/">Narsil</a> which is configured with a strong focus on privacy and security.
+									Download it in a zip file from <a href="https://codeberg.org/Narsil/mozilla.cfg/archive/master.zip">here</a> and unzip it.
+									You need to copy the config folder to the firefox installation path.
+								</p>
+								
+								<table>
+										<tr>
+												<th>OS</th>
+												<th>Path</th>
+										</tr>
+										<tr>
+												<td>Windows</td>
+												<td><code class="big-code">C:\Program Files\Mozilla Firefox\</code> <p>or</p> <code class="big-code">C:\Program Files (x86)\Mozilla Firefox\</code></td>
+												
+										</tr>
+										<tr>
+												<td> Linux </td>
+												<td><code class="big-code">/usr/lib/firefox/</code></td>
+										</tr>
+										<tr>
+												<td> OS X</td>
+												<td><code class="big-code">Applications/Firefox.app/Contents/Resources/</code></td>
+										</tr>
+								</table>
+								<br/>
+
+								<p> 	This method may be preferable because settings can not be overwritten by addons or normal users, only by users with root privileges. Make sure to read through the
+									mozilla.cfg to check if the settings suit your usecase, it's optimized for maximum privacy and security.</p>
+								<br/>
 								<hr/>
 								<h2>Other Guides</h2>
 								<p>
@@ -115,18 +155,21 @@
 										finish setting Firefox up. Librewolf is less of a guide and more of a project and series of tools and settings
 										you can download to help you make Firefox private.
 								</p>
+								<p>Note that these guides might not completely remove automatic connections. Consider using the hosts file.</p>
 								<ol>
-										<li><a href="https://www.privacytools.io/#about_config">Privacy Related "about:config" Tweaks to Firefox</a> <a href="http://web.archive.org/web/20181031171622/https://www.privacytools.io/">[web.archive.org]</a> <a href="http://archive.fo/SEFXb">[archive.is]</a></li>
+										<li><a href="https://brainfucksec.github.io/firefox-hardening-guide">Privacy Related "about:config" Tweaks to Firefox</a> <a href="https://web.archive.org/web/20220702153223/https://brainfucksec.github.io/firefox-hardening-guide">[web.archive.org]</a> <a href="https://archive.ph/l9Ldc">[archive.is]</a></li>
 										<li><a href="https://restoreprivacy.com/firefox-privacy/">Firefox Privacy – The Complete How-To Guide</a> <a href="https://web.archive.org/web/20181015023738/https://restoreprivacy.com/firefox-privacy/">[web.archive.org]</a> <a href="http://archive.is/20180414165038/https://restoreprivacy.com/firefox-privacy/">[archive.is]</a></li>
-										<li><a href="https://gitlab.com/librewolf-community/browser/linux/">Librewolf, Firefox with privacy enhancements</a></li>
+										<li><a href="https://librewolf.net/">Librewolf, Firefox with privacy enhancements</a></li>
 								</ol>
 								<hr/>
 								<h2>Sources</h2>
 								<ol>
-									<li><a href="https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg">https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg</a> (Firefox Logo)</li>
-									<li id="one"><a href="https://github.com/arkenfox/user.js/blob/master/user.js">arkenfox/user.js</a> <a href="http://web.archive.org/web/20181015031306/https://github.com/arkenfox/user.jss/blob/master/user.js">[web.archive.org]</a> <a href="http://archive.is/GXIBO">[archive.is]</a></li>
+									<li id="one"><a href="hhttps://github.com/arkenfox/user.js/wiki">arkenfox/user.js wiki</a> <a href="https://web.archive.org/web/20220821211917/https://github.com/arkenfox/user.js/wiki">[web.archive.org]</a> <a href="https://archive.ph/HEc2S">[archive.is]</a></li>
 									<li id="two"><a href="https://github.com/arkenfox/user.js/blob/master/README.md">https://github.com/arkenfox/user.jss/blob/master/README.md</a></li>
+									<li><a href="">Narsil's user.js README</a> <a href="https://web.archive.org/web/20220821233350/https://codeberg.org/Narsil/user.js/src/branch/main/desktop">[web.archive.org]</a> <a href="https://archive.ph/FLCAQ">[archive.is]</a></li>
+									<li><a href="https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg">https://commons.wikimedia.org/wiki/File:Firefox_logo,_2019.svg</a> (Firefox Logo)</li>
 								</ol>
+								<p><strong><i>This guide was updated on 08/22/2022</i></strong></p>
 								<hr/>
 								<p>
 								If you want to edit this article, or contribute your own article(s), visit us at the git repo on <a href="https://codeberg.org/shadow/SpywareWatchdog">Codeberg</a>. All contributions must be licensed under the CC0 license to be accepted.
